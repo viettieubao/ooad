@@ -17,7 +17,7 @@ namespace QuanLiVatLieuXayDung
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuanLiVatLieuXayDung.View.Form1());
+            Application.Run(new frmLogin());
         }
     }
 }

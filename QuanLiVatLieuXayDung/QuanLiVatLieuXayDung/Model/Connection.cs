@@ -16,10 +16,11 @@ namespace QuanLiVatLieuXayDung.Model
         public static SqlDataAdapter sqlDataAdapter;
         public static DataTable dataTable;
 
-        public static string conn = "Data Source=DESKTOP-J4CPLKG;Initial Catalog=OOAD;Integrated Security=True";
+        public static string conn = @"Data Source=DESKTOP-UD95KR6;Initial Catalog=OOAD;Integrated Security=True";
         public static DataTable getData(String sql)
         {
             sqlConnection = new SqlConnection(conn);
+            dataTable = new DataTable();
             sqlConnection.Open();
             sqlDataAdapter = new SqlDataAdapter(sql,sqlConnection);
             sqlDataAdapter.Fill(dataTable);

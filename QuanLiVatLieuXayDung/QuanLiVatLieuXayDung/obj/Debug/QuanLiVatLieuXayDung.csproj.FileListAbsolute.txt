@@ -8,3 +8,15 @@ C:\Users\Quang Dora\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayD
 C:\Users\Quang Dora\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.pdb
 C:\Users\Quang Dora\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.Form1.resources
 C:\Users\Quang Dora\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.ucQlsanpham.resources
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\bin\Debug\QuanLiVatLieuXayDung.exe.config
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\bin\Debug\QuanLiVatLieuXayDung.exe
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\bin\Debug\QuanLiVatLieuXayDung.pdb
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.csprojResolveAssemblyReference.cache
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.Properties.Resources.resources
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.Form1.resources
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.ucQlsanpham.resources
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.csproj.GenerateResource.Cache
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.csproj.CoreCompileInputs.cache
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.exe
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.pdb
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.frmLogin.resources
