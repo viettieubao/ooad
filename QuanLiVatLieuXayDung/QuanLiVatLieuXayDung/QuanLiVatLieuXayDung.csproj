@@ -62,11 +62,23 @@
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ucQlsanpham.cs">
+    <Compile Include="View\UC\ucQLHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\ucQlsanpham.Designer.cs">
+    <Compile Include="View\UC\ucQLHoaDon.Designer.cs">
+      <DependentUpon>ucQLHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucQlsanpham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucQlsanpham.Designer.cs">
       <DependentUpon>ucQlsanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucQLUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucQLUser.Designer.cs">
+      <DependentUpon>ucQLUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -83,8 +95,14 @@
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ucQlsanpham.resx">
+    <EmbeddedResource Include="View\UC\ucQLHoaDon.resx">
+      <DependentUpon>ucQLHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucQlsanpham.resx">
       <DependentUpon>ucQlsanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucQLUser.resx">
+      <DependentUpon>ucQLUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

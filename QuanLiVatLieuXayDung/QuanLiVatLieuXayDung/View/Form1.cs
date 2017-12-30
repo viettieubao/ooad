@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiVatLieuXayDung.View.UC;
 
 namespace QuanLiVatLieuXayDung.View
 {
@@ -18,12 +19,18 @@ namespace QuanLiVatLieuXayDung.View
         }
 
         ucQlsanpham ucQlsanpham;
+        ucQLHoaDon ucQLHoadon;
         private void Form1_Load(object sender, EventArgs e)
         {
-            ucQlsanpham = new ucQlsanpham();
-            panel1.Controls.Add(ucQlsanpham);
-            ucQlsanpham.Dock = DockStyle.Fill;
-            ucQlsanpham.BringToFront();
+            //ucQlsanpham = new ucQlsanpham();
+            //panel1.Controls.Add(ucQlsanpham);
+            //ucQlsanpham.Dock = DockStyle.Fill;
+            //ucQlsanpham.BringToFront();
+
+            ucQLHoadon = new ucQLHoaDon();
+            panel1.Controls.Add(ucQLHoadon);
+            ucQLHoadon.Dock = DockStyle.Fill;
+            ucQLHoadon.BringToFront();
         }
     }
 }

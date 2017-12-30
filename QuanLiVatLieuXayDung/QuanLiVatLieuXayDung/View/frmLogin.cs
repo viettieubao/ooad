@@ -31,7 +31,7 @@ namespace QuanLiVatLieuXayDung.View
             {
                 Form1 form1 = new Form1();
                 form1.Show();
-
+                this.Hide();
             }
             else
             {
