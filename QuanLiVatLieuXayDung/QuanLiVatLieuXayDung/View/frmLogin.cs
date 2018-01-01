@@ -19,7 +19,7 @@ namespace QuanLiVatLieuXayDung.View
         }
 
         UserController userController = new UserController();
-        public int rule { get; set; }
+        public static int rule { get; set; }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -29,6 +29,7 @@ namespace QuanLiVatLieuXayDung.View
             }else
             if (userController.GetUserByUserName(txtUsername.Text, txtPassword.Text) == true)
             {
+                rule = userController.rule;
                 Form1 form1 = new Form1();
                 form1.Show();
                 this.Hide();
@@ -37,6 +38,11 @@ namespace QuanLiVatLieuXayDung.View
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Đăng nhập thất bại!");
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

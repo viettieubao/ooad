@@ -20,5 +20,16 @@ namespace QuanLiVatLieuXayDung.Controller
             rule = users.Bophan;
             return true;
         }
+        public int AddUser(string username, string tennhanvien, DateTime ngaysinh, int bophan, string diachi, string sodienthoai)
+        {
+            int result = users.AddUser(username,tennhanvien,ngaysinh,bophan,diachi,sodienthoai);
+            return result;
+        }
+
+        public int UpdateUser(string tennhanvien, DateTime ngaysinh, int bophan, string diachi, string sodienthoai)
+        {
+            int result = users.UpdateUser(tennhanvien, ngaysinh, bophan, diachi, sodienthoai);
+            return result;
+        }
     }
 }

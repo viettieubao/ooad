@@ -20,17 +20,24 @@ namespace QuanLiVatLieuXayDung.View
 
         ucQlsanpham ucQlsanpham;
         ucQLHoaDon ucQLHoadon;
+        ucQLUser ucQLUser;
         private void Form1_Load(object sender, EventArgs e)
         {
+            int rule = frmLogin.rule;
             //ucQlsanpham = new ucQlsanpham();
             //panel1.Controls.Add(ucQlsanpham);
             //ucQlsanpham.Dock = DockStyle.Fill;
             //ucQlsanpham.BringToFront();
 
-            ucQLHoadon = new ucQLHoaDon();
-            panel1.Controls.Add(ucQLHoadon);
-            ucQLHoadon.Dock = DockStyle.Fill;
-            ucQLHoadon.BringToFront();
+            //ucQLHoadon = new ucQLHoaDon();
+            //panel1.Controls.Add(ucQLHoadon);
+            //ucQLHoadon.Dock = DockStyle.Fill;
+            //ucQLHoadon.BringToFront();
+
+            ucQLUser = new ucQLUser();
+            panel1.Controls.Add(ucQLUser);
+            ucQLUser.Dock = DockStyle.Fill;
+            ucQLUser.BringToFront();
         }
     }
 }

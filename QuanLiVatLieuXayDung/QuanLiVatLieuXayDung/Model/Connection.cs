@@ -38,7 +38,7 @@ namespace QuanLiVatLieuXayDung.Model
                 sqlCommand = new SqlCommand(sql, sqlConnection);
                 result = sqlCommand.ExecuteNonQuery();
                 sqlConnection.Close();
-
+                result = 1;
             }
             catch
             {

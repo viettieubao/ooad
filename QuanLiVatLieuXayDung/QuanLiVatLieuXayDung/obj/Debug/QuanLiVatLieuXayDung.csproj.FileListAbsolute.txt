@@ -21,3 +21,4 @@ C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\ob
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.pdb
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.frmLogin.resources
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.UC.ucQLHoaDon.resources
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.UC.ucQLUser.resources
