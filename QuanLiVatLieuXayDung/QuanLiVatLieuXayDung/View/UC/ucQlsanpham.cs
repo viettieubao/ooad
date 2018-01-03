@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiVatLieuXayDung.Controller;
 
 namespace QuanLiVatLieuXayDung.View
 {
@@ -15,21 +16,13 @@ namespace QuanLiVatLieuXayDung.View
         public ucQlsanpham()
         {
             InitializeComponent();
+            sanPham = new SanPhamController();
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        SanPhamController sanPham;
+        private void ucQlsanpham_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
+            dtpData.DataSource = sanPham.GetAllSanPham();
         }
     }
 }
