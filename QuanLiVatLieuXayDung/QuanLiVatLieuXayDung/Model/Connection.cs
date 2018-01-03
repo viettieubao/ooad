@@ -14,18 +14,18 @@ namespace QuanLiVatLieuXayDung.Model
         public static SqlConnection sqlConnection;
         public static SqlCommand sqlCommand;
         public static SqlDataAdapter sqlDataAdapter;
-        public static DataTable dataTable;
+        public static DataTable dataset;
 
         public static string conn = @"Data Source=DESKTOP-UD95KR6;Initial Catalog=OOAD;Integrated Security=True";
         public static DataTable getData(String sql)
         {
             sqlConnection = new SqlConnection(conn);
-            dataTable = new DataTable();
+            dataset = new DataTable();
             sqlConnection.Open();
             sqlDataAdapter = new SqlDataAdapter(sql,sqlConnection);
-            sqlDataAdapter.Fill(dataTable);
+            sqlDataAdapter.Fill(dataset);
             sqlConnection.Close();
-            return dataTable;
+            return dataset;
         }
 
         public static int ExcuteNonQuery(String sql)
