@@ -108,6 +108,15 @@
             this.textBox7.Size = new System.Drawing.Size(259, 22);
             this.textBox7.TabIndex = 13;
             // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox7.Location = new System.Drawing.Point(613, 75);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(259, 22);
+            this.textBox7.TabIndex = 13;
+            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -218,6 +227,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
             this.label6.Location = new System.Drawing.Point(824, 68);
+            this.label6.Location = new System.Drawing.Point(39, 79);
 =======
             this.label6.Location = new System.Drawing.Point(39, 79);
 >>>>>>> d37e71069a509bb415d892856cebd5882ea29fc4
@@ -234,6 +244,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
             this.label5.Location = new System.Drawing.Point(824, 102);
+            this.label5.Location = new System.Drawing.Point(39, 123);
 =======
             this.label5.Location = new System.Drawing.Point(39, 123);
 >>>>>>> d37e71069a509bb415d892856cebd5882ea29fc4
@@ -250,6 +261,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
             this.label4.Location = new System.Drawing.Point(437, 39);
+            this.label4.Location = new System.Drawing.Point(484, 36);
 =======
             this.label4.Location = new System.Drawing.Point(484, 36);
 >>>>>>> d37e71069a509bb415d892856cebd5882ea29fc4
@@ -404,6 +416,10 @@
             this.btnCapnhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapnhat.Name = "btnCapnhat";
             this.btnCapnhat.Size = new System.Drawing.Size(100, 27);
+            this.btnCapnhat.Location = new System.Drawing.Point(893, 112);
+            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCapnhat.Name = "btnCapnhat";
+            this.btnCapnhat.Size = new System.Drawing.Size(141, 29);
 =======
             this.btnCapnhat.Location = new System.Drawing.Point(893, 112);
             this.btnCapnhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -467,6 +483,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
             this.label9.Location = new System.Drawing.Point(43, 106);
+            this.label9.Location = new System.Drawing.Point(779, 36);
 =======
             this.label9.Location = new System.Drawing.Point(779, 36);
 >>>>>>> d37e71069a509bb415d892856cebd5882ea29fc4
@@ -609,6 +626,7 @@
 <<<<<<< HEAD
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThem.UseVisualStyleBackColor = true;
 =======
             this.btnThem.UseVisualStyleBackColor = true;
 >>>>>>> d37e71069a509bb415d892856cebd5882ea29fc4
