@@ -15,5 +15,13 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return sanPham.GetAllSanPham();
         }
+        public int UpdateSanPham(int masanpham, string tensanpham, int soluongbansitoithieu, int donvibansi, int donvibanle, string giabanle, string giabansi, int soluong,int soluongtontoithieu)
+        {
+            return sanPham.UpdateSanPham(masanpham,tensanpham, soluongbansitoithieu, donvibansi,donvibanle,giabanle,giabansi,soluong,soluongtontoithieu);
+        }
+        public DataTable GetDanhSachDonVi()
+        {
+            return sanPham.GetDanhSachDonVi();
+        }
     }
 }
