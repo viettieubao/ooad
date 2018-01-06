@@ -25,9 +25,9 @@ namespace QuanLiVatLieuXayDung.Model
         {
             string cmd = @"SELECT
        [MASANPHAM] as [Mã sản phẩm]
-      ,[DONVITINH] as [Đơn vị tính]
       ,(select tensanpham from SANPHAM sp where sp.MASANPHAM=spncc.MASANPHAM) as [Tên sản phẩm]
-  FROM [OOAD].[dbo].[SANPHAMNHACUNGCAP] spncc where MANHACUNGCAP ="+ manhacungcap;
+      ,[DONVITINH] as [Đơn vị tính]
+  FROM [OOAD].[dbo].[SANPHAMNHACUNGCAP] spncc where MANHACUNGCAP =" + manhacungcap;
             return Connection.getData(cmd);
         }
         public int UpdateNhacungcap(int manhacungcap, string tennhacungcap, string diachi, string sodienthoai, string email, string masothue, long congno)
@@ -71,10 +71,15 @@ namespace QuanLiVatLieuXayDung.Model
       FROM [OOAD].[dbo].[NHACUNGCAP] where TENNHACUNGCAP like N'%" + tennhacungcap + @"%' and ISACTIVE=1";
             return Connection.getData(cmd);
         }
-        //public int InsertSpncc(string tensanpham, string diachi, string sodienthoai, string email, string masothue, long congno)
-        //{
-        //    string cmd = @"insert into nhacungcap (te, diachi, sodienthoai, email, masothue, congno) values (N'" + tennhacungcap + "',N'" + diachi + "', N'" + sodienthoai + "',N'" + email + "',N'" + masothue + "', " + congno + ")";
-        //    return Connection.ExcuteNonQuery(cmd);
-        //}
+        public int UpdateSpncc(int manhacungcap, string tennhacungcap, string diachi, string sodienthoai, string email, string masothue, long congno)
+        {
+            string cmd = @"update nhacungcap set tennhacungcap=N'" + tennhacungcap + "', diachi=N'" + diachi + "', sodienthoai=N'" + sodienthoai + "', email=N'" + email + "', masothue=N'" + masothue + "', congno = " + congno + " where manhacungcap=" + manhacungcap;
+            return Connection.ExcuteNonQuery(cmd);
+        }
+        public int InsertSpncc(string tensanpham, string donvi)
+        {
+            string cmd = @"insert into sanphamnhacungcap (tensanpham, donvi) values (N'" + tensanpham + "',N'" + donvi + "')";
+            return Connection.ExcuteNonQuery(cmd);
+        }
     }
 }

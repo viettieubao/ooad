@@ -30,6 +30,7 @@ namespace QuanLiVatLieuXayDung.View
         }
         private void dtgNcc_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+
             txtMancc.Text = dtgNcc.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
             txtTenncc.Text = dtgNcc.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
             txtDiachi.Text = dtgNcc.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
