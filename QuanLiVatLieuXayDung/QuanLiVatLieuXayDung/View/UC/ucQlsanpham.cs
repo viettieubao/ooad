@@ -261,7 +261,7 @@ namespace QuanLiVatLieuXayDung.View
             {
                 dtpData.DataSource = sanPham.SearchTheoTenVaGia(txtTimTheoTen.Text, long.Parse(txtFrom.Text), long.Parse(txtTo.Text), flat);
             }
-            else
+            else if (CbTimTheoGia.CheckState==CheckState.Unchecked&&cbTimTheoTen.CheckState==CheckState.Unchecked)
             {
                 loadall();
             }

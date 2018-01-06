@@ -54,7 +54,7 @@ sp.SOLUONGBANSITOITHIEU as [Số lượng bán sỉ tối thiểu],
 sp.GIABANSI as [Giá bán sỉ],
 (select tendonvi from DONVI dv where sp.DONVIBANLE=dv.MADONVI) as [Đơn vị bán lẻ],
 sp.GIABANLE as [Giá bán lẻ], soluong as [Số lượng tồn], soluongtontoithieu as [Số lượng tồn tối thiểu]
-from SANPHAM sp where sp.tensanpham=N'Thép' and ISACTIVE =1";// + tensanpham+"'"; //like N'%" + tensanpham + @"%'";
+from SANPHAM sp where  ISACTIVE =1 and tensanpham like N'%" + tensanpham + @"%'";
             return Connection.getData(cmd);
         }
 

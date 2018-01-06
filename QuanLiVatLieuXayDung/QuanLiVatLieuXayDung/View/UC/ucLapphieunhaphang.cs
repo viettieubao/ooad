@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace QuanLiVatLieuXayDung.View.UC
 {
-    public partial class ucLapphieunhaphang : UserControl
+    public partial class ucLapPhieuNhapHang : UserControl
     {
-        public ucLapphieunhaphang()
+        public ucLapPhieuNhapHang()
         {
             InitializeComponent();
+        }
+
+        private void btnSuaSp_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
