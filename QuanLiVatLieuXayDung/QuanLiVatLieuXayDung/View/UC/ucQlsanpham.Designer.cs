@@ -1,6 +1,6 @@
 ﻿namespace QuanLiVatLieuXayDung.View
 {
-    partial class ucQlsanpham
+    partial class ucQLSanPham
     {
         /// <summary> 
         /// Required designer variable.
