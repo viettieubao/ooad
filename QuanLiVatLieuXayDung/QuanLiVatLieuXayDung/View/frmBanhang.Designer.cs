@@ -33,7 +33,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuTaikhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabcontrol = new System.Windows.Forms.TabControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,7 +45,7 @@
             // mnuThoat
             // 
             this.mnuThoat.Name = "mnuThoat";
-            this.mnuThoat.Size = new System.Drawing.Size(196, 22);
+            this.mnuThoat.Size = new System.Drawing.Size(152, 22);
             this.mnuThoat.Text = "Thoát";
             // 
             // tabPage1
@@ -70,8 +70,8 @@
             // mnuDoimatkhau
             // 
             this.mnuDoimatkhau.Name = "mnuDoimatkhau";
-            this.mnuDoimatkhau.Size = new System.Drawing.Size(196, 22);
-            this.mnuDoimatkhau.Text = "Đổi thông tin tài khoản";
+            this.mnuDoimatkhau.Size = new System.Drawing.Size(152, 22);
+            this.mnuDoimatkhau.Text = "Đổi mật khẩu";
             this.mnuDoimatkhau.Click += new System.EventHandler(this.mnuDoimatkhau_Click);
             // 
             // mnuLogout
@@ -80,14 +80,14 @@
             this.mnuLogout.Size = new System.Drawing.Size(57, 20);
             this.mnuLogout.Text = "Logout";
             // 
-            // menuToolStripMenuItem
+            // mnuTaikhoan
             // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuTaikhoan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuDoimatkhau,
             this.mnuThoat});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.menuToolStripMenuItem.Text = "Tài khoản";
+            this.mnuTaikhoan.Name = "mnuTaikhoan";
+            this.mnuTaikhoan.Size = new System.Drawing.Size(70, 20);
+            this.mnuTaikhoan.Text = "Tài khoản";
             // 
             // panel2
             // 
@@ -114,7 +114,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem,
+            this.mnuTaikhoan,
             this.mnuLogout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -148,7 +148,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolStripMenuItem mnuDoimatkhau;
         private System.Windows.Forms.ToolStripMenuItem mnuLogout;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuTaikhoan;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabcontrol;
         private System.Windows.Forms.MenuStrip menuStrip1;

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,7 +69,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -97,19 +95,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "thông tin hóa đơn";
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(940, 86);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 28);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Cập nhật";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label10
             // 
@@ -434,7 +419,7 @@
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // ucQLHoaDon
+            // ucQLPhieuThuTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -445,7 +430,7 @@
             this.Controls.Add(this.groupBox4);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ucQLHoaDon";
+            this.Name = "ucQLPhieuThuTien";
             this.Size = new System.Drawing.Size(1075, 486);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -489,7 +474,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

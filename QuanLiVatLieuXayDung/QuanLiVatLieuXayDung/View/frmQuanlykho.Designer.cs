@@ -33,13 +33,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuTaikhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabcontrol.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -98,32 +98,41 @@
             this.tabPage4.Text = "Quản lý sản phẩm";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // thoátToolStripMenuItem
+            // tabPage5
             // 
-            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.thoátToolStripMenuItem.Text = "Thoát";
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1000, 676);
+            this.tabPage5.TabIndex = 7;
+            this.tabPage5.Text = "Lập báo cáo tồn kho";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // đổiMậtKhẩuToolStripMenuItem
+            // mnuThoat
             // 
-            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi thông tin tài khoản";
+            this.mnuThoat.Name = "mnuThoat";
+            this.mnuThoat.Size = new System.Drawing.Size(152, 22);
+            this.mnuThoat.Text = "Thoát";
             // 
-            // logoutToolStripMenuItem
+            // mnuDoimatkhau
             // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.logoutToolStripMenuItem.Text = "Logout";
+            this.mnuDoimatkhau.Name = "mnuDoimatkhau";
+            this.mnuDoimatkhau.Size = new System.Drawing.Size(152, 22);
+            this.mnuDoimatkhau.Text = "Đổi mật khẩu";
             // 
-            // menuToolStripMenuItem
+            // mnuLogout
             // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đổiMậtKhẩuToolStripMenuItem,
-            this.thoátToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.menuToolStripMenuItem.Text = "Tài khoản";
+            this.mnuLogout.Name = "mnuLogout";
+            this.mnuLogout.Size = new System.Drawing.Size(57, 20);
+            this.mnuLogout.Text = "Logout";
+            // 
+            // mnuTaikhoan
+            // 
+            this.mnuTaikhoan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDoimatkhau,
+            this.mnuThoat});
+            this.mnuTaikhoan.Name = "mnuTaikhoan";
+            this.mnuTaikhoan.Size = new System.Drawing.Size(70, 20);
+            this.mnuTaikhoan.Text = "Tài khoản";
             // 
             // panel2
             // 
@@ -137,22 +146,13 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.mnuTaikhoan,
+            this.mnuLogout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1000, 676);
-            this.tabPage5.TabIndex = 7;
-            this.tabPage5.Text = "Lập báo cáo tồn kho";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // frmQuanlykho
             // 
@@ -179,10 +179,10 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuThoat;
+        private System.Windows.Forms.ToolStripMenuItem mnuDoimatkhau;
+        private System.Windows.Forms.ToolStripMenuItem mnuLogout;
+        private System.Windows.Forms.ToolStripMenuItem mnuTaikhoan;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TabPage tabPage5;
