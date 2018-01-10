@@ -323,6 +323,7 @@
             // 
             // dtgDanhsach
             // 
+            this.dtgDanhsach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDanhsach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgDanhsach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgDanhsach.GridColor = System.Drawing.SystemColors.Control;
