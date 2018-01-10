@@ -36,7 +36,8 @@ namespace QuanLiVatLieuXayDung.Model
         }
         public DataTable GetAllUser()
         {
-            string command = @"select manhanvien as 'STT', username as [Tên tài khoản], tennhanvien as [Tên nhân viên], bophan as [Bộ phận], diachi as [Địa chỉ], sodienthoai as [Số điện thoại] , ngaysinh as [Ngày sinh] from nhanvien where bophan<>'admin'";
+            string command = @"select manhanvien as 'STT', username as [Tên tài khoản], tennhanvien as [Tên nhân viên], bophan as [Bộ phận], diachi as [Địa chỉ], sodienthoai as [Số điện thoại] , ngaysinh as [Ngày sinh], isactive as [Trạng thái] from nhanvien
+                 where bophan<>'admin'";
             return Connection.getData(command);
         }
 

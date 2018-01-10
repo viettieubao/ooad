@@ -145,6 +145,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
             Enable();
             txtTenTaiKhoan.Enabled = false;
+            btnCapNhat.Enabled = true;
         }
 
 
@@ -152,11 +153,13 @@ namespace QuanLiVatLieuXayDung.View.UC
         private void btnActive_Click(object sender, EventArgs e)
         {
             user.Enable(txtTenTaiKhoan.Text);
+            loadall();
         }
 
         private void btnDeActive_Click(object sender, EventArgs e)
         {
             user.Disable(txtTenTaiKhoan.Text);
+            loadall();
         }
     }
 }
