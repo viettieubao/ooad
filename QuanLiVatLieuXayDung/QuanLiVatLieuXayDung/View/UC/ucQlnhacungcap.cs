@@ -41,7 +41,7 @@ namespace QuanLiVatLieuXayDung.View
         }
         private void Disable()
         {
-            btnThemmoi.Enabled = false;
+           
             btnCapnhat.Enabled = false;
             txtMancc.Enabled = false;
             txtTenncc.Enabled = false;
@@ -54,7 +54,7 @@ namespace QuanLiVatLieuXayDung.View
 
         private void Enable()
         {
-            btnThemmoi.Enabled = true;
+            
             btnCapnhat.Enabled = true;
             txtTenncc.Enabled = true;
             txtDiachi.Enabled = true;
@@ -83,7 +83,6 @@ namespace QuanLiVatLieuXayDung.View
         private void btnSua_Click(object sender, EventArgs e)
         {
             Enable();
-            btnThemmoi.Enabled = false;
             txtMancc.Enabled = false;
         }
         private void btnXoa_Click(object sender, EventArgs e)

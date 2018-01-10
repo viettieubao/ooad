@@ -1,6 +1,6 @@
-﻿namespace QuanLiVatLieuXayDung.View
+﻿namespace QuanLiVatLieuXayDung.View.UC
 {
-    partial class ucQLSanPham
+    partial class ucQlsanpham
     {
         /// <summary> 
         /// Required designer variable.
@@ -411,8 +411,8 @@
             // 
             // dtpData
             // 
-            this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtpData.Location = new System.Drawing.Point(8, 23);

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data;
 using QuanLiVatLieuXayDung.Controller;
 
-namespace QuanLiVatLieuXayDung.View
+namespace QuanLiVatLieuXayDung.View.UC
 {
     public partial class ucQlsanpham : UserControl
     {

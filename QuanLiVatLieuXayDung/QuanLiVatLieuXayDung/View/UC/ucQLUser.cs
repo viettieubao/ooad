@@ -147,10 +147,16 @@ namespace QuanLiVatLieuXayDung.View.UC
             txtTenTaiKhoan.Enabled = false;
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+
+
+        private void btnActive_Click(object sender, EventArgs e)
+        {
+            user.Enable(txtTenTaiKhoan.Text);
+        }
+
+        private void btnDeActive_Click(object sender, EventArgs e)
         {
             user.Disable(txtTenTaiKhoan.Text);
-            loadall();
         }
     }
 }

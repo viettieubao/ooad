@@ -36,7 +36,7 @@ namespace QuanLiVatLieuXayDung.Model
         }
         public DataTable GetAllUser()
         {
-            string command = @"select manhanvien as 'STT', username as [Tên tài khoản], tennhanvien as [Tên nhân viên], bophan as [Bộ phận], diachi as [Địa chỉ], sodienthoai as [Số điện thoại] , ngaysinh as [Ngày sinh] from nhanvien where bophan<>'admin' and isactive= 1";
+            string command = @"select manhanvien as 'STT', username as [Tên tài khoản], tennhanvien as [Tên nhân viên], bophan as [Bộ phận], diachi as [Địa chỉ], sodienthoai as [Số điện thoại] , ngaysinh as [Ngày sinh] from nhanvien where bophan<>'admin'";
             return Connection.getData(command);
         }
 
@@ -61,6 +61,11 @@ namespace QuanLiVatLieuXayDung.Model
         public int Disable(string username)
         {
             string cmd = @"UPDATE NHANVIEN SET ISACTIVE =0 WHERE USERNAME='" + username + "'";
+            return Connection.ExcuteNonQuery(cmd);
+        }
+        public int Enable(string username)
+        {
+            string cmd = @"UPDATE NHANVIEN SET ISACTIVE =1 WHERE USERNAME='" + username + "'";
             return Connection.ExcuteNonQuery(cmd);
         }
     }

@@ -92,5 +92,13 @@ namespace QuanLiVatLieuXayDung.Model
             string cmd = @"select tennhacungcap from nhacungcap";
             return Connection.getData(cmd);
         }
+
+        //public int InsertDanhSachSanPhamNhap(DataTable dt)
+        //{
+        //    int result = 0;
+        //    string cmd;
+
+        //    return result;
+        //} 
     }
 }

@@ -103,5 +103,6 @@ from SANPHAM sp where (sp.giabanle between " + from + " and " + to + ") and (sp.
             }
             return Connection.getData(cmd);
         }
+
     }
 }

@@ -45,7 +45,6 @@
             this.rdbTensp = new System.Windows.Forms.RadioButton();
             this.dtgSpncc = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnThemsp = new System.Windows.Forms.Button();
             this.btnSuasp = new System.Windows.Forms.Button();
             this.btnTimsp = new System.Windows.Forms.Button();
             this.btnXoasp = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCapnhat = new System.Windows.Forms.Button();
-            this.btnThemmoi = new System.Windows.Forms.Button();
             this.txtSdt = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -211,7 +209,6 @@
             this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.dtgSpncc);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.btnThemsp);
             this.groupBox4.Controls.Add(this.btnSuasp);
             this.groupBox4.Controls.Add(this.btnTimsp);
             this.groupBox4.Controls.Add(this.btnXoasp);
@@ -299,22 +296,11 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Tên sản phẩm";
             // 
-            // btnThemsp
-            // 
-            this.btnThemsp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemsp.Location = new System.Drawing.Point(566, 213);
-            this.btnThemsp.Name = "btnThemsp";
-            this.btnThemsp.Size = new System.Drawing.Size(86, 32);
-            this.btnThemsp.TabIndex = 21;
-            this.btnThemsp.Text = "Thêm";
-            this.btnThemsp.UseVisualStyleBackColor = true;
-            // 
             // btnSuasp
             // 
             this.btnSuasp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSuasp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuasp.Location = new System.Drawing.Point(658, 213);
+            this.btnSuasp.Location = new System.Drawing.Point(618, 213);
             this.btnSuasp.Name = "btnSuasp";
             this.btnSuasp.Size = new System.Drawing.Size(86, 32);
             this.btnSuasp.TabIndex = 22;
@@ -337,7 +323,7 @@
             // 
             this.btnXoasp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXoasp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoasp.Location = new System.Drawing.Point(750, 213);
+            this.btnXoasp.Location = new System.Drawing.Point(710, 213);
             this.btnXoasp.Name = "btnXoasp";
             this.btnXoasp.Size = new System.Drawing.Size(86, 32);
             this.btnXoasp.TabIndex = 23;
@@ -402,7 +388,6 @@
             // 
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.btnCapnhat);
-            this.groupBox2.Controls.Add(this.btnThemmoi);
             this.groupBox2.Controls.Add(this.txtSdt);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Controls.Add(this.txtEmail);
@@ -451,18 +436,6 @@
             this.btnCapnhat.Text = "Cập nhật";
             this.btnCapnhat.UseVisualStyleBackColor = true;
             this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
-            // 
-            // btnThemmoi
-            // 
-            this.btnThemmoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThemmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemmoi.Location = new System.Drawing.Point(719, 22);
-            this.btnThemmoi.Name = "btnThemmoi";
-            this.btnThemmoi.Size = new System.Drawing.Size(106, 34);
-            this.btnThemmoi.TabIndex = 17;
-            this.btnThemmoi.Text = "Thêm mới";
-            this.btnThemmoi.UseVisualStyleBackColor = true;
-            this.btnThemmoi.Click += new System.EventHandler(this.btnThemmoi_Click);
             // 
             // txtSdt
             // 
@@ -629,7 +602,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCapnhat;
-        private System.Windows.Forms.Button btnThemmoi;
         private System.Windows.Forms.TextBox txtSdt;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label7;
@@ -647,7 +619,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThemsp;
         private System.Windows.Forms.Button btnSuasp;
         private System.Windows.Forms.Button btnXoasp;
         private System.Windows.Forms.Label label1;

@@ -46,5 +46,9 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return users.Disable(username);
         }
+        public int Enable(string username)
+        {
+            return users.Enable(username);
+        }
     }
 }

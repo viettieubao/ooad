@@ -51,8 +51,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgDanhsach = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnActive = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnDeActive = new System.Windows.Forms.Button();
             this.btnThemNhanVien = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -338,8 +339,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnActive);
             this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.btnDeActive);
             this.panel1.Controls.Add(this.btnThemNhanVien);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 532);
@@ -348,12 +350,26 @@
             this.panel1.Size = new System.Drawing.Size(1075, 46);
             this.panel1.TabIndex = 7;
             // 
+            // btnActive
+            // 
+            this.btnActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActive.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActive.Location = new System.Drawing.Point(840, 9);
+            this.btnActive.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActive.Name = "btnActive";
+            this.btnActive.Size = new System.Drawing.Size(100, 28);
+            this.btnActive.TabIndex = 3;
+            this.btnActive.Text = "Active";
+            this.btnActive.UseVisualStyleBackColor = false;
+            this.btnActive.Click += new System.EventHandler(this.btnActive_Click);
+            // 
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSua.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Location = new System.Drawing.Point(828, 9);
+            this.btnSua.Location = new System.Drawing.Point(732, 9);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 28);
@@ -362,26 +378,26 @@
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // btnXoa
+            // btnDeActive
             // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Location = new System.Drawing.Point(936, 9);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 28);
-            this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnDeActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeActive.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDeActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeActive.Location = new System.Drawing.Point(948, 9);
+            this.btnDeActive.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeActive.Name = "btnDeActive";
+            this.btnDeActive.Size = new System.Drawing.Size(100, 28);
+            this.btnDeActive.TabIndex = 1;
+            this.btnDeActive.Text = "DeActive";
+            this.btnDeActive.UseVisualStyleBackColor = false;
+            this.btnDeActive.Click += new System.EventHandler(this.btnDeActive_Click);
             // 
             // btnThemNhanVien
             // 
             this.btnThemNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThemNhanVien.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThemNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemNhanVien.Location = new System.Drawing.Point(720, 9);
+            this.btnThemNhanVien.Location = new System.Drawing.Point(624, 9);
             this.btnThemNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemNhanVien.Name = "btnThemNhanVien";
             this.btnThemNhanVien.Size = new System.Drawing.Size(100, 28);
@@ -438,8 +454,9 @@
         private System.Windows.Forms.DataGridView dtgDanhsach;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThemNhanVien;
         private System.Windows.Forms.TextBox txtTim;
+        private System.Windows.Forms.Button btnDeActive;
+        private System.Windows.Forms.Button btnActive;
     }
 }
