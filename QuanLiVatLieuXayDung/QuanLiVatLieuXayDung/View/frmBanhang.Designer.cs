@@ -47,6 +47,7 @@
             this.mnuThoat.Name = "mnuThoat";
             this.mnuThoat.Size = new System.Drawing.Size(152, 22);
             this.mnuThoat.Text = "Thoát";
+            this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
             // tabPage1
             // 
@@ -79,6 +80,7 @@
             this.mnuLogout.Name = "mnuLogout";
             this.mnuLogout.Size = new System.Drawing.Size(57, 20);
             this.mnuLogout.Text = "Logout";
+            this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
             // 
             // mnuTaikhoan
             // 

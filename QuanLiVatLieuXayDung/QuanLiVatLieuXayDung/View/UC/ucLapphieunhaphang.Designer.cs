@@ -138,7 +138,6 @@
             this.label19.Size = new System.Drawing.Size(49, 16);
             this.label19.TabIndex = 24;
             this.label19.Text = "Còn lại";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label10
             // 
@@ -376,7 +375,6 @@
             this.btnThem.TabIndex = 61;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbbDonVi
             // 
@@ -407,7 +405,6 @@
             this.btnXoa.TabIndex = 62;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnSuaSp
             // 
@@ -582,7 +579,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucLapPhieuNhapHang";
             this.Size = new System.Drawing.Size(973, 688);
-            this.Load += new System.EventHandler(this.ucLapPhieuNhapHang_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

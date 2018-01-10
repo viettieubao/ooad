@@ -112,18 +112,21 @@
             this.mnuThoat.Name = "mnuThoat";
             this.mnuThoat.Size = new System.Drawing.Size(152, 22);
             this.mnuThoat.Text = "Thoát";
+            this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
             // mnuDoimatkhau
             // 
             this.mnuDoimatkhau.Name = "mnuDoimatkhau";
             this.mnuDoimatkhau.Size = new System.Drawing.Size(152, 22);
             this.mnuDoimatkhau.Text = "Đổi mật khẩu";
+            this.mnuDoimatkhau.Click += new System.EventHandler(this.mnuDoimatkhau_Click);
             // 
             // mnuLogout
             // 
             this.mnuLogout.Name = "mnuLogout";
             this.mnuLogout.Size = new System.Drawing.Size(57, 20);
             this.mnuLogout.Text = "Logout";
+            this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
             // 
             // mnuTaikhoan
             // 

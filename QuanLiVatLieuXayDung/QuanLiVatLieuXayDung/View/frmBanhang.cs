@@ -19,7 +19,35 @@ namespace QuanLiVatLieuXayDung.View
 
         private void mnuDoimatkhau_Click(object sender, EventArgs e)
         {
+            frmDoimatkhau frmDoimatkhau = new frmDoimatkhau();
+            frmDoimatkhau.ShowDialog();
+        }
 
+        private void mnuThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn thoát không?", "Quit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+            }
+        }
+
+        private void mnuLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn logout không?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.ShowDialog();
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+            }
         }
     }
 }
