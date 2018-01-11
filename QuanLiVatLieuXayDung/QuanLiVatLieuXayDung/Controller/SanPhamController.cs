@@ -48,6 +48,13 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return sanPham.SearchTheoTenVaGia(tensanpham, from, to, flat);
         }
-
+        public DataTable GetDvTheoSanPham(string tensanpham)
+        {
+            return sanPham.GetDvTheoSanPham(tensanpham);
+        }
+        public DataTable GetSanPhamTheoTen(string tensanpham)
+        {
+            return sanPham.GetSanPhamTheoTen(tensanpham);
+        }
     }
 }

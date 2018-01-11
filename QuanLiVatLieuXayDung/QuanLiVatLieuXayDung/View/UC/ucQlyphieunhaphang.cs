@@ -46,5 +46,10 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
 
         }
+
+        private void btnSuaSp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

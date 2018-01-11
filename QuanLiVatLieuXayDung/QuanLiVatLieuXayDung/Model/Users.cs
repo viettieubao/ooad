@@ -12,7 +12,7 @@ namespace QuanLiVatLieuXayDung.Model
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public int Bophan { get; set; }
+        public string Bophan { get; set; }
         public bool IsActive { get; set; }
         public string Tennhanvien { get; set; }
         public string Diachi { get; set; }
@@ -28,7 +28,7 @@ namespace QuanLiVatLieuXayDung.Model
             {
                 foreach (DataRow row in dt.Rows)
                 {
-                    Bophan = int.Parse(row["BOPHAN"].ToString());
+                    Bophan = row["BOPHAN"].ToString();
                 }
                 return true;
             }

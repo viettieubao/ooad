@@ -19,7 +19,7 @@ namespace QuanLiVatLieuXayDung.View
         }
 
         UserController userController = new UserController();
-        public static int rule { get; set; }
+        public static string rule { get; set; }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,8 +30,24 @@ namespace QuanLiVatLieuXayDung.View
             if (userController.GetUserByUserName(txtUsername.Text, txtPassword.Text) == true)
             {
                 rule = userController.rule;
-                Form1 form1 = new Form1();
-                form1.Show();
+                if (rule == "admin")
+                {
+                    Form1 form1 = new Form1();
+                    form1.Show(); 
+                }else
+                if (rule =="Nhân viên bán hàng")
+                {
+                    frmBanhang frmbanhang = new frmBanhang();
+                    frmbanhang.Show();
+                }else
+                    if(rule=="Nhân viên kế toán")
+                {
+                    frmKetoan frmKetoan = new frmKetoan();
+                    frmKetoan.Show();
+                }else if (rule =="Quản lí kho")
+                {
+                    frmQuanlykho frmQuanlykho = new frmQuanlykho();
+                }
                 this.Hide();
             }
             else

@@ -43,6 +43,10 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return nhacungcap.SearchTheoTenncc(tennhacungcap);
         }
+        public DataTable GetIDNCCTheoTen(string tenncc)
+        {
+            return nhacungcap.GetIDNCCTheoTen(tenncc);
+        }
     }
             
 }

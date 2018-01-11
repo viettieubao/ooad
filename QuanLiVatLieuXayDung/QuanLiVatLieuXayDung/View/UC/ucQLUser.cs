@@ -13,7 +13,7 @@ namespace QuanLiVatLieuXayDung.View.UC
 {
     public partial class ucQLUser : UserControl
     {
-        int rule { get; set; }
+        string rule { get; set; }
         UserController user;
         public ucQLUser()
         {

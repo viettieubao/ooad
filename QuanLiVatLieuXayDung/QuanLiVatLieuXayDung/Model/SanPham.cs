@@ -103,6 +103,16 @@ from SANPHAM sp where (sp.giabanle between " + from + " and " + to + ") and (sp.
             }
             return Connection.getData(cmd);
         }
-
+        public DataTable GetDvTheoSanPham(string tensanpham)
+        {
+            string cmd = @"select (select tendonvi from donvi dv where dv.madonvi=sp.donvibanle) as donvibanle
+            ,(select tendonvi from donvi dv where dv.madonvi=sp.donvibansi) as donvibansi from sanpham sp where tensanpham=N'"+tensanpham+"'";
+            return Connection.getData(cmd);
+        }
+        public DataTable GetSanPhamTheoTen(string tensanpham)
+        {
+            string cmd = @"select * from sanpham where tensanpham=N'"+tensanpham+"'";
+            return Connection.getData(cmd);
+        }
     }
 }

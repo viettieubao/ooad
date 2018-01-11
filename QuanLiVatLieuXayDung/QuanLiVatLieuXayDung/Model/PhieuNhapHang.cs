@@ -27,26 +27,29 @@ namespace QuanLiVatLieuXayDung.Model
             return Connection.ExcuteNonQuery(cmd);
         }
 
-        public int Insert(int nhacungcap, string nguoigiaohang, string sodienthoai, long tongtien,long sotiendathanhtoan, DateTime ngaynhap,DataTable danhsachsanpham)
+        public int Insert(string maphieugiaohang,int nhacungcap, string nguoigiaohang, string sodienthoai, long tongtien,long sotiendathanhtoan, DateTime ngaynhap,DataTable danhsachsanpham)
         {
             //them phiếu nhập vào bảng phiếu nhập
-            string cmd = @"insert into phieunhap (ngaynhap,manhacungcap,tongtienhoadon,sotiendathanhtoan,nguoigiaohang) values (ngaynhap=convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "',105)," + nhacungcap + ","+tongtien+","+sotiendathanhtoan+",N'"+nguoigiaohang+"')";
+            string cmd = @"insert into phieunhap (maphieugiaohang,ngaynhap,manhacungcap,tongtienhoadon,sotiendathanhtoan,nguoigiaohang,sodienthoai) values ("+maphieugiaohang+",convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "',105)," + nhacungcap + ","+tongtien+","+sotiendathanhtoan+",N'"+nguoigiaohang+"',"+sodienthoai+")";
 
 
             int result = Connection.ExcuteNonQuery(cmd);
 
+            if (result == 1)
             //get mã phiếu nhập vừa thêm
-            string cmd1 = @"select maphieunhap from phieunhap where nhacungcap=" + nhacungcap + ",tongtienhoadon=" + tongtien + ",sotiendathanhtoan=" + sotiendathanhtoan + ",ngaynhap=convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "',105),nguoigiaohang=N'" + nguoigiaohang + "'" ;
-
-            DataTable dt = Connection.getData(cmd1);
-            int maphieunhap = int.Parse(dt.Rows[0][0].ToString());
-
-            //thêm danh sách sản phẩm của phiếu nhập vào bảng chi tiết
-            foreach (DataRow row in danhsachsanpham.Rows)
             {
-                string cmd2 = @"insert into table chitietphieunhap(maphieunhap,masanpham,gianhap,soluongnhaptheochungtu,soluongnhapthucte,donvitinh) values (" + maphieunhap + "," + row[0] + "," + row[1] + "," + row[3] + "," + row[4] + ")";
-                Connection.ExcuteNonQuery(cmd2);
-            }   
+                string cmd1 = @"select maphieunhap from phieunhap where maphieugiaohang="+maphieugiaohang+" manhacungcap=" + nhacungcap + "and tongtienhoadon=" + tongtien + " and sotiendathanhtoan=" + sotiendathanhtoan + "and ngaynhap=convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "',105) and nguoigiaohang=N'" + nguoigiaohang + "'";
+
+                DataTable dt = Connection.getData(cmd1);
+                int maphieunhap = int.Parse(dt.Rows[0][0].ToString());
+
+                //thêm danh sách sản phẩm của phiếu nhập vào bảng chi tiết
+                foreach (DataRow row in danhsachsanpham.Rows)
+                {
+                    string cmd2 = @"insert into chitietphieunhap(maphieunhap,masanpham,gianhap,soluongnhaptheochungtu,soluongnhapthucte,donvitinh) values (" + maphieunhap + ",(select masanpham from sanpham where tensanpham=N'" + row[0] + "')," + row[4] +","+row[1]+ "," + row[2] + ",(select madonvi from donvi where tendonvi=N'" + row[3] +"'))";
+                   int tem = Connection.ExcuteNonQuery(cmd2);
+                }
+            }
             return result;
         }
         public DataTable Search(string nhacungcap,long tongtien, DateTime ngaynhap, int flat) //flat =1 tìm theo tên =2 tìm theo tổng tiền =3 tìm theo ngày nhập

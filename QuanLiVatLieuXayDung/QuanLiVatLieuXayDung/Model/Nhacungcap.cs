@@ -75,6 +75,11 @@ namespace QuanLiVatLieuXayDung.Model
         //{
         //    string cmd = @"insert into nhacungcap (te, diachi, sodienthoai, email, masothue, congno) values (N'" + tennhacungcap + "',N'" + diachi + "', N'" + sodienthoai + "',N'" + email + "',N'" + masothue + "', " + congno + ")";
         //    return Connection.ExcuteNonQuery(cmd);
-        //}
+        //}        
+        public DataTable GetIDNCCTheoTen(string tenncc)
+        {
+            string cmd = @"select manhacungcap from nhacungcap where tennhacungcap= N'"+tenncc+"'";
+            return Connection.getData(cmd);
+        }
     }
 }

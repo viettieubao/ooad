@@ -12,7 +12,7 @@ namespace QuanLiVatLieuXayDung.Controller
     class UserController
     {
         Users users = new Users();
-        public int rule { get; set; }
+        public string rule { get; set; }
         public bool GetUserByUserName(string user, string pass)
         {
 
