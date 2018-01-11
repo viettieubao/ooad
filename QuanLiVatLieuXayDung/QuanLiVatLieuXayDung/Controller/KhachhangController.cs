@@ -20,12 +20,9 @@ namespace QuanLiVatLieuXayDung.Controller
         }
         public int InsertKhachhang(string tenkhachhang, string sodienthoai, string diachi, string masothue, long congno)
         {
-            return khachhang.InsertKhachhang(tenkhachhang, sodienthoai, diachi, masothue, congno);
+            return khachhang.InsertKhachhang(tenkhachhang, sodienthoai, diachi, masothue);
         }
-        public int DeleteKhachhang(int makhachhang)
-        {
-            return khachhang.DeleteKhachhang(makhachhang);
-        }
+        
         public DataTable SearchTheoMakhachhang(int makhachhang)
         {
             return khachhang.SearchTheoMakhachhang(makhachhang);

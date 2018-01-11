@@ -17,8 +17,10 @@ namespace QuanLiVatLieuXayDung.View
         {
             InitializeComponent();
             nhacungcap = new NhacungcapController();
+            sanPham = new SanPhamController();
         }
         NhacungcapController nhacungcap;
+        SanPhamController sanPham;
         private void ucQlnhacungcap_Load(object sender, EventArgs e)
         {
             Disable();
@@ -37,11 +39,12 @@ namespace QuanLiVatLieuXayDung.View
             txtEmail.Text = dtgNcc.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
             txtMsthue.Text = dtgNcc.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
             txtCongno.Text = dtgNcc.Rows[e.RowIndex].Cells[6].FormattedValue.ToString();
-            if(txtMancc.Text!="") dtgSpncc.DataSource = nhacungcap.GetAllSpncc(int.Parse(txtMancc.Text));
+            if(txtMancc.Text!="")
+                dtgSpncc.DataSource = nhacungcap.GetAllSpncc(int.Parse(txtMancc.Text));
         }
         private void Disable()
         {
-           
+            btnThemNCC.Enabled = false;
             btnCapnhat.Enabled = false;
             txtMancc.Enabled = false;
             txtTenncc.Enabled = false;
@@ -54,7 +57,7 @@ namespace QuanLiVatLieuXayDung.View
 
         private void Enable()
         {
-            
+            btnThemNCC.Enabled = false;
             btnCapnhat.Enabled = true;
             txtTenncc.Enabled = true;
             txtDiachi.Enabled = true;
@@ -79,11 +82,14 @@ namespace QuanLiVatLieuXayDung.View
             Enable();
             Clear();
             btnCapnhat.Enabled = false;
+            btnThem.Enabled = true;
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
             Enable();
             txtMancc.Enabled = false;
+            btnThemNCC.Enabled = true;
+            btnCapnhat.Enabled = false;
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -156,6 +162,46 @@ namespace QuanLiVatLieuXayDung.View
                     dtgNcc.DataSource = nhacungcap.SearchTheoTenncc(txtTim.Text);
                 }
             }
+        }
+
+        private void btnThemNCC_Click(object sender, EventArgs e)
+        {
+            long congno;
+            if (txtCongno.Text == "") congno = 0;
+            else congno = long.Parse(txtCongno.Text);
+            int result = nhacungcap.InsertNhacungcap(txtTenncc.Text, txtDiachi.Text, txtSdt.Text, txtEmail.Text, txtMsthue.Text, congno);
+            if (result == 1)
+            {
+                MessageBox.Show("Thêm thành công");
+                Disable();
+                loadall();
+                btnThemNCC.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại");
+            }
+        }
+
+        private void btnThemSanPham_Click(object sender, EventArgs e)
+        {
+            if (sanPham.GetSanPhamTheoTen(cbbTensp.Text).Rows.Count != 0)
+            {
+                sanPham.UpdateNhaCC(int.Parse(txtMancc.Text), cbbTensp.Text);
+                MessageBox.Show("Thêm thành công", "Thành công");
+                if (txtMancc.Text != "")
+                    dtgSpncc.DataSource = nhacungcap.GetAllSpncc(int.Parse(txtMancc.Text));
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại", "Thất bại");
+            }
+
+        }
+
+        private void dtgSpncc_MouseEnter(object sender, EventArgs e)
+        {
+
         }
     }
 }

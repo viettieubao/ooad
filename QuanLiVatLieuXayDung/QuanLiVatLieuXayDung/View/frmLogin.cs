@@ -32,8 +32,8 @@ namespace QuanLiVatLieuXayDung.View
                 rule = userController.rule;
                 if (rule == "admin")
                 {
-                    Form1 form1 = new Form1();
-                    form1.Show(); 
+                    frmAdmin frm = new frmAdmin();
+                    frm.Show(); 
                 }else
                 if (rule =="Nhân viên bán hàng")
                 {
@@ -47,6 +47,7 @@ namespace QuanLiVatLieuXayDung.View
                 }else if (rule =="Quản lí kho")
                 {
                     frmQuanlykho frmQuanlykho = new frmQuanlykho();
+                    frmQuanlykho.Show();
                 }
                 this.Hide();
             }

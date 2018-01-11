@@ -32,6 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,7 +50,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\NhacungcapController.cs" />
+    <Compile Include="Controller\PhieuNhapController.cs" />
+    <Compile Include="Controller\SanPhamController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Model\HoaDon.cs" />
+    <Compile Include="Model\Nhacungcap.cs" />
+    <Compile Include="Model\PhieuNhapHang.cs" />
+    <Compile Include="Model\SanPham.cs" />
+    <Compile Include="View\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmBanhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmBanhang.designer.cs">
+      <DependentUpon>frmBanhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmDoimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDoimatkhau.designer.cs">
+      <DependentUpon>frmDoimatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmKetoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmKetoan.Designer.cs">
+      <DependentUpon>frmKetoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +97,102 @@
     </Compile>
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmNhanVienBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNhanVienBanHang.Designer.cs">
+      <DependentUpon>frmNhanVienBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmQuanlykho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmQuanlykho.Designer.cs">
+      <DependentUpon>frmQuanlykho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmThem.Designer.cs">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NhanVienKeToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NhanVienKeToan.Designer.cs">
+      <DependentUpon>NhanVienKeToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucLapbaocao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucLapbaocao.Designer.cs">
+      <DependentUpon>ucLapbaocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucLapBaoCaoCongNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucLapBaoCaoCongNo.Designer.cs">
+      <DependentUpon>ucLapBaoCaoCongNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucLapBaoCaoDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucLapBaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>ucLapBaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucLapBaoCaoTon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucLapBaoCaoTon.Designer.cs">
+      <DependentUpon>ucLapBaoCaoTon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucLapHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucLapHoaDon.Designer.cs">
+      <DependentUpon>ucLapHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucLapPhieuNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucLapPhieuNhapHang.Designer.cs">
+      <DependentUpon>ucLapPhieuNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucQLBaoCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucQLBaoCao.Designer.cs">
+      <DependentUpon>ucQLBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucQLKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucQLKhachHang.Designer.cs">
+      <DependentUpon>ucQLKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucQlnhacungcap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucQlnhacungcap.designer.cs">
+      <DependentUpon>ucQlnhacungcap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucQLPhieuThuTien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucQLPhieuThuTien.Designer.cs">
+      <DependentUpon>ucQLPhieuThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucQLPhieuXuatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucQLPhieuXuatHang.Designer.cs">
+      <DependentUpon>ucQLPhieuXuatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucQlyphieunhaphang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucQlyphieunhaphang.Designer.cs">
+      <DependentUpon>ucQlyphieunhaphang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UC\ucQLHoaDon.cs">
       <SubType>UserControl</SubType>
@@ -80,6 +212,30 @@
     <Compile Include="View\UC\ucQLUser.Designer.cs">
       <DependentUpon>ucQLUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UC\ucThayDoiQuyDinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucThayDoiQuyDinh.Designer.cs">
+      <DependentUpon>ucThayDoiQuyDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucThemDonViTinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucThemDonViTinh.Designer.cs">
+      <DependentUpon>ucThemDonViTinh.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmBanhang.resx">
+      <DependentUpon>frmBanhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDoimatkhau.resx">
+      <DependentUpon>frmDoimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmKetoan.resx">
+      <DependentUpon>frmKetoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +251,48 @@
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmQuanlykho.resx">
+      <DependentUpon>frmQuanlykho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmThem.resx">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucLapbaocao.resx">
+      <DependentUpon>ucLapbaocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucLapBaoCaoCongNo.resx">
+      <DependentUpon>ucLapBaoCaoCongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucLapBaoCaoDoanhThu.resx">
+      <DependentUpon>ucLapBaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucLapBaoCaoTon.resx">
+      <DependentUpon>ucLapBaoCaoTon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucLapHoaDon.resx">
+      <DependentUpon>ucLapHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucLapPhieuNhapHang.resx">
+      <DependentUpon>ucLapPhieuNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucQLBaoCao.resx">
+      <DependentUpon>ucQLBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucQLKhachHang.resx">
+      <DependentUpon>ucQLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucQlnhacungcap.resx">
+      <DependentUpon>ucQlnhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucQLPhieuThuTien.resx">
+      <DependentUpon>ucQLPhieuThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucQLPhieuXuatHang.resx">
+      <DependentUpon>ucQLPhieuXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucQlyphieunhaphang.resx">
+      <DependentUpon>ucQlyphieunhaphang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UC\ucQLHoaDon.resx">
       <DependentUpon>ucQLHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +302,13 @@
     <EmbeddedResource Include="View\UC\ucQLUser.resx">
       <DependentUpon>ucQLUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucThayDoiQuyDinh.resx">
+      <DependentUpon>ucThayDoiQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucThemDonViTinh.resx">
+      <DependentUpon>ucThemDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

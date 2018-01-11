@@ -69,5 +69,10 @@ namespace QuanLiVatLieuXayDung.Model
             string cmd = @"UPDATE NHANVIEN SET ISACTIVE =1 WHERE USERNAME='" + username + "'";
             return Connection.ExcuteNonQuery(cmd);
         }
+        public int ResetMakhau(string tentaikhoan)
+        {
+            string cmd = "update nhanvien set password = '123456' where username='"+tentaikhoan+"'";
+            return Connection.ExcuteNonQuery(cmd);
+        }
     }
 }

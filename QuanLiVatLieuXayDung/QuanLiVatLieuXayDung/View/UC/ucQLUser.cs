@@ -161,5 +161,11 @@ namespace QuanLiVatLieuXayDung.View.UC
             user.Disable(txtTenTaiKhoan.Text);
             loadall();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            user.ResetMakhau(txtTenTaiKhoan.Text);
+            MessageBox.Show("Đã reset về mật khẩu mặc định là 123456.");
+        }
     }
 }

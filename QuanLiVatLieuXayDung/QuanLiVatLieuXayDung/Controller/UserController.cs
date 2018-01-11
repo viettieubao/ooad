@@ -50,5 +50,9 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return users.Enable(username);
         }
+        public int ResetMakhau(string tentaikhoan)
+        {
+            return users.ResetMakhau(tentaikhoan);
+        }
     }
 }

@@ -16,9 +16,9 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return phieuNhap.GetAllPhieuNhap();
         }
-        public int InsertPhieuNhap(int nhacungcap, string nguoigiaohang, string sodienthoai, long tongtien, long sotiendathanhtoan, DateTime ngaynhap,DataTable danhsachsanpham)
+        public int InsertPhieuNhap(string maphieugiaohang,int nhacungcap, string nguoigiaohang, string sodienthoai, long tongtien, long sotiendathanhtoan, DateTime ngaynhap,DataTable danhsachsanpham)
         {
-            return phieuNhap.Insert(nhacungcap, nguoigiaohang, sodienthoai, tongtien,  sotiendathanhtoan, ngaynhap,danhsachsanpham);
+            return phieuNhap.Insert(maphieugiaohang,nhacungcap, nguoigiaohang, sodienthoai, tongtien,  sotiendathanhtoan, ngaynhap,danhsachsanpham);
         }
         public int Update(int maphieunhap, string nguoigiaohang, string sodienthoai, long tongtien,  long sotiendathanhtoan, DateTime ngaynhap)
         {

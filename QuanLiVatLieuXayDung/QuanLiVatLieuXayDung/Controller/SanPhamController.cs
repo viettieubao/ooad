@@ -56,5 +56,9 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return sanPham.GetSanPhamTheoTen(tensanpham);
         }
+        public int UpdateNhaCC(int manhacungcap,string tensanpham)
+        {
+            return sanPham.UpdateNhaCC(manhacungcap,tensanpham);
+        }
     }
 }

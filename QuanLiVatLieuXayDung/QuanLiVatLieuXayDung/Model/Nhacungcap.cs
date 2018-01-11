@@ -25,9 +25,9 @@ namespace QuanLiVatLieuXayDung.Model
         {
             string cmd = @"SELECT
        [MASANPHAM] as [Mã sản phẩm]
-      ,[DONVITINH] as [Đơn vị tính]
-      ,(select tensanpham from SANPHAM sp where sp.MASANPHAM=spncc.MASANPHAM) as [Tên sản phẩm]
-  FROM [OOAD].[dbo].[SANPHAMNHACUNGCAP] spncc where MANHACUNGCAP ="+ manhacungcap;
+      , tensanpham as [Tên sản phẩm]
+      ,(select tendonvitinh from donvi dv where dv.madonvitinh=sp.madonvitinhbansi) as [Đơn vị tính]
+  FROM SANPHAM sp where MANHACUNGCAP =" + manhacungcap;
             return Connection.getData(cmd);
         }
         public int UpdateNhacungcap(int manhacungcap, string tennhacungcap, string diachi, string sodienthoai, string email, string masothue, long congno)

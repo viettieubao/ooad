@@ -40,18 +40,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbbTensp = new System.Windows.Forms.ComboBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.rdbMasp = new System.Windows.Forms.RadioButton();
-            this.rdbTensp = new System.Windows.Forms.RadioButton();
             this.dtgSpncc = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSuasp = new System.Windows.Forms.Button();
-            this.btnTimsp = new System.Windows.Forms.Button();
             this.btnXoasp = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTimsp = new System.Windows.Forms.TextBox();
             this.txtMasp = new System.Windows.Forms.TextBox();
             this.txtDonvi = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -71,11 +66,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnThemNCC = new System.Windows.Forms.Button();
+            this.btnThemSp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNcc)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSpncc)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -206,16 +202,14 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cbbTensp);
-            this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.dtgSpncc);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.btnSuasp);
-            this.groupBox4.Controls.Add(this.btnTimsp);
+            this.groupBox4.Controls.Add(this.btnThemSp);
             this.groupBox4.Controls.Add(this.btnXoasp);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.txtTimsp);
             this.groupBox4.Controls.Add(this.txtMasp);
             this.groupBox4.Controls.Add(this.txtDonvi);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -231,46 +225,10 @@
             // 
             this.cbbTensp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbTensp.FormattingEnabled = true;
-            this.cbbTensp.Location = new System.Drawing.Point(618, 111);
+            this.cbbTensp.Location = new System.Drawing.Point(631, 40);
             this.cbbTensp.Name = "cbbTensp";
             this.cbbTensp.Size = new System.Drawing.Size(218, 24);
             this.cbbTensp.TabIndex = 27;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.rdbMasp);
-            this.groupBox5.Controls.Add(this.rdbTensp);
-            this.groupBox5.Location = new System.Drawing.Point(516, 51);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(320, 45);
-            this.groupBox5.TabIndex = 26;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Tìm theo";
-            // 
-            // rdbMasp
-            // 
-            this.rdbMasp.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbMasp.AutoSize = true;
-            this.rdbMasp.Checked = true;
-            this.rdbMasp.Location = new System.Drawing.Point(25, 18);
-            this.rdbMasp.Name = "rdbMasp";
-            this.rdbMasp.Size = new System.Drawing.Size(111, 21);
-            this.rdbMasp.TabIndex = 25;
-            this.rdbMasp.TabStop = true;
-            this.rdbMasp.Text = "Mã sản phẩm";
-            this.rdbMasp.UseVisualStyleBackColor = true;
-            // 
-            // rdbTensp
-            // 
-            this.rdbTensp.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbTensp.AutoSize = true;
-            this.rdbTensp.Location = new System.Drawing.Point(173, 18);
-            this.rdbTensp.Name = "rdbTensp";
-            this.rdbTensp.Size = new System.Drawing.Size(117, 21);
-            this.rdbTensp.TabIndex = 24;
-            this.rdbTensp.Text = "Tên sản phẩm";
-            this.rdbTensp.UseVisualStyleBackColor = true;
             // 
             // dtgSpncc
             // 
@@ -282,15 +240,17 @@
             this.dtgSpncc.Location = new System.Drawing.Point(6, 22);
             this.dtgSpncc.Name = "dtgSpncc";
             this.dtgSpncc.ReadOnly = true;
+            this.dtgSpncc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgSpncc.Size = new System.Drawing.Size(504, 223);
             this.dtgSpncc.TabIndex = 0;
+            this.dtgSpncc.MouseEnter += new System.EventHandler(this.dtgSpncc_MouseEnter);
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(513, 114);
+            this.label4.Location = new System.Drawing.Point(526, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 17);
             this.label4.TabIndex = 12;
@@ -300,30 +260,18 @@
             // 
             this.btnSuasp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSuasp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuasp.Location = new System.Drawing.Point(618, 213);
+            this.btnSuasp.Location = new System.Drawing.Point(683, 142);
             this.btnSuasp.Name = "btnSuasp";
             this.btnSuasp.Size = new System.Drawing.Size(86, 32);
             this.btnSuasp.TabIndex = 22;
             this.btnSuasp.Text = "Sửa";
             this.btnSuasp.UseVisualStyleBackColor = true;
             // 
-            // btnTimsp
-            // 
-            this.btnTimsp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTimsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimsp.Location = new System.Drawing.Point(761, 22);
-            this.btnTimsp.Name = "btnTimsp";
-            this.btnTimsp.Size = new System.Drawing.Size(75, 23);
-            this.btnTimsp.TabIndex = 1;
-            this.btnTimsp.Text = "Tìm";
-            this.btnTimsp.UseVisualStyleBackColor = true;
-            this.btnTimsp.Click += new System.EventHandler(this.btnTim_Click);
-            // 
             // btnXoasp
             // 
             this.btnXoasp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXoasp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoasp.Location = new System.Drawing.Point(710, 213);
+            this.btnXoasp.Location = new System.Drawing.Point(775, 142);
             this.btnXoasp.Name = "btnXoasp";
             this.btnXoasp.Size = new System.Drawing.Size(86, 32);
             this.btnXoasp.TabIndex = 23;
@@ -343,7 +291,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(513, 173);
+            this.label10.Location = new System.Drawing.Point(526, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 17);
             this.label10.TabIndex = 12;
@@ -354,24 +302,16 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(513, 144);
+            this.label9.Location = new System.Drawing.Point(526, 73);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 17);
             this.label9.TabIndex = 12;
             this.label9.Text = "Mã sản phẩm";
             // 
-            // txtTimsp
-            // 
-            this.txtTimsp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimsp.Location = new System.Drawing.Point(516, 22);
-            this.txtTimsp.Name = "txtTimsp";
-            this.txtTimsp.Size = new System.Drawing.Size(231, 23);
-            this.txtTimsp.TabIndex = 11;
-            // 
             // txtMasp
             // 
             this.txtMasp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMasp.Location = new System.Drawing.Point(618, 141);
+            this.txtMasp.Location = new System.Drawing.Point(631, 70);
             this.txtMasp.Name = "txtMasp";
             this.txtMasp.Size = new System.Drawing.Size(218, 23);
             this.txtMasp.TabIndex = 11;
@@ -379,13 +319,14 @@
             // txtDonvi
             // 
             this.txtDonvi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDonvi.Location = new System.Drawing.Point(618, 170);
+            this.txtDonvi.Location = new System.Drawing.Point(631, 99);
             this.txtDonvi.Name = "txtDonvi";
             this.txtDonvi.Size = new System.Drawing.Size(218, 23);
             this.txtDonvi.TabIndex = 11;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnThemNCC);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.btnCapnhat);
             this.groupBox2.Controls.Add(this.txtSdt);
@@ -429,7 +370,7 @@
             // 
             this.btnCapnhat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCapnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapnhat.Location = new System.Drawing.Point(719, 70);
+            this.btnCapnhat.Location = new System.Drawing.Point(743, 96);
             this.btnCapnhat.Name = "btnCapnhat";
             this.btnCapnhat.Size = new System.Drawing.Size(106, 34);
             this.btnCapnhat.TabIndex = 18;
@@ -570,6 +511,30 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên nhà cung cấp";
             // 
+            // btnThemNCC
+            // 
+            this.btnThemNCC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThemNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemNCC.Location = new System.Drawing.Point(618, 96);
+            this.btnThemNCC.Name = "btnThemNCC";
+            this.btnThemNCC.Size = new System.Drawing.Size(106, 34);
+            this.btnThemNCC.TabIndex = 20;
+            this.btnThemNCC.Text = "Thêm ";
+            this.btnThemNCC.UseVisualStyleBackColor = true;
+            this.btnThemNCC.Click += new System.EventHandler(this.btnThemNCC_Click);
+            // 
+            // btnThemSp
+            // 
+            this.btnThemSp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemSp.Location = new System.Drawing.Point(591, 142);
+            this.btnThemSp.Name = "btnThemSp";
+            this.btnThemSp.Size = new System.Drawing.Size(86, 32);
+            this.btnThemSp.TabIndex = 23;
+            this.btnThemSp.Text = "Thêm";
+            this.btnThemSp.UseVisualStyleBackColor = true;
+            this.btnThemSp.Click += new System.EventHandler(this.btnThemSanPham_Click);
+            // 
             // ucQlnhacungcap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,8 +548,6 @@
             this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSpncc)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -626,17 +589,14 @@
         private System.Windows.Forms.RadioButton rdbTenncc;
         private System.Windows.Forms.RadioButton rdbMancc;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btnTimsp;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTimsp;
         private System.Windows.Forms.TextBox txtDonvi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMasp;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton rdbTensp;
-        private System.Windows.Forms.RadioButton rdbMasp;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbbTensp;
+        private System.Windows.Forms.Button btnThemNCC;
+        private System.Windows.Forms.Button btnThemSp;
     }
 }

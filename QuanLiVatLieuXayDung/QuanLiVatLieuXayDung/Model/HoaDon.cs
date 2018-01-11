@@ -19,6 +19,10 @@ namespace QuanLiVatLieuXayDung.Model
             string cmd = @"";
             return Connection.getData(cmd);
         }
-
+        public int InsertHoaDon(string tenkhachhang, string sodienthoai, string diachi,DateTime ngaylap,DataTable sanpham)
+        {
+            string cmd = @"";
+            return Connection.ExcuteNonQuery(cmd);
+        }
     }
 }

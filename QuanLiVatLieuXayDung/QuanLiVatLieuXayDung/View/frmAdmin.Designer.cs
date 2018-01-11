@@ -43,13 +43,13 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.ucThemDonViTinh1 = new QuanLiVatLieuXayDung.View.UC.ucThemDonViTinh();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.ucThayDoiQuyDinh1 = new QuanLiVatLieuXayDung.View.UC.ucThayDoiQuyDinh();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuTaikhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
-            this.ucThayDoiQuyDinh1 = new QuanLiVatLieuXayDung.View.UC.ucThayDoiQuyDinh();
             this.tabcontrol.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -233,6 +233,17 @@
             this.tabPage8.UseVisualStyleBackColor = true;
             this.tabPage8.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // ucThayDoiQuyDinh1
+            // 
+            this.ucThayDoiQuyDinh1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucThayDoiQuyDinh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.ucThayDoiQuyDinh1.Location = new System.Drawing.Point(3, 3);
+            this.ucThayDoiQuyDinh1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucThayDoiQuyDinh1.Name = "ucThayDoiQuyDinh1";
+            this.ucThayDoiQuyDinh1.Size = new System.Drawing.Size(994, 670);
+            this.ucThayDoiQuyDinh1.TabIndex = 0;
+            this.ucThayDoiQuyDinh1.Load += new System.EventHandler(this.ucThayDoiQuyDinh1_Load);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.tabcontrol);
@@ -283,17 +294,6 @@
             this.mnuLogout.Size = new System.Drawing.Size(57, 20);
             this.mnuLogout.Text = "Logout";
             this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
-            // 
-            // ucThayDoiQuyDinh1
-            // 
-            this.ucThayDoiQuyDinh1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucThayDoiQuyDinh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.ucThayDoiQuyDinh1.Location = new System.Drawing.Point(3, 3);
-            this.ucThayDoiQuyDinh1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucThayDoiQuyDinh1.Name = "ucThayDoiQuyDinh1";
-            this.ucThayDoiQuyDinh1.Size = new System.Drawing.Size(994, 670);
-            this.ucThayDoiQuyDinh1.TabIndex = 0;
-            this.ucThayDoiQuyDinh1.Load += new System.EventHandler(this.ucThayDoiQuyDinh1_Load);
             // 
             // frmAdmin
             // 

@@ -66,6 +66,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         private void Disable()
         {
             btnThemMoiSP.Enabled = false;
+            btnCapnhat.Enabled = false;
             txtGiaBanLe.Enabled = false;
             txtGiaBanSi.Enabled = false;
             txtMaSanPham.Enabled = false;
@@ -169,13 +170,12 @@ namespace QuanLiVatLieuXayDung.View.UC
                     MessageBox.Show("Cập nhật thành công");
                     Disable();
                     loadall();
+                   
                 }
                 else
                 {
                     MessageBox.Show("Cập nhật thất bại");
                 }
-
-
             }
 
         }
@@ -183,6 +183,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         private void btnSua_Click(object sender, EventArgs e)
         {
             Enable();
+            btnCapnhat.Enabled = true;
             txtMaSanPham.Enabled = false;
         }
         int flat = 0; // cờ hiệu tìm kiếm

@@ -13,9 +13,9 @@ namespace QuanLiVatLieuXayDung.Model
         {
             string cmd = @"select sp.MASANPHAM as [STT], sp.TENSANPHAM as [Tên sản phẩm],
 sp.SOLUONGBANSITOITHIEU as [Số lượng bán sỉ tối thiểu], 
-(select tendonvi from DONVI dv where sp.DONVIBANSI= dv.MADONVI) as [Đơn vị bán sỉ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANSI= dv.MADONVITINH) as [Đơn vị bán sỉ],
 sp.GIABANSI as [Giá bán sỉ],
-(select tendonvi from DONVI dv where sp.DONVIBANLE=dv.MADONVI) as [Đơn vị bán lẻ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANLE=dv.MADONVITINH) as [Đơn vị bán lẻ],
 sp.GIABANLE as [Giá bán lẻ], soluong as [Số lượng tồn], soluongtontoithieu as [Số lượng tồn tối thiểu]
 from SANPHAM sp where ISACTIVE =1 ";
             return Connection.getData(cmd);
@@ -23,20 +23,20 @@ from SANPHAM sp where ISACTIVE =1 ";
 
         public int UpdateSanPham(int masanpham,string tensanpham, int soluongbansitoithieu, int donvibansi, int donvibanle,long giabanle, long giabansi,int soluong,int soluongtontoithieu)
         {
-            string cmd = @"update sanpham set tensanpham=N'"+tensanpham+"', soluongbansitoithieu="+ soluongbansitoithieu + ",donvibansi="+donvibansi+",donvibanle="+donvibanle+",giabanle="+giabanle+",giabansi="+giabansi+",soluong="+soluong+",soluongtontoithieu="+soluongtontoithieu +"where masanpham="+masanpham;
+            string cmd = @"update sanpham set tensanpham=N'"+tensanpham+"', soluongbansitoithieu="+ soluongbansitoithieu + ",madonvitinhbansi="+donvibansi+",madonvitinhbanle="+donvibanle+",giabanle="+giabanle+",giabansi="+giabansi+",soluong="+soluong+",soluongtontoithieu="+soluongtontoithieu +"where masanpham="+masanpham;
             return Connection.ExcuteNonQuery(cmd);
         }
 
         public DataTable GetDanhSachDonVi()
         {
-            string cmd = @"select tendonvi from Donvi";
+            string cmd = @"select tendonvitinh from Donvi";
             return Connection.getData(cmd);
         }
 
         public int InsertSanPham(string tensanpham, int soluongbansitoithieu, int donvibansi, int donvibanle, long giabanle, long giabansi, int soluong, int soluongtontoithieu)
         {
 
-            string cmd = @"insert into sanpham (tensanpham,soluongbansitoithieu,donvibansi,donvibanle,giabansi,giabanle,soluong,soluongtontoithieu) values (N'"+ tensanpham+"',"+soluongbansitoithieu+","+donvibansi+","+donvibanle+","+giabansi+","+giabanle+","+soluong+","+soluongtontoithieu+")";
+            string cmd = @"insert into sanpham (tensanpham,soluongbansitoithieu,madonvitinhbansi,madonvitinhbanle,giabansi,giabanle,soluong,soluongtontoithieu) values (N'"+ tensanpham+"',"+soluongbansitoithieu+","+donvibansi+","+donvibanle+","+giabansi+","+giabanle+","+soluong+","+soluongtontoithieu+")";
             return Connection.ExcuteNonQuery(cmd);
         }
 
@@ -50,9 +50,9 @@ from SANPHAM sp where ISACTIVE =1 ";
         {
             string cmd = @"select sp.MASANPHAM as [STT], sp.TENSANPHAM as [Tên sản phẩm],
 sp.SOLUONGBANSITOITHIEU as [Số lượng bán sỉ tối thiểu], 
-(select tendonvi from DONVI dv where sp.DONVIBANSI= dv.MADONVI) as [Đơn vị bán sỉ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANSI= dv.MADONVITINH) as [Đơn vị bán sỉ],
 sp.GIABANSI as [Giá bán sỉ],
-(select tendonvi from DONVI dv where sp.DONVIBANLE=dv.MADONVI) as [Đơn vị bán lẻ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANLE=dv.MADONVITINH) as [Đơn vị bán lẻ],
 sp.GIABANLE as [Giá bán lẻ], soluong as [Số lượng tồn], soluongtontoithieu as [Số lượng tồn tối thiểu]
 from SANPHAM sp where  ISACTIVE =1 and tensanpham like N'%" + tensanpham + @"%'";
             return Connection.getData(cmd);
@@ -63,16 +63,16 @@ from SANPHAM sp where  ISACTIVE =1 and tensanpham like N'%" + tensanpham + @"%'"
             string cmd;
             if (flat==1) cmd= @"select sp.MASANPHAM as [STT], sp.TENSANPHAM as [Tên sản phẩm],
 sp.SOLUONGBANSITOITHIEU as [Số lượng bán sỉ tối thiểu], 
-(select tendonvi from DONVI dv where sp.DONVIBANSI= dv.MADONVI) as [Đơn vị bán sỉ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANSI= dv.MADONVITINH) as [Đơn vị bán sỉ],
 sp.GIABANSI as [Giá bán sỉ],
-(select tendonvi from DONVI dv where sp.DONVIBANLE=dv.MADONVI) as [Đơn vị bán lẻ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANLE=dv.MADONVITINH) as [Đơn vị bán lẻ],
 sp.GIABANLE as [Giá bán lẻ], soluong as [Số lượng tồn], soluongtontoithieu as [Số lượng tồn tối thiểu]
 from SANPHAM sp where sp.giabansi between "+from+" and "+to + " and ISACTIVE =1";
             else cmd = @"select sp.MASANPHAM as [STT], sp.TENSANPHAM as [Tên sản phẩm],
 sp.SOLUONGBANSITOITHIEU as [Số lượng bán sỉ tối thiểu], 
-(select tendonvi from DONVI dv where sp.DONVIBANSI= dv.MADONVI) as [Đơn vị bán sỉ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANSI= dv.MADONVITINH) as [Đơn vị bán sỉ],
 sp.GIABANSI as [Giá bán sỉ],
-(select tendonvi from DONVI dv where sp.DONVIBANLE=dv.MADONVI) as [Đơn vị bán lẻ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANLE=dv.MADONVITINH) as [Đơn vị bán lẻ],
 sp.GIABANLE as [Giá bán lẻ], soluong as [Số lượng tồn], soluongtontoithieu as [Số lượng tồn tối thiểu]
 from SANPHAM sp where sp.giabanle between " + from + " and " + to + " and ISACTIVE =1";
             return Connection.getData(cmd);
@@ -85,9 +85,9 @@ from SANPHAM sp where sp.giabanle between " + from + " and " + to + " and ISACTI
             {
                 cmd= @"select sp.MASANPHAM as [STT], sp.TENSANPHAM as [Tên sản phẩm],
 sp.SOLUONGBANSITOITHIEU as [Số lượng bán sỉ tối thiểu], 
-(select tendonvi from DONVI dv where sp.DONVIBANSI= dv.MADONVI) as [Đơn vị bán sỉ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANSI= dv.MADONVITINH) as [Đơn vị bán sỉ],
 sp.GIABANSI as [Giá bán sỉ],
-(select tendonvi from DONVI dv where sp.DONVIBANLE=dv.MADONVI) as [Đơn vị bán lẻ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANLE=dv.MADONVITINH) as [Đơn vị bán lẻ],
 sp.GIABANLE as [Giá bán lẻ], soluong as [Số lượng tồn], soluongtontoithieu as [Số lượng tồn tối thiểu]
 from SANPHAM sp where (sp.giabansi between " + from + " and " + to+ ") and (sp.tensanpham like N'%" + tensanpham + @"%') and ISACTIVE = 1";
             }
@@ -95,9 +95,9 @@ from SANPHAM sp where (sp.giabansi between " + from + " and " + to+ ") and (sp.t
             {
                 cmd= @"select sp.MASANPHAM as [STT], sp.TENSANPHAM as [Tên sản phẩm],
 sp.SOLUONGBANSITOITHIEU as [Số lượng bán sỉ tối thiểu], 
-(select tendonvi from DONVI dv where sp.DONVIBANSI= dv.MADONVI) as [Đơn vị bán sỉ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANSI= dv.MADONVITINH) as [Đơn vị bán sỉ],
 sp.GIABANSI as [Giá bán sỉ],
-(select tendonvi from DONVI dv where sp.DONVIBANLE=dv.MADONVI) as [Đơn vị bán lẻ],
+(select tendonvitinh from DONVI dv where sp.MADONVITINHBANLE=dv.MADONVITINH) as [Đơn vị bán lẻ],
 sp.GIABANLE as [Giá bán lẻ], soluong as [Số lượng tồn], soluongtontoithieu as [Số lượng tồn tối thiểu]
 from SANPHAM sp where (sp.giabanle between " + from + " and " + to + ") and (sp.tensanpham like N'%" + tensanpham + @"%') and ISACTIVE =1";
             }
@@ -105,14 +105,20 @@ from SANPHAM sp where (sp.giabanle between " + from + " and " + to + ") and (sp.
         }
         public DataTable GetDvTheoSanPham(string tensanpham)
         {
-            string cmd = @"select (select tendonvi from donvi dv where dv.madonvi=sp.donvibanle) as donvibanle
-            ,(select tendonvi from donvi dv where dv.madonvi=sp.donvibansi) as donvibansi from sanpham sp where tensanpham=N'"+tensanpham+"'";
+            string cmd = @"select (select tendonvitinh from donvi dv where dv.madonviTINH=sp.madonvitinhbanle) as donvibanle
+            ,(select tendonvitinh from donvi dv where dv.madonviTINH=sp.madonvitinhbansi) as donvibansi from sanpham sp where tensanpham=N'"+tensanpham+"'";
             return Connection.getData(cmd);
         }
         public DataTable GetSanPhamTheoTen(string tensanpham)
         {
-            string cmd = @"select * from sanpham where tensanpham=N'"+tensanpham+"'";
+            string cmd = @"select masanpham,giabansi,giabanle, (select tendonvitinh from donvi dv where dv.madonvitinh= sp.madonvitinhbansi), (select tendonvitinh from donvi dv where dv.madonvitinh= sp.madonvitinhbanle)from sanpham sp where tensanpham=N'" + tensanpham+"'";
             return Connection.getData(cmd);
         }
+        public int UpdateNhaCC(int manhacungcap, string tensanpham)
+        {
+            string cmd = @"update sanpham set manhacungcap="+manhacungcap +"where tensanpham=N'"+tensanpham+"'";
+            return Connection.ExcuteNonQuery(cmd);
+        }
+
     }
 }

@@ -55,6 +55,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnDeActive = new System.Windows.Forms.Button();
             this.btnThemNhanVien = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -340,6 +341,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.btnActive);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnDeActive);
@@ -407,6 +409,20 @@
             this.btnThemNhanVien.UseVisualStyleBackColor = false;
             this.btnThemNhanVien.Click += new System.EventHandler(this.btnThemNhanVien_Click);
             // 
+            // btnReset
+            // 
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReset.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Location = new System.Drawing.Point(516, 9);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(100, 28);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "Reset pass";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // ucQLUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -459,5 +475,6 @@
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.Button btnDeActive;
         private System.Windows.Forms.Button btnActive;
+        private System.Windows.Forms.Button btnReset;
     }
 }

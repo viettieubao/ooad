@@ -17,7 +17,7 @@ namespace QuanLiVatLieuXayDung.Model
       ,[SODIENTHOAI] as [Số điện thoại]
       ,[MASOTHUE] as [Mã số thuế]
       ,[CONGNO] as [Công nợ]
-        FROM[OOAD].[dbo].[KHACHHANG] where ISACTIVE =1";
+        FROM[OOAD].[dbo].[KHACHHANG] ";
             return Connection.getData(cmd);
         }
         public int UpdateKhachhang(int makhachhang, string tenkhachhang, string sodienthoai, string diachi, string masothue, long congno)
@@ -26,17 +26,12 @@ namespace QuanLiVatLieuXayDung.Model
             return Connection.ExcuteNonQuery(cmd);
         }
 
-        public int InsertKhachhang (string tenkhachhang, string sodienthoai, string diachi, string masothue, long congno)
+        public int InsertKhachhang (string tenkhachhang, string sodienthoai, string diachi, string masothue)
         {
-            string cmd = @"insert into khachhang (tenkhachhang, sodienthoai, diachi, masothue, congno) values (N'" + tenkhachhang + "','" + sodienthoai + "',N'" + diachi + "', '" + masothue + "',  " + congno + ")";
+            string cmd = @"insert into khachhang (tenkhachhang, sodienthoai, diachi, masothue, congno) values (N'" + tenkhachhang + "','" + sodienthoai + "',N'" + diachi + "', '" + masothue + "',  0)";
             return Connection.ExcuteNonQuery(cmd);
         }
 
-        public int DeleteKhachhang (int makhachhang)
-        {
-            string cmd = @"update khachhang set isactive =0 where makhachhang = " + makhachhang;
-            return Connection.ExcuteNonQuery(cmd);
-        }
 
         public DataTable SearchTheoMakhachhang(int makhachhang)
         {
