@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using QuanLiVatLieuXayDung.Controller;
+using QuanLiVatLieuXayDung.View;
 
 namespace QuanLiVatLieuXayDung.View.UC
 {
@@ -19,6 +20,10 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
             InitializeComponent();
             phieunhap = new PhieuNhapController();
+            if (frmLogin.rule!="Quản lí kho")
+            {
+                btnThemPN.Enabled = false;
+            }
 
         }
 
@@ -32,24 +37,14 @@ namespace QuanLiVatLieuXayDung.View.UC
             }
         }
 
-        private void btnCapnhat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtTimSP_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void btnSuaSp_Click(object sender, EventArgs e)
+        private void btnThemPN_Click(object sender, EventArgs e)
         {
-
+            frmThem them = new frmThem(2);
+            them.Show();
         }
     }
 }

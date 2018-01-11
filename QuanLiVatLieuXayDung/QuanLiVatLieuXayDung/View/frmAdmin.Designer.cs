@@ -50,12 +50,14 @@
             this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.ucQLBaoCao1 = new QuanLiVatLieuXayDung.View.UC.ucQLBaoCao();
             this.tabcontrol.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -192,6 +194,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.ucQLBaoCao1);
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1000, 676);
@@ -295,6 +298,16 @@
             this.mnuLogout.Text = "Logout";
             this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
             // 
+            // ucQLBaoCao1
+            // 
+            this.ucQLBaoCao1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQLBaoCao1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQLBaoCao1.Location = new System.Drawing.Point(0, 0);
+            this.ucQLBaoCao1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQLBaoCao1.Name = "ucQLBaoCao1";
+            this.ucQLBaoCao1.Size = new System.Drawing.Size(1000, 676);
+            this.ucQLBaoCao1.TabIndex = 0;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,6 +325,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -346,5 +360,6 @@
         private System.Windows.Forms.TabPage tabPage4;
         private UC.ucQLKhachHang ucQLKhachHang1;
         private UC.ucThayDoiQuyDinh ucThayDoiQuyDinh1;
+        private UC.ucQLBaoCao ucQLBaoCao1;
     }
 }

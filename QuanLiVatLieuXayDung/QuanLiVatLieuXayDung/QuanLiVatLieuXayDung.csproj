@@ -50,14 +50,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BaoCaoCongNoCuaHangController.cs" />
+    <Compile Include="Controller\BaoCaoCongNoKhachHangController.cs" />
+    <Compile Include="Controller\BaoCaoController.cs" />
+    <Compile Include="Controller\BaoCaoDoanhThuController.cs" />
+    <Compile Include="Controller\BaoCaoTonController.cs" />
+    <Compile Include="Controller\HoaDonController.cs" />
+    <Compile Include="Controller\KhachhangController.cs" />
     <Compile Include="Controller\NhacungcapController.cs" />
     <Compile Include="Controller\PhieuNhapController.cs" />
+    <Compile Include="Controller\PhieuThuTienController.cs" />
+    <Compile Include="Controller\PhieuXuatHangController.cs" />
     <Compile Include="Controller\SanPhamController.cs" />
+    <Compile Include="Controller\ThamSoController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Model\BaoCao.cs" />
+    <Compile Include="Model\BaoCaoCongNoCuaHang.cs" />
+    <Compile Include="Model\BaoCaoCongNoKhachHang.cs" />
+    <Compile Include="Model\BaoCaoDoanhThuController.cs" />
+    <Compile Include="Model\BaoCaoTon.cs" />
     <Compile Include="Model\HoaDon.cs" />
+    <Compile Include="Model\Khachhang.cs" />
     <Compile Include="Model\Nhacungcap.cs" />
     <Compile Include="Model\PhieuNhapHang.cs" />
+    <Compile Include="Model\PhieuThuTien.cs" />
+    <Compile Include="Model\PhieuXuatHang.cs" />
     <Compile Include="Model\SanPham.cs" />
+    <Compile Include="Model\ThamSo.cs" />
     <Compile Include="View\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,18 +111,6 @@
     <Compile Include="Model\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmNhanVienBanHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmNhanVienBanHang.Designer.cs">
-      <DependentUpon>frmNhanVienBanHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmQuanlykho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,12 +122,6 @@
     </Compile>
     <Compile Include="View\frmThem.Designer.cs">
       <DependentUpon>frmThem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\NhanVienKeToan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\NhanVienKeToan.Designer.cs">
-      <DependentUpon>NhanVienKeToan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UC\ucLapbaocao.cs">
       <SubType>UserControl</SubType>
@@ -157,6 +158,18 @@
     </Compile>
     <Compile Include="View\UC\ucLapPhieuNhapHang.Designer.cs">
       <DependentUpon>ucLapPhieuNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucLapPhieuThuTien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucLapPhieuThuTien.Designer.cs">
+      <DependentUpon>ucLapPhieuThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC\ucLapPhieuXuatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC\ucLapPhieuXuatHang.Designer.cs">
+      <DependentUpon>ucLapPhieuXuatHang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UC\ucQLBaoCao.cs">
       <SubType>UserControl</SubType>
@@ -248,9 +261,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmQuanlykho.resx">
       <DependentUpon>frmQuanlykho.cs</DependentUpon>
     </EmbeddedResource>

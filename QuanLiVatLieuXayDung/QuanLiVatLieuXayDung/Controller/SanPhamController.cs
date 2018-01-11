@@ -60,5 +60,9 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return sanPham.UpdateNhaCC(manhacungcap,tensanpham);
         }
+        public DataTable GetSanPhamTheoNhaCungCap(int nhacungcap)
+        {
+            return sanPham.GetSanPhamTheoNhaCungCap(nhacungcap);
+        }
     }
 }

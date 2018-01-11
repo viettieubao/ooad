@@ -13,7 +13,6 @@ C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\bi
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\bin\Debug\QuanLiVatLieuXayDung.pdb
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.csprojResolveAssemblyReference.cache
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.Properties.Resources.resources
-C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.Form1.resources
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.csproj.GenerateResource.Cache
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.csproj.CoreCompileInputs.cache
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.exe

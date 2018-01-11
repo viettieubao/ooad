@@ -21,20 +21,7 @@ namespace QuanLiVatLieuXayDung.View.UC
             nhacungcap = new NhacungcapController();
             phieuNhap = new PhieuNhapController();
 
-        }
-        SanPhamController sanPham;
-        NhacungcapController nhacungcap;
-        PhieuNhapController phieuNhap;
-
-
-        private void ucLapPhieuNhapHang_Load(object sender, EventArgs e)
-        {
             DataTable dt;
-            dt = sanPham.GetAllSanPham();
-            foreach (DataRow row in dt.Rows)
-            {
-                cbbTenSanPham.Items.Add(row[1]);
-            }
             dt = sanPham.GetDanhSachDonVi();
             foreach (DataRow row in dt.Rows)
             {
@@ -46,6 +33,15 @@ namespace QuanLiVatLieuXayDung.View.UC
             {
                 cbbTenNhaCC.Items.Add(row[1]);
             }
+
+        }
+        SanPhamController sanPham;
+        NhacungcapController nhacungcap;
+        PhieuNhapController phieuNhap;
+
+
+        private void ucLapPhieuNhapHang_Load(object sender, EventArgs e)
+        {
         }
 
         private void btnSuaSp_Click(object sender, EventArgs e)
@@ -173,6 +169,18 @@ namespace QuanLiVatLieuXayDung.View.UC
             cbbDonVi.Items.Clear();
             cbbDonVi.Items.Add(dt.Rows[0][0].ToString());
             cbbDonVi.Items.Add(dt.Rows[0][1].ToString());
+        }
+
+        private void cbbTenNhaCC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt;
+            cbbTenSanPham.Items.Clear();
+            dt = sanPham.GetSanPhamTheoNhaCungCap(int.Parse(nhacungcap.GetIDNCCTheoTen(cbbTenNhaCC.Text.ToString()).Rows[0][0].ToString()));
+            foreach (DataRow row in dt.Rows)
+            {
+                cbbTenSanPham.Items.Add(row[0]);
+            }
+            dataGridView1.Rows.Clear();
         }
     }
 }

@@ -119,6 +119,11 @@ from SANPHAM sp where (sp.giabanle between " + from + " and " + to + ") and (sp.
             string cmd = @"update sanpham set manhacungcap="+manhacungcap +"where tensanpham=N'"+tensanpham+"'";
             return Connection.ExcuteNonQuery(cmd);
         }
+        public DataTable GetSanPhamTheoNhaCungCap(int nhacungcap)
+        {
+            string cmd = @"select tensanpham from sanpham where manhacungcap=" + nhacungcap;
+            return Connection.getData(cmd);
+        }
 
     }
 }

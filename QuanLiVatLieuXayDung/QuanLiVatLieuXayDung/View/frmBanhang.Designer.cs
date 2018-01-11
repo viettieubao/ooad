@@ -37,6 +37,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabcontrol = new System.Windows.Forms.TabControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ucQLKhachHang1 = new QuanLiVatLieuXayDung.View.UC.ucQLKhachHang();
+            this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabcontrol.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -45,7 +47,7 @@
             // mnuThoat
             // 
             this.mnuThoat.Name = "mnuThoat";
-            this.mnuThoat.Size = new System.Drawing.Size(152, 22);
+            this.mnuThoat.Size = new System.Drawing.Size(145, 22);
             this.mnuThoat.Text = "Thoát";
             this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
@@ -61,9 +63,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ucQLKhachHang1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1000, 676);
+            this.tabPage2.Size = new System.Drawing.Size(950, 676);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Quản lý khách hàng";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -71,7 +74,7 @@
             // mnuDoimatkhau
             // 
             this.mnuDoimatkhau.Name = "mnuDoimatkhau";
-            this.mnuDoimatkhau.Size = new System.Drawing.Size(152, 22);
+            this.mnuDoimatkhau.Size = new System.Drawing.Size(145, 22);
             this.mnuDoimatkhau.Text = "Đổi mật khẩu";
             this.mnuDoimatkhau.Click += new System.EventHandler(this.mnuDoimatkhau_Click);
             // 
@@ -97,7 +100,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1008, 705);
+            this.panel2.Size = new System.Drawing.Size(958, 705);
             this.panel2.TabIndex = 4;
             // 
             // tabcontrol
@@ -110,7 +113,7 @@
             this.tabcontrol.Location = new System.Drawing.Point(0, 0);
             this.tabcontrol.Name = "tabcontrol";
             this.tabcontrol.SelectedIndex = 0;
-            this.tabcontrol.Size = new System.Drawing.Size(1008, 705);
+            this.tabcontrol.Size = new System.Drawing.Size(958, 705);
             this.tabcontrol.TabIndex = 0;
             // 
             // menuStrip1
@@ -120,20 +123,31 @@
             this.mnuLogout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(958, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ucQLKhachHang1
+            // 
+            this.ucQLKhachHang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQLKhachHang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQLKhachHang1.Location = new System.Drawing.Point(0, 0);
+            this.ucQLKhachHang1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQLKhachHang1.Name = "ucQLKhachHang1";
+            this.ucQLKhachHang1.Size = new System.Drawing.Size(950, 676);
+            this.ucQLKhachHang1.TabIndex = 0;
             // 
             // frmBanhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(958, 729);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmBanhang";
             this.Text = "frmBanhang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabcontrol.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
@@ -154,5 +168,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabcontrol;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private UC.ucQLKhachHang ucQLKhachHang1;
     }
 }
