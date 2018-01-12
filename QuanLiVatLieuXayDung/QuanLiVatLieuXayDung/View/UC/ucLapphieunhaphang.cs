@@ -92,12 +92,12 @@ namespace QuanLiVatLieuXayDung.View.UC
             {
                 MessageBox.Show("Số lượng nhập nhà cung cấp phải là số nguyên ");
             }
-            else if (int.TryParse(txtSoLuongThucNhap.Text, out int tem1))
+            else if (int.TryParse(txtSoLuongThucNhap.Text, out int tem1)==false)
             {
                 MessageBox.Show("Số lượng nhập thực tế phải là số nguyên");
             }
             else
-            if (long.TryParse(txtGiaNhap.Text, out long tem3))
+            if (long.TryParse(txtGiaNhap.Text, out long tem3)==false)
             {
                 MessageBox.Show("Giá nhập phải là số nguyên");
             }
@@ -111,6 +111,10 @@ namespace QuanLiVatLieuXayDung.View.UC
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (txtMaPhieuGiaoHang.Text == "")
+            {
+                MessageBox.Show("Mã giao hàng không được để trống","Lỗi");
+            }
             int mancc = -1;
             try
             {
@@ -157,9 +161,14 @@ namespace QuanLiVatLieuXayDung.View.UC
                             dt.Rows.Add(dr);
                         }
                     }
+                    
                     phieuNhap.InsertPhieuNhap(txtMaPhieuGiaoHang.Text, mancc, txtNguoiGiaoHang.Text, txtSoDienThoai.Text, long.Parse(txtTongTien.Text), long.Parse(txtThanhToan.Text), dtpNgayNhap.Value, dt);
                 }
 
+            }
+            else
+            {
+                MessageBox.Show("Nhà cung cấp không tồn tại");
             }
         }
 

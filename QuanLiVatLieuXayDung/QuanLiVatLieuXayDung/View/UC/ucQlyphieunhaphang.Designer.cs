@@ -39,6 +39,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtgChiTietDonHang = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnThemPN = new System.Windows.Forms.Button();
             this.cbbTenNhaCC = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -53,7 +54,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnThemPN = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDSDonHang)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -127,6 +142,14 @@
             // 
             this.dtgDSDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDSDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDSDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
             this.dtgDSDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgDSDonHang.Location = new System.Drawing.Point(5, 20);
             this.dtgDSDonHang.Margin = new System.Windows.Forms.Padding(5);
@@ -179,6 +202,15 @@
             // 
             this.dtgChiTietDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgChiTietDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgChiTietDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15});
             this.dtgChiTietDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgChiTietDonHang.Location = new System.Drawing.Point(4, 19);
             this.dtgChiTietDonHang.Margin = new System.Windows.Forms.Padding(5);
@@ -213,6 +245,18 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phiếu nhập hàng";
+            // 
+            // btnThemPN
+            // 
+            this.btnThemPN.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThemPN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemPN.Location = new System.Drawing.Point(907, 86);
+            this.btnThemPN.Name = "btnThemPN";
+            this.btnThemPN.Size = new System.Drawing.Size(130, 44);
+            this.btnThemPN.TabIndex = 28;
+            this.btnThemPN.Text = "Thêm phiếu nhập";
+            this.btnThemPN.UseVisualStyleBackColor = true;
+            this.btnThemPN.Click += new System.EventHandler(this.btnThemPN_Click);
             // 
             // cbbTenNhaCC
             // 
@@ -366,17 +410,99 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Nhà cung cấp";
             // 
-            // btnThemPN
+            // Column1
             // 
-            this.btnThemPN.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThemPN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemPN.Location = new System.Drawing.Point(907, 86);
-            this.btnThemPN.Name = "btnThemPN";
-            this.btnThemPN.Size = new System.Drawing.Size(130, 44);
-            this.btnThemPN.TabIndex = 28;
-            this.btnThemPN.Text = "Thêm phiếu nhập";
-            this.btnThemPN.UseVisualStyleBackColor = true;
-            this.btnThemPN.Click += new System.EventHandler(this.btnThemPN_Click);
+            this.Column1.HeaderText = "Mã Phiếu nhập";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã phiếu giao hàng nhà cung cấp";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Ngày nhâp";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Tên nhà cung cấp ";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Tổng tiền hóa đơn";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Số tiền đã thanh toán";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Người giao hàng";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Mã phiếu nhập";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Mã sản phẩm";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Tên sản phẩm";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Giá nhập";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Số lượng nhập theo chứng từ";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Số lượng nhập thực tế";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Đơn vị tính";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Thành tiền";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
             // 
             // ucQlyphieunhaphang
             // 
@@ -429,5 +555,20 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox cbbTenNhaCC;
         private System.Windows.Forms.Button btnThemPN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
     }
 }

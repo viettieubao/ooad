@@ -40,6 +40,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.ucQLHoaDon1 = new QuanLiVatLieuXayDung.View.UC.ucQLHoaDon();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.ucQLBaoCao1 = new QuanLiVatLieuXayDung.View.UC.ucQLBaoCao();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.ucThemDonViTinh1 = new QuanLiVatLieuXayDung.View.UC.ucThemDonViTinh();
             this.tabPage8 = new System.Windows.Forms.TabPage();
@@ -50,7 +51,6 @@
             this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
-            this.ucQLBaoCao1 = new QuanLiVatLieuXayDung.View.UC.ucQLBaoCao();
             this.tabcontrol.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -82,7 +82,7 @@
             this.tabcontrol.SelectedIndex = 0;
             this.tabcontrol.Size = new System.Drawing.Size(1008, 705);
             this.tabcontrol.TabIndex = 0;
-            this.tabcontrol.SelectedIndexChanged += new System.EventHandler(this.tabcontrol_SelectedIndexChanged);
+
             // 
             // tabPage1
             // 
@@ -94,7 +94,7 @@
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "Quản lý tài khoản";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage2_Click);
+
             // 
             // ucQLUser1
             // 
@@ -105,7 +105,7 @@
             this.ucQLUser1.Name = "ucQLUser1";
             this.ucQLUser1.Size = new System.Drawing.Size(994, 670);
             this.ucQLUser1.TabIndex = 0;
-            this.ucQLUser1.Load += new System.EventHandler(this.ucQLUser1_Load);
+
             // 
             // tabPage2
             // 
@@ -116,7 +116,7 @@
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Quản lý sản phẩm";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage4_Click);
+
             // 
             // ucQlsanpham1
             // 
@@ -139,7 +139,7 @@
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Quản lý nhà cung cấp";
             this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage5_Click);
+
             // 
             // ucQlnhacungcap1
             // 
@@ -149,7 +149,7 @@
             this.ucQlnhacungcap1.Name = "ucQlnhacungcap1";
             this.ucQlnhacungcap1.Size = new System.Drawing.Size(983, 820);
             this.ucQlnhacungcap1.TabIndex = 0;
-            this.ucQlnhacungcap1.Load += new System.EventHandler(this.ucQlnhacungcap1_Load);
+  
             // 
             // tabPage4
             // 
@@ -180,7 +180,7 @@
             this.tabPage5.TabIndex = 6;
             this.tabPage5.Text = "Quản lý hóa đơn";
             this.tabPage5.UseVisualStyleBackColor = true;
-            this.tabPage5.Click += new System.EventHandler(this.tabPage6_Click);
+
             // 
             // ucQLHoaDon1
             // 
@@ -201,7 +201,17 @@
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "Quản lý báo cáo";
             this.tabPage6.UseVisualStyleBackColor = true;
-            this.tabPage6.Click += new System.EventHandler(this.tabPage8_Click);
+    
+            // 
+            // ucQLBaoCao1
+            // 
+            this.ucQLBaoCao1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQLBaoCao1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQLBaoCao1.Location = new System.Drawing.Point(0, 0);
+            this.ucQLBaoCao1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQLBaoCao1.Name = "ucQLBaoCao1";
+            this.ucQLBaoCao1.Size = new System.Drawing.Size(1000, 676);
+            this.ucQLBaoCao1.TabIndex = 0;
             // 
             // tabPage7
             // 
@@ -212,7 +222,6 @@
             this.tabPage7.TabIndex = 7;
             this.tabPage7.Text = "Thêm đơn vị tính";
             this.tabPage7.UseVisualStyleBackColor = true;
-            this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
             // 
             // ucThemDonViTinh1
             // 
@@ -234,8 +243,7 @@
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Thay đổi quy định";
             this.tabPage8.UseVisualStyleBackColor = true;
-            this.tabPage8.Click += new System.EventHandler(this.tabPage3_Click);
-            // 
+
             // ucThayDoiQuyDinh1
             // 
             this.ucThayDoiQuyDinh1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -245,8 +253,7 @@
             this.ucThayDoiQuyDinh1.Name = "ucThayDoiQuyDinh1";
             this.ucThayDoiQuyDinh1.Size = new System.Drawing.Size(994, 670);
             this.ucThayDoiQuyDinh1.TabIndex = 0;
-            this.ucThayDoiQuyDinh1.Load += new System.EventHandler(this.ucThayDoiQuyDinh1_Load);
-            // 
+
             // panel2
             // 
             this.panel2.Controls.Add(this.tabcontrol);
@@ -297,16 +304,6 @@
             this.mnuLogout.Size = new System.Drawing.Size(57, 20);
             this.mnuLogout.Text = "Logout";
             this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
-            // 
-            // ucQLBaoCao1
-            // 
-            this.ucQLBaoCao1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucQLBaoCao1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQLBaoCao1.Location = new System.Drawing.Point(0, 0);
-            this.ucQLBaoCao1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucQLBaoCao1.Name = "ucQLBaoCao1";
-            this.ucQLBaoCao1.Size = new System.Drawing.Size(1000, 676);
-            this.ucQLBaoCao1.TabIndex = 0;
             // 
             // frmAdmin
             // 

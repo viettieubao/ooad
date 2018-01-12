@@ -67,7 +67,7 @@
     <Compile Include="Model\BaoCao.cs" />
     <Compile Include="Model\BaoCaoCongNoCuaHang.cs" />
     <Compile Include="Model\BaoCaoCongNoKhachHang.cs" />
-    <Compile Include="Model\BaoCaoDoanhThuController.cs" />
+    <Compile Include="Model\BaoCaoDoanhThu.cs" />
     <Compile Include="Model\BaoCaoTon.cs" />
     <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\Khachhang.cs" />
@@ -284,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC\ucLapPhieuNhapHang.resx">
       <DependentUpon>ucLapPhieuNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC\ucLapPhieuThuTien.resx">
+      <DependentUpon>ucLapPhieuThuTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC\ucQLBaoCao.resx">
       <DependentUpon>ucQLBaoCao.cs</DependentUpon>

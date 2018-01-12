@@ -65,59 +65,6 @@ namespace QuanLiVatLieuXayDung.View
             {
             }
         }
-        private void tabcontrol_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ucQLUser1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ucQlnhacungcap1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ucThayDoiQuyDinh1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -23,6 +23,7 @@ namespace QuanLiVatLieuXayDung.View.UC
 
         SanPhamController sanPham;
         KhachhangController khachhang;
+        HoaDonController hoaDon;
         private void ucQlsanpham_Load(object sender, EventArgs e)
         {
             DataTable dt = sanPham.GetAllSanPham();
@@ -40,13 +41,13 @@ namespace QuanLiVatLieuXayDung.View.UC
         long tongtien = 0;
         private void btnThemMoiSP_Click_1(object sender, EventArgs e)
         {
-            tongtien = long.Parse(txtGiaBan.Text) * int.Parse(txtSoLuong.Text);
+            tongtien += long.Parse(txtGiaBan.Text) * int.Parse(txtSoLuong.Text);
 
-            string thanhtien = (long.Parse(txtGiaBan.Text)*int.Parse(txtSoLuong.Text)).ToString();
-            string[] row = new string[] {txtMaSP.Text,cbbTenSanPham.Text,cbbDonVi.Text,txtGiaBan.Text,txtSoLuong.Text,thanhtien };
+            string thanhtien = (long.Parse(txtGiaBan.Text) * int.Parse(txtSoLuong.Text)).ToString();
+            string[] row = new string[] { txtMaSP.Text, cbbTenSanPham.Text, cbbDonVi.Text, txtGiaBan.Text, txtSoLuong.Text, thanhtien };
             dtpData.Rows.Add(row);
 
-            txtTongTien.Text = tongtien.ToString() ;
+            txtTongTien.Text = tongtien.ToString();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -65,6 +66,41 @@ namespace QuanLiVatLieuXayDung.View.UC
 
         private void btnLap_Click(object sender, EventArgs e)
         {
+            int makhachhang=0;
+            if (tongtien > 10000000)
+            {
+                makhachhang = int.Parse(khachhang.SearchTheoTenkhachhang(cbbTenKhachHang.Text).Rows[0][0].ToString());
+            }
+            else
+            {
+                makhachhang = -1;
+            }
+            DataTable datatable = new DataTable();
+            if (dtpData.Columns.Count > 0)
+            {
+                foreach (DataGridViewColumn col in dtpData.Columns)
+                {
+                    datatable.Columns.Add(col.Name);
+                }
+            }
+            if (dtpData.Rows.Count > 0)
+            {
+
+                foreach (DataGridViewRow row in dtpData.Rows)
+                {
+                    DataRow dr;
+                    dr = datatable.NewRow();
+
+                    for (int i = 0; i < row.Cells.Count; i++)
+                    {
+                        dr[i] = row.Cells[i].Value;
+                    }
+                    datatable.Rows.Add(dr);
+                }
+                
+            }
+            hoaDon.InsertHoaDon(makhachhang, tongtien, tongtien, dtpNgayLap.Value, datatable);
+
 
         }
 
@@ -74,6 +110,8 @@ namespace QuanLiVatLieuXayDung.View.UC
             if (sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows.Count != 0)
             {
                 string masanpham = sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][0].ToString();
+                txtMaSP.Text = masanpham;
+                txtSoLuongBanSiTT.Text= sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][5].ToString();
 
                 cbbDonVi.Items.Add(sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][3]);
                 cbbDonVi.Items.Add(sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][4]);

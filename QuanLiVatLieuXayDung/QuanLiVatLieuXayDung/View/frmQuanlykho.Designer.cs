@@ -29,10 +29,14 @@
         private void InitializeComponent()
         {
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ucQlyphieunhaphang1 = new QuanLiVatLieuXayDung.View.UC.ucQlyphieunhaphang();
             this.tabcontrol = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ucQLPhieuXuatHang1 = new QuanLiVatLieuXayDung.View.UC.ucQLPhieuXuatHang();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ucQlnhacungcap1 = new QuanLiVatLieuXayDung.View.ucQlnhacungcap();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.ucQlsanpham1 = new QuanLiVatLieuXayDung.View.UC.ucQlsanpham();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,15 +44,13 @@
             this.mnuTaikhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ucQlyphieunhaphang1 = new QuanLiVatLieuXayDung.View.UC.ucQlyphieunhaphang();
-            this.ucQlnhacungcap1 = new QuanLiVatLieuXayDung.View.ucQlnhacungcap();
-            this.ucQlsanpham1 = new QuanLiVatLieuXayDung.View.UC.ucQlsanpham();
-            this.ucQLPhieuXuatHang1 = new QuanLiVatLieuXayDung.View.UC.ucQLPhieuXuatHang();
+            this.ucLapBaoCaoTon1 = new QuanLiVatLieuXayDung.View.UC.ucLapBaoCaoTon();
             this.tabPage1.SuspendLayout();
             this.tabcontrol.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +65,17 @@
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "Quản lý phiếu nhập hàng";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ucQlyphieunhaphang1
+            // 
+            this.ucQlyphieunhaphang1.AutoScroll = true;
+            this.ucQlyphieunhaphang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQlyphieunhaphang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQlyphieunhaphang1.Location = new System.Drawing.Point(3, 3);
+            this.ucQlyphieunhaphang1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQlyphieunhaphang1.Name = "ucQlyphieunhaphang1";
+            this.ucQlyphieunhaphang1.Size = new System.Drawing.Size(1234, 690);
+            this.ucQlyphieunhaphang1.TabIndex = 0;
             // 
             // tabcontrol
             // 
@@ -90,6 +103,16 @@
             this.tabPage2.Text = "Quản lý phiếu xuất hàng";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // ucQLPhieuXuatHang1
+            // 
+            this.ucQLPhieuXuatHang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQLPhieuXuatHang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQLPhieuXuatHang1.Location = new System.Drawing.Point(0, 0);
+            this.ucQLPhieuXuatHang1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQLPhieuXuatHang1.Name = "ucQLPhieuXuatHang1";
+            this.ucQLPhieuXuatHang1.Size = new System.Drawing.Size(1240, 696);
+            this.ucQLPhieuXuatHang1.TabIndex = 0;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.ucQlnhacungcap1);
@@ -99,6 +122,15 @@
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Quản lý nhà cung cấp";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // ucQlnhacungcap1
+            // 
+            this.ucQlnhacungcap1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQlnhacungcap1.Location = new System.Drawing.Point(0, 0);
+            this.ucQlnhacungcap1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQlnhacungcap1.Name = "ucQlnhacungcap1";
+            this.ucQlnhacungcap1.Size = new System.Drawing.Size(1240, 696);
+            this.ucQlnhacungcap1.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -110,8 +142,19 @@
             this.tabPage4.Text = "Quản lý sản phẩm";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // ucQlsanpham1
+            // 
+            this.ucQlsanpham1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQlsanpham1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQlsanpham1.Location = new System.Drawing.Point(0, 0);
+            this.ucQlsanpham1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQlsanpham1.Name = "ucQlsanpham1";
+            this.ucQlsanpham1.Size = new System.Drawing.Size(1240, 696);
+            this.ucQlsanpham1.TabIndex = 0;
+            // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.ucLapBaoCaoTon1);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1240, 696);
@@ -169,45 +212,15 @@
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // ucQlyphieunhaphang1
+            // ucLapBaoCaoTon1
             // 
-            this.ucQlyphieunhaphang1.AutoScroll = true;
-            this.ucQlyphieunhaphang1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucQlyphieunhaphang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQlyphieunhaphang1.Location = new System.Drawing.Point(3, 3);
-            this.ucQlyphieunhaphang1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucQlyphieunhaphang1.Name = "ucQlyphieunhaphang1";
-            this.ucQlyphieunhaphang1.Size = new System.Drawing.Size(1234, 690);
-            this.ucQlyphieunhaphang1.TabIndex = 0;
-            // 
-            // ucQlnhacungcap1
-            // 
-            this.ucQlnhacungcap1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucQlnhacungcap1.Location = new System.Drawing.Point(0, 0);
-            this.ucQlnhacungcap1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ucQlnhacungcap1.Name = "ucQlnhacungcap1";
-            this.ucQlnhacungcap1.Size = new System.Drawing.Size(1240, 696);
-            this.ucQlnhacungcap1.TabIndex = 0;
-            // 
-            // ucQlsanpham1
-            // 
-            this.ucQlsanpham1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucQlsanpham1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQlsanpham1.Location = new System.Drawing.Point(0, 0);
-            this.ucQlsanpham1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucQlsanpham1.Name = "ucQlsanpham1";
-            this.ucQlsanpham1.Size = new System.Drawing.Size(1240, 696);
-            this.ucQlsanpham1.TabIndex = 0;
-            // 
-            // ucQLPhieuXuatHang1
-            // 
-            this.ucQLPhieuXuatHang1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucQLPhieuXuatHang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQLPhieuXuatHang1.Location = new System.Drawing.Point(0, 0);
-            this.ucQLPhieuXuatHang1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucQLPhieuXuatHang1.Name = "ucQLPhieuXuatHang1";
-            this.ucQLPhieuXuatHang1.Size = new System.Drawing.Size(1240, 696);
-            this.ucQLPhieuXuatHang1.TabIndex = 0;
+            this.ucLapBaoCaoTon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLapBaoCaoTon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucLapBaoCaoTon1.Location = new System.Drawing.Point(0, 0);
+            this.ucLapBaoCaoTon1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucLapBaoCaoTon1.Name = "ucLapBaoCaoTon1";
+            this.ucLapBaoCaoTon1.Size = new System.Drawing.Size(1240, 696);
+            this.ucLapBaoCaoTon1.TabIndex = 0;
             // 
             // frmQuanlykho
             // 
@@ -223,6 +236,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -249,5 +263,6 @@
         private UC.ucQLPhieuXuatHang ucQLPhieuXuatHang1;
         private ucQlnhacungcap ucQlnhacungcap1;
         private UC.ucQlsanpham ucQlsanpham1;
+        private UC.ucLapBaoCaoTon ucLapBaoCaoTon1;
     }
 }

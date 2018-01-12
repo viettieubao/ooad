@@ -38,6 +38,8 @@
             this.tabcontrol = new System.Windows.Forms.TabControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ucQLKhachHang1 = new QuanLiVatLieuXayDung.View.UC.ucQLKhachHang();
+            this.ucLapHoaDon1 = new QuanLiVatLieuXayDung.View.UC.ucLapHoaDon();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabcontrol.SuspendLayout();
@@ -53,10 +55,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ucLapHoaDon1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1000, 676);
+            this.tabPage1.Size = new System.Drawing.Size(950, 676);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "Lập hóa đơn";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -137,6 +140,16 @@
             this.ucQLKhachHang1.Size = new System.Drawing.Size(950, 676);
             this.ucQLKhachHang1.TabIndex = 0;
             // 
+            // ucLapHoaDon1
+            // 
+            this.ucLapHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLapHoaDon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucLapHoaDon1.Location = new System.Drawing.Point(3, 3);
+            this.ucLapHoaDon1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucLapHoaDon1.Name = "ucLapHoaDon1";
+            this.ucLapHoaDon1.Size = new System.Drawing.Size(944, 670);
+            this.ucLapHoaDon1.TabIndex = 0;
+            // 
             // frmBanhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +160,7 @@
             this.Name = "frmBanhang";
             this.Text = "frmBanhang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabcontrol.ResumeLayout(false);
@@ -169,5 +183,6 @@
         private System.Windows.Forms.TabControl tabcontrol;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private UC.ucQLKhachHang ucQLKhachHang1;
+        private UC.ucLapHoaDon ucLapHoaDon1;
     }
 }

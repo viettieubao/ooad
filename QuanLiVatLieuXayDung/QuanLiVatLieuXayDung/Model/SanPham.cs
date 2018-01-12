@@ -111,7 +111,7 @@ from SANPHAM sp where (sp.giabanle between " + from + " and " + to + ") and (sp.
         }
         public DataTable GetSanPhamTheoTen(string tensanpham)
         {
-            string cmd = @"select masanpham,giabansi,giabanle, (select tendonvitinh from donvi dv where dv.madonvitinh= sp.madonvitinhbansi), (select tendonvitinh from donvi dv where dv.madonvitinh= sp.madonvitinhbanle)from sanpham sp where tensanpham=N'" + tensanpham+"'";
+            string cmd = @"select masanpham,giabansi,giabanle, (select tendonvitinh from donvi dv where dv.madonvitinh= sp.madonvitinhbansi), (select tendonvitinh from donvi dv where dv.madonvitinh= sp.madonvitinhbanle), soluongbansitoithieu from sanpham sp where tensanpham=N'" + tensanpham+"'";
             return Connection.getData(cmd);
         }
         public int UpdateNhaCC(int manhacungcap, string tensanpham)

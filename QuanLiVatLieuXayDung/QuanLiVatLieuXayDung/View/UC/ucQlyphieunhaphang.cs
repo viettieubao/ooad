@@ -44,7 +44,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         private void btnThemPN_Click(object sender, EventArgs e)
         {
             frmThem them = new frmThem(2);
-            them.Show();
+            them.ShowDialog();
         }
     }
 }

@@ -122,12 +122,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(157, 25);
+            this.label2.Location = new System.Drawing.Point(92, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 16);
+            this.label2.Size = new System.Drawing.Size(209, 16);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Mã phiếu giao hàng";
+            this.label2.Text = "Mã phiếu giao hàng nhà cung cấp";
             // 
             // cbbTenNhaCC
             // 
@@ -377,6 +377,7 @@
             this.btnThem.TabIndex = 61;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // cbbDonVi
             // 

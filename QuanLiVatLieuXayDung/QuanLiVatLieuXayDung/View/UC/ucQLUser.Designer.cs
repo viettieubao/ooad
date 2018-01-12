@@ -51,11 +51,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgDanhsach = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnActive = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnDeActive = new System.Windows.Forms.Button();
             this.btnThemNhanVien = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -324,6 +324,7 @@
             // 
             // dtgDanhsach
             // 
+            this.dtgDanhsach.AllowUserToAddRows = false;
             this.dtgDanhsach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDanhsach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgDanhsach.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -352,6 +353,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1075, 46);
             this.panel1.TabIndex = 7;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReset.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Location = new System.Drawing.Point(516, 9);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(100, 28);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "Reset pass";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnActive
             // 
@@ -408,20 +423,6 @@
             this.btnThemNhanVien.Text = "Thêm ";
             this.btnThemNhanVien.UseVisualStyleBackColor = false;
             this.btnThemNhanVien.Click += new System.EventHandler(this.btnThemNhanVien_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReset.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Location = new System.Drawing.Point(516, 9);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(100, 28);
-            this.btnReset.TabIndex = 4;
-            this.btnReset.Text = "Reset pass";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // ucQLUser
             // 

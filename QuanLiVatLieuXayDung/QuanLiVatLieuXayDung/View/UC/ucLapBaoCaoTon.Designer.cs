@@ -30,11 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -46,6 +49,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.textBox1);
             this.groupBox4.Controls.Add(this.textBox7);
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -58,11 +64,45 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm kiếm";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(419, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Năm";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(150, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Tháng";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox1.Location = new System.Drawing.Point(470, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(173, 23);
+            this.textBox1.TabIndex = 5;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox7.Location = new System.Drawing.Point(215, 24);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(173, 23);
+            this.textBox7.TabIndex = 5;
+            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(555, 21);
+            this.button1.Location = new System.Drawing.Point(697, 21);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
@@ -108,14 +148,6 @@
             this.button2.Text = "Lưu";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox7.Location = new System.Drawing.Point(363, 24);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 23);
-            this.textBox7.TabIndex = 5;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -142,7 +174,7 @@
             this.groupBox5.Size = new System.Drawing.Size(1075, 410);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Danh sách phiếu xuất hàng";
+            this.groupBox5.Text = "Thông tin chi tiết";
             // 
             // ucLapBaoCaoTon
             // 
@@ -174,5 +206,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

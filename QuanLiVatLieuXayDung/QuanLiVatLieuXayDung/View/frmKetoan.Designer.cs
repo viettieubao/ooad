@@ -29,21 +29,27 @@
         private void InitializeComponent()
         {
             this.tabcontrol = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.ucQLPhieuThuTien1 = new QuanLiVatLieuXayDung.View.UC.ucQLPhieuThuTien();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.ucQLBaoCao1 = new QuanLiVatLieuXayDung.View.UC.ucQLBaoCao();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ucLapBaoCaoCongNo1 = new QuanLiVatLieuXayDung.View.UC.ucLapBaoCaoCongNo();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ucLapBaoCaoDoanhThu1 = new QuanLiVatLieuXayDung.View.UC.ucLapBaoCaoDoanhThu();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTaikhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.ucQLBaoCao1 = new QuanLiVatLieuXayDung.View.UC.ucQLBaoCao();
-            this.ucQLPhieuThuTien1 = new QuanLiVatLieuXayDung.View.UC.ucQLPhieuThuTien();
             this.tabcontrol.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabcontrol
@@ -51,6 +57,8 @@
             this.tabcontrol.AccessibleName = "";
             this.tabcontrol.Controls.Add(this.tabPage5);
             this.tabcontrol.Controls.Add(this.tabPage6);
+            this.tabcontrol.Controls.Add(this.tabPage2);
+            this.tabcontrol.Controls.Add(this.tabPage3);
             this.tabcontrol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabcontrol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabcontrol.Location = new System.Drawing.Point(0, 0);
@@ -58,6 +66,88 @@
             this.tabcontrol.SelectedIndex = 0;
             this.tabcontrol.Size = new System.Drawing.Size(1038, 541);
             this.tabcontrol.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.ucQLPhieuThuTien1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1030, 512);
+            this.tabPage5.TabIndex = 7;
+            this.tabPage5.Text = "Quản lý phiếu thu tiền";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // ucQLPhieuThuTien1
+            // 
+            this.ucQLPhieuThuTien1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQLPhieuThuTien1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQLPhieuThuTien1.Location = new System.Drawing.Point(3, 3);
+            this.ucQLPhieuThuTien1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQLPhieuThuTien1.Name = "ucQLPhieuThuTien1";
+            this.ucQLPhieuThuTien1.Size = new System.Drawing.Size(1024, 506);
+            this.ucQLPhieuThuTien1.TabIndex = 0;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.ucQLBaoCao1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1030, 512);
+            this.tabPage6.TabIndex = 8;
+            this.tabPage6.Text = "Quản lí báo cáo";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // ucQLBaoCao1
+            // 
+            this.ucQLBaoCao1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQLBaoCao1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQLBaoCao1.Location = new System.Drawing.Point(0, 0);
+            this.ucQLBaoCao1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQLBaoCao1.Name = "ucQLBaoCao1";
+            this.ucQLBaoCao1.Size = new System.Drawing.Size(1030, 512);
+            this.ucQLBaoCao1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.ucLapBaoCaoCongNo1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1030, 512);
+            this.tabPage2.TabIndex = 10;
+            this.tabPage2.Text = "Lập báo cáo công nợ";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ucLapBaoCaoCongNo1
+            // 
+            this.ucLapBaoCaoCongNo1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLapBaoCaoCongNo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucLapBaoCaoCongNo1.Location = new System.Drawing.Point(3, 3);
+            this.ucLapBaoCaoCongNo1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucLapBaoCaoCongNo1.Name = "ucLapBaoCaoCongNo1";
+            this.ucLapBaoCaoCongNo1.Size = new System.Drawing.Size(1024, 506);
+            this.ucLapBaoCaoCongNo1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.ucLapBaoCaoDoanhThu1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1030, 512);
+            this.tabPage3.TabIndex = 11;
+            this.tabPage3.Text = "Lập báo cáo doanh thu";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // ucLapBaoCaoDoanhThu1
+            // 
+            this.ucLapBaoCaoDoanhThu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLapBaoCaoDoanhThu1.Location = new System.Drawing.Point(3, 3);
+            this.ucLapBaoCaoDoanhThu1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucLapBaoCaoDoanhThu1.Name = "ucLapBaoCaoDoanhThu1";
+            this.ucLapBaoCaoDoanhThu1.Size = new System.Drawing.Size(1024, 506);
+            this.ucLapBaoCaoDoanhThu1.TabIndex = 0;
             // 
             // mnuThoat
             // 
@@ -109,47 +199,6 @@
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.ucQLPhieuThuTien1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1030, 512);
-            this.tabPage5.TabIndex = 7;
-            this.tabPage5.Text = "Quản lý phiếu thu tiền";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.ucQLBaoCao1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1000, 676);
-            this.tabPage6.TabIndex = 8;
-            this.tabPage6.Text = "Quản lí báo cáo";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // ucQLBaoCao1
-            // 
-            this.ucQLBaoCao1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucQLBaoCao1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQLBaoCao1.Location = new System.Drawing.Point(0, 0);
-            this.ucQLBaoCao1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucQLBaoCao1.Name = "ucQLBaoCao1";
-            this.ucQLBaoCao1.Size = new System.Drawing.Size(1000, 676);
-            this.ucQLBaoCao1.TabIndex = 0;
-            // 
-            // ucQLPhieuThuTien1
-            // 
-            this.ucQLPhieuThuTien1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucQLPhieuThuTien1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQLPhieuThuTien1.Location = new System.Drawing.Point(3, 3);
-            this.ucQLPhieuThuTien1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucQLPhieuThuTien1.Name = "ucQLPhieuThuTien1";
-            this.ucQLPhieuThuTien1.Size = new System.Drawing.Size(1024, 506);
-            this.ucQLPhieuThuTien1.TabIndex = 0;
-            // 
             // frmKetoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,11 +209,13 @@
             this.Name = "frmKetoan";
             this.Text = "frmKetoan";
             this.tabcontrol.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +234,9 @@
         private UC.ucQLPhieuThuTien ucQLPhieuThuTien1;
         private System.Windows.Forms.TabPage tabPage6;
         private UC.ucQLBaoCao ucQLBaoCao1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private UC.ucLapBaoCaoCongNo ucLapBaoCaoCongNo1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private UC.ucLapBaoCaoDoanhThu ucLapBaoCaoDoanhThu1;
     }
 }

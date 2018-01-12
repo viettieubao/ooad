@@ -55,3 +55,4 @@ C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\bi
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\bin\Debug\ru\DevExpress.Xpo.v17.2.resources.dll
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.frmThem.resources
 C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.frmAdmin.resources
+C:\Users\Viet\Documents\GitHub\ooad\QuanLiVatLieuXayDung\QuanLiVatLieuXayDung\obj\Debug\QuanLiVatLieuXayDung.View.UC.ucLapPhieuThuTien.resources
