@@ -25,7 +25,7 @@ namespace QuanLiVatLieuXayDung.Model
             int result = Connection.ExcuteNonQuery(cmd);
             if (result == 1)
             {
-                string cmd1 = @"select mahoadon from hoadon where makhachhang="+makhachang+"and ngaynhap="+ngaylap+"and tongtien="+tongtien+"and thuevat="+thuevat;
+                string cmd1 = @"select mahoadon from hoadon where makhachhang="+makhachang+ "and ngaynhap=convert(datetime, '" + ngaylap.ToString(@"yyyy - MM - dd") + "', 105) and tongtien="+tongtien+"and thuevat="+thuevat;
                 int mahoadon = int.Parse(Connection.getData(cmd).Rows[0][0].ToString());
 
                 foreach (DataRow row in sanpham.Rows)

@@ -19,6 +19,7 @@ namespace QuanLiVatLieuXayDung.View.UC
             InitializeComponent();
             sanPham = new SanPhamController();
             khachhang = new KhachhangController();
+            hoaDon = new HoaDonController();
         }
 
         SanPhamController sanPham;
