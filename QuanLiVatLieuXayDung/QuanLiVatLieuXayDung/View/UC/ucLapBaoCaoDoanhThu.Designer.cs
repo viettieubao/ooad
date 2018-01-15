@@ -32,8 +32,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtThang = new System.Windows.Forms.TextBox();
+            this.txtNam = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -51,8 +51,8 @@
             this.groupBox4.Controls.Add(this.comboBox1);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.textBox7);
+            this.groupBox4.Controls.Add(this.txtThang);
+            this.groupBox4.Controls.Add(this.txtNam);
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
@@ -96,23 +96,23 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Tháng";
             // 
-            // textBox1
+            // txtThang
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(232, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 23);
-            this.textBox1.TabIndex = 5;
+            this.txtThang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtThang.Location = new System.Drawing.Point(232, 24);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.Size = new System.Drawing.Size(173, 23);
+            this.txtThang.TabIndex = 5;
             // 
-            // textBox7
+            // txtNam
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox7.Location = new System.Drawing.Point(522, 24);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 23);
-            this.textBox7.TabIndex = 5;
+            this.txtNam.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtNam.Location = new System.Drawing.Point(522, 24);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(173, 23);
+            this.txtNam.TabIndex = 5;
             // 
             // button1
             // 
@@ -211,8 +211,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtThang;
+        private System.Windows.Forms.TextBox txtNam;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button3;

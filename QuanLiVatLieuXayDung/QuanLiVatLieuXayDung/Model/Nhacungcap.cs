@@ -21,6 +21,19 @@ namespace QuanLiVatLieuXayDung.Model
   FROM [OOAD].[dbo].[NHACUNGCAP] where isactive =1";
             return Connection.getData(cmd);
         }
+
+        public DataTable GetAllNhacungcapConNo()
+        {
+            string cmd = @"SELECT [MANHACUNGCAP] as [Mã nhà cung cấp]
+      ,[TENNHACUNGCAP] as [Tên nhà cung cấp]
+      ,[DIACHI] as [Địa chỉ]
+      ,[SODIENTHOAI] as [SĐT]
+      ,[EMAIL] as [Email]
+      ,[MASOTHUE] as [Mã số thuế]
+      ,[CONGNO] as [Công nợ]
+  FROM [OOAD].[dbo].[NHACUNGCAP] where isactive =1 and congno > 0";
+            return Connection.getData(cmd);
+        }
         public DataTable GetAllSpncc(int manhacungcap)
         {
             string cmd = @"SELECT
@@ -30,9 +43,16 @@ namespace QuanLiVatLieuXayDung.Model
   FROM SANPHAM sp where MANHACUNGCAP =" + manhacungcap;
             return Connection.getData(cmd);
         }
+
         public int UpdateNhacungcap(int manhacungcap, string tennhacungcap, string diachi, string sodienthoai, string email, string masothue, long congno)
         {
             string cmd = @"update nhacungcap set tennhacungcap=N'" + tennhacungcap + "', diachi=N'"+diachi+"', sodienthoai=N'" + sodienthoai + "', email=N'" + email + "', masothue=N'"+masothue+"', congno = "+congno+" where manhacungcap=" + manhacungcap;
+            return Connection.ExcuteNonQuery(cmd);
+        }
+
+        public int UpdateCongNoNhaCungCap(int manhacungcap, long congno)
+        {
+            string cmd = @"update nhacungcap set congno=" + congno + " where manhacungcap=" + manhacungcap;
             return Connection.ExcuteNonQuery(cmd);
         }
 

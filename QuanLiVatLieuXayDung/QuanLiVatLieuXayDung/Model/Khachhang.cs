@@ -11,7 +11,7 @@ namespace QuanLiVatLieuXayDung.Model
     {
         public DataTable GetAllKhachhang()
         {
-            string cmd = @"SELECT [MAKHACHHANG] as [STT]
+            string cmd = @"SELECT [MAKHACHHANG] as [Mã khách hàng]
       ,[TENKHACHHANG] as [Tên khách hàng]
 	  ,[DIACHI] as [Địa chỉ]
       ,[SODIENTHOAI] as [Số điện thoại]
@@ -19,9 +19,21 @@ namespace QuanLiVatLieuXayDung.Model
         FROM[OOAD].[dbo].[KHACHHANG] ";
             return Connection.getData(cmd);
         }
-        public int UpdateKhachhang(int makhachhang, string tenkhachhang, string sodienthoai, string diachi, long congno)
+
+        public DataTable GetAllKhachhangConCongNo()
         {
-            string cmd = @"update khachhang set tenkhachhang=N'"+tenkhachhang+ "', sodienthoai='" + sodienthoai + "',diachi=N'" + diachi + "', congno = " + congno + " where makhachhang=" + makhachhang;
+            string cmd = @"SELECT [MAKHACHHANG] as [Mã khách hàng]
+      ,[TENKHACHHANG] as [Tên khách hàng]
+	  ,[DIACHI] as [Địa chỉ]
+      ,[SODIENTHOAI] as [Số điện thoại]
+      ,[CONGNO] as [Công nợ]
+        FROM[OOAD].[dbo].[KHACHHANG] ";
+            return Connection.getData(cmd);
+        }
+
+        public int UpdateKhachhang(int makhachhang, string tenkhachhang, string sodienthoai, string diachi)
+        {
+            string cmd = @"update khachhang set tenkhachhang=N'"+tenkhachhang+ "', sodienthoai='" + sodienthoai + "',diachi=N'" + diachi + "' where makhachhang=" + makhachhang;
             return Connection.ExcuteNonQuery(cmd);
         }
 
@@ -34,7 +46,7 @@ namespace QuanLiVatLieuXayDung.Model
 
         public DataTable SearchTheoMakhachhang(int makhachhang)
         {
-            string cmd = @"SELECT [MAKHACHHANG] as [STT]
+            string cmd = @"SELECT [MAKHACHHANG] as [Mã khách hàng]
       ,[TENKHACHHANG] as [Tên khách hàng]
 	  ,[DIACHI] as [Địa chỉ]
       ,[SODIENTHOAI] as [Số điện thoại]
@@ -44,12 +56,12 @@ namespace QuanLiVatLieuXayDung.Model
         }
         public DataTable SearchTheoTenkhachhang(string tenkhachhang)
         {
-            string cmd = @"SELECT [MAKHACHHANG] as [STT]
+            string cmd = @"SELECT [MAKHACHHANG] as [Mã khách hàng]
       ,[TENKHACHHANG] as [Tên khách hàng]
 	  ,[DIACHI] as [Địa chỉ]
       ,[SODIENTHOAI] as [Số điện thoại]
       ,[CONGNO] as [Công nợ]
-        FROM[OOAD].[dbo].[KHACHHANG] where TENKHACHHANG = N'" + tenkhachhang + @"'";
+        FROM[OOAD].[dbo].[KHACHHANG] where TENKHACHHANG like N'%" + tenkhachhang + "%'";
             return Connection.getData(cmd);
         }
     }

@@ -16,7 +16,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
             InitializeComponent();
             txtGia.Enabled = false;
-            btnXacnhan.Enabled = false;
+            btnThem.Enabled = false;
         }
 
         private void btnXacnhan_Click(object sender, EventArgs e)
@@ -26,19 +26,19 @@ namespace QuanLiVatLieuXayDung.View.UC
             {
                 MessageBox.Show("Thay đổi thành công");
                 txtGia.Enabled = false;
-                btnXacnhan.Enabled = false;
+                btnThem.Enabled = false;
             }
             else if (dialogResult == DialogResult.No)
             {
                 txtGia.Text = "";
                 txtGia.Enabled = false;
-                btnXacnhan.Enabled = false;
+                btnThem.Enabled = false;
             }
         }
 
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
-            btnXacnhan.Enabled = true;
+            btnThem.Enabled = true;
             txtGia.Enabled = true;
         }
     }

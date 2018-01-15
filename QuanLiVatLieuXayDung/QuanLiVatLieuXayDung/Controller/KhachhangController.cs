@@ -14,11 +14,11 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return khachhang.GetAllKhachhang();
         }
-        public int UpdateKhachhang(int makhachhang, string tenkhachhang, string sodienthoai, string diachi, string masothue, long congno)
+        public int UpdateKhachhang(int makhachhang, string tenkhachhang, string sodienthoai, string diachi)
         {
-            return khachhang.UpdateKhachhang(makhachhang, tenkhachhang, sodienthoai, diachi,  congno);
+            return khachhang.UpdateKhachhang(makhachhang, tenkhachhang, sodienthoai, diachi);
         }
-        public int InsertKhachhang(string tenkhachhang, string sodienthoai, string diachi, string masothue, long congno)
+        public int InsertKhachhang(string tenkhachhang, string sodienthoai, string diachi)
         {
             return khachhang.InsertKhachhang(tenkhachhang, sodienthoai, diachi);
         }

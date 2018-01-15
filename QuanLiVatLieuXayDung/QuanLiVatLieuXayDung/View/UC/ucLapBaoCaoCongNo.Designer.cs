@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbThang = new System.Windows.Forms.ComboBox();
+            this.cbbLoaiBaoCao = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtNam = new System.Windows.Forms.TextBox();
+            this.btnLapBaoCao = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBaoCao = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCao)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.cbbThang);
+            this.groupBox4.Controls.Add(this.cbbLoaiBaoCao);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.txtNam);
+            this.groupBox4.Controls.Add(this.btnLapBaoCao);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -66,23 +66,46 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin";
             // 
-            // comboBox1
+            // cbbThang
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbThang.FormattingEnabled = true;
+            this.cbbThang.Items.AddRange(new object[] {
+            "Một",
+            "Hai",
+            "Ba",
+            "Bốn",
+            "Năm",
+            "Sáu",
+            "Bảy",
+            "Tám",
+            "Chín",
+            "Mười",
+            "Mười Một",
+            "Mười Hai"});
+            this.cbbThang.Location = new System.Drawing.Point(505, 24);
+            this.cbbThang.Name = "cbbThang";
+            this.cbbThang.Size = new System.Drawing.Size(132, 24);
+            this.cbbThang.TabIndex = 8;
+            // 
+            // cbbLoaiBaoCao
+            // 
+            this.cbbLoaiBaoCao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbbLoaiBaoCao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLoaiBaoCao.FormattingEnabled = true;
+            this.cbbLoaiBaoCao.Items.AddRange(new object[] {
             "Báo cáo công nợ cửa hàng",
             "Báo cáo công nợ khách hàng"});
-            this.comboBox1.Location = new System.Drawing.Point(243, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 7;
+            this.cbbLoaiBaoCao.Location = new System.Drawing.Point(205, 22);
+            this.cbbLoaiBaoCao.Name = "cbbLoaiBaoCao";
+            this.cbbLoaiBaoCao.Size = new System.Drawing.Size(201, 24);
+            this.cbbLoaiBaoCao.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(678, 27);
+            this.label2.Location = new System.Drawing.Point(676, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 16);
             this.label2.TabIndex = 6;
@@ -92,7 +115,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 25);
+            this.label3.Location = new System.Drawing.Point(99, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 6;
@@ -102,41 +125,33 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(401, 27);
+            this.label1.Location = new System.Drawing.Point(441, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Tháng";
             // 
-            // textBox1
+            // txtNam
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(467, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 23);
-            this.textBox1.TabIndex = 5;
+            this.txtNam.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtNam.Location = new System.Drawing.Point(744, 24);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(115, 23);
+            this.txtNam.TabIndex = 5;
             // 
-            // textBox7
+            // btnLapBaoCao
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox7.Location = new System.Drawing.Point(757, 24);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 23);
-            this.textBox7.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(948, 19);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Lập báo cáo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLapBaoCao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLapBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLapBaoCao.Location = new System.Drawing.Point(917, 19);
+            this.btnLapBaoCao.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLapBaoCao.Name = "btnLapBaoCao";
+            this.btnLapBaoCao.Size = new System.Drawing.Size(100, 28);
+            this.btnLapBaoCao.TabIndex = 1;
+            this.btnLapBaoCao.Text = "Lập báo cáo";
+            this.btnLapBaoCao.UseVisualStyleBackColor = true;
+            this.btnLapBaoCao.Click += new System.EventHandler(this.btnLapBaoCao_Click);
             // 
             // groupBox6
             // 
@@ -176,19 +191,19 @@
             this.button2.Text = "Lưu";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvBaoCao
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 19);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1067, 387);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvBaoCao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBaoCao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBaoCao.Location = new System.Drawing.Point(4, 19);
+            this.dgvBaoCao.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvBaoCao.Name = "dgvBaoCao";
+            this.dgvBaoCao.Size = new System.Drawing.Size(1067, 387);
+            this.dgvBaoCao.TabIndex = 0;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dataGridView1);
+            this.groupBox5.Controls.Add(this.dgvBaoCao);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(0, 76);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
@@ -213,7 +228,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCao)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -221,17 +236,17 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLapBaoCao;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtNam;
+        private System.Windows.Forms.DataGridView dgvBaoCao;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbLoaiBaoCao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbbThang;
     }
 }

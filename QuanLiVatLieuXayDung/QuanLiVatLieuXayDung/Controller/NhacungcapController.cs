@@ -15,6 +15,12 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return nhacungcap.GetAllNhacungcap();
         }
+
+        public DataTable GetAllNhaCungCapConNo()
+        {
+            return nhacungcap.GetAllNhacungcapConNo();
+        }
+
         public DataTable GetAllSpncc(int manhacungcap)
         {
             return nhacungcap.GetAllSpncc(manhacungcap);
