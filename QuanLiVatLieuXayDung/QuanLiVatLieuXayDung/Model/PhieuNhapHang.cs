@@ -23,14 +23,14 @@ namespace QuanLiVatLieuXayDung.Model
         }
         public int Update(int maphieunhap,string nguoigiaohang, string sodienthoai,long tongtien,long sotiendathanhtoan,DateTime ngaynhap)
         {
-            string cmd = @"UPDATE PHIEUNHAP SET NGUOIGIAOHANG=N'" + nguoigiaohang + "',sodienthoai=" + sodienthoai + ",tongtien=" + tongtien+ ",sotiendathanhtoan=" + sotiendathanhtoan + ",ngaynhap=convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "',105)";
+            string cmd = @"UPDATE PHIEUNHAP SET NGUOIGIAOHANG=N'" + nguoigiaohang + "',sodienthoai=" + sodienthoai + ",tongtien=" + tongtien+ ",sotiendathanhtoan=" + sotiendathanhtoan + ",ngaynhap=convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "')";
             return Connection.ExcuteNonQuery(cmd);
         }
 
         public int Insert(string maphieugiaohang,int nhacungcap, string nguoigiaohang, string sodienthoai, long tongtien,long sotiendathanhtoan, DateTime ngaynhap,DataTable danhsachsanpham)
         {
             //them phiếu nhập vào bảng phiếu nhập
-            string cmd = @"insert into phieunhap (maphieugiaohang,ngaynhap,manhacungcap,tongtienhoadon,sotiendathanhtoan,nguoigiaohang) values ('"+maphieugiaohang+"',convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "',105)," + nhacungcap + ","+tongtien+","+sotiendathanhtoan+",N'"+nguoigiaohang+"')";
+            string cmd = @"insert into phieunhap (maphieugiaohang,ngaynhap,manhacungcap,tongtienhoadon,sotiendathanhtoan,nguoigiaohang) values ('"+maphieugiaohang+"',convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "')," + nhacungcap + ","+tongtien+","+sotiendathanhtoan+",N'"+nguoigiaohang+"')";
 
 
             int result = Connection.ExcuteNonQuery(cmd);
@@ -38,7 +38,7 @@ namespace QuanLiVatLieuXayDung.Model
             if (result == 1)
             //get mã phiếu nhập vừa thêm
             {
-                string cmd1 = @"select maphieunhap from phieunhap where maphieugiaohang="+maphieugiaohang+"and manhacungcap=" + nhacungcap + "and tongtienhoadon=" + tongtien + " and sotiendathanhtoan=" + sotiendathanhtoan + "and ngaynhap=convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "',105) and nguoigiaohang=N'" + nguoigiaohang + "'";
+                string cmd1 = @"select max(maphieunhap) from phieunhap";
 
                 DataTable dt = Connection.getData(cmd1);
                 int maphieunhap = int.Parse(dt.Rows[0][0].ToString());
@@ -48,6 +48,10 @@ namespace QuanLiVatLieuXayDung.Model
                 {
                     string cmd2 = @"insert into chitietphieunhap(maphieunhap,masanpham,gianhap,soluongnhaptheochungtu,soluongnhapthucte,madonvitinh) values (" + maphieunhap + ",(select masanpham from sanpham where tensanpham=N'" + row[0] + "')," + row[4] +","+row[1]+ "," + row[2] + ",(select madonvitinh from donvi where tendonvitinh=N'" + row[3] +"'))";
                    int tem = Connection.ExcuteNonQuery(cmd2);
+
+                    //update lai so luong trong kho
+                    string cmd3 = @"update sanpham set soluong= ((select soluong from sanpham where tensanpham=N'"+row[0]+"')+"+row[2]+") where tensanpham=N'"+row[0];
+                    int tem2 = Connection.ExcuteNonQuery(cmd3);
                 }
             }
             return result;

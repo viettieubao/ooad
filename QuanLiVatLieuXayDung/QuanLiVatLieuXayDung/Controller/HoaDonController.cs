@@ -15,5 +15,19 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return hoaDon.InsertHoaDon(makhachang, tongtien, thuevat, ngaylap, sanpham);
         }
+        public DataTable SearchTenKhachHang(string tenKhachHang)
+        {
+            return hoaDon.GetHoaDonWithTenKhachHang(tenKhachHang);
+        }
+        public DataTable SearchMaHoaDon(int maHoaDon)
+        {
+            return hoaDon.GetHoaDonWithMaDonHang(maHoaDon);
+        }
+
+        public DataTable GetChiTietHoaDon(int maHoaDon)
+        {
+            return hoaDon.GetChiTietHoaDon(maHoaDon);
+        }
+
     }
 }
