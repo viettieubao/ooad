@@ -19,9 +19,17 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return hoaDon.GetHoaDonWithTenKhachHang(tenKhachHang);
         }
+        public DataTable SearchMaKhachHang(int makhachhang)
+        {
+            return hoaDon.GetHoaDonWithMaKhachHang(makhachhang);
+        }
         public DataTable SearchMaHoaDon(int maHoaDon)
         {
             return hoaDon.GetHoaDonWithMaDonHang(maHoaDon);
+        }
+        public DataTable SearchNgayLap(DateTime ngaylap)
+        {
+            return hoaDon.GetHoaDonWithNgayLap(ngaylap);
         }
 
         public DataTable GetChiTietHoaDon(int maHoaDon)
