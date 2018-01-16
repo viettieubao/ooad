@@ -73,6 +73,7 @@
             // 
             // cbbThang
             // 
+            this.cbbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbThang.FormattingEnabled = true;
             this.cbbThang.Items.AddRange(new object[] {
             "Một",

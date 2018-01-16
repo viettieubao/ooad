@@ -14,7 +14,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         BaoCaoController baocaoController = new BaoCaoController();
         DataTable sanpham = null;
         SanPhamController sanphamController = new SanPhamController();
-        int nam;
+        int nam = -1;
         public ucLapBaoCaoTon()
         {
             InitializeComponent();
