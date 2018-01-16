@@ -20,6 +20,8 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
             InitializeComponent();
             sanPham = new SanPhamController();
+            btnCapnhat.Enabled = false;
+            btnThemMoiSP.Enabled = false;
         }
 
         SanPhamController sanPham;
@@ -84,7 +86,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         private void Disable()
         {
             //btnThemMoiSP.Enabled = false;
-            btnCapnhat.Enabled = false;
+            //btnCapnhat.Enabled = false;
             txtGiaBanLe.Enabled = false;
             txtGiaBanSi.Enabled = false;
             txtMaSanPham.Enabled = false;
