@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data;
 using DevExpress.XtraPrinting.Preview;
 using QuanLiVatLieuXayDung.Controller;
+using QuanLiVatLieuXayDung.View;
 
 
 namespace QuanLiVatLieuXayDung.View.UC
@@ -151,8 +152,6 @@ namespace QuanLiVatLieuXayDung.View.UC
         private void btnLap_Click(object sender, EventArgs e)
         {
 
-            DocumentViewer documentViewer = new DocumentViewer();
-           // documentViewer.PrintingSystem.PrintingDocument;
             int makhachhang = 0;
             if (tongtienhoadon > 1000000)
             {//trường hợp hóa đơn khách hàng lớn hơn 10 triệu
@@ -185,7 +184,11 @@ namespace QuanLiVatLieuXayDung.View.UC
                             }
 
                         }
-                        hoaDon.InsertHoaDon(makhachhang, tongtienhoadon, thuevat, dtpNgayLap.Value, datatable);
+
+                        int mahoadon=hoaDon.InsertHoaDon(makhachhang, tongtienhoadon, thuevat, dtpNgayLap.Value, datatable);
+                        frmView frmView = new frmView();
+                        frmView.LapHoaDon(cbbTenKhachHang.Text,khachhang.SearchTheoTenkhachhang(cbbTenKhachHang.Text).Rows[0][2].ToString(),mahoadon, khachhang.SearchTheoTenkhachhang(cbbTenKhachHang.Text).Rows[0][3].ToString(),convertFromNumberToString(tongtienhoadon));
+                        frmView.ShowDialog();
                     }
                     else
                     {
@@ -230,7 +233,11 @@ namespace QuanLiVatLieuXayDung.View.UC
                                 }
 
                             }
-                            hoaDon.InsertHoaDon(makhachhang, tongtienhoadon, thuevat, dtpNgayLap.Value, datatable);
+
+                            int mahoadon = hoaDon.InsertHoaDon(makhachhang, tongtienhoadon, thuevat, dtpNgayLap.Value, datatable);
+                            frmView frmView = new frmView();
+                            frmView.LapHoaDon(cbbTenKhachHang.Text, khachhang.SearchTheoTenkhachhang(cbbTenKhachHang.Text).Rows[0][2].ToString(), mahoadon, khachhang.SearchTheoTenkhachhang(cbbTenKhachHang.Text).Rows[0][3].ToString(), convertFromNumberToString(tongtienhoadon));
+                            frmView.ShowDialog();
                         }
                         else
                         {
@@ -271,8 +278,14 @@ namespace QuanLiVatLieuXayDung.View.UC
                             }
 
                         }
-                        hoaDon.InsertHoaDon(makhachhang, tongtienhoadon, thuevat, dtpNgayLap.Value, datatable);
-                    }else
+
+                        int mahoadon = hoaDon.InsertHoaDon(makhachhang, tongtienhoadon, thuevat, dtpNgayLap.Value, datatable);
+                        //xuat hoa don
+                        frmView frmView = new frmView();
+                        frmView.LapHoaDon(cbbTenKhachHang.Text, khachhang.SearchTheoTenkhachhang(cbbTenKhachHang.Text).Rows[0][2].ToString(), mahoadon, khachhang.SearchTheoTenkhachhang(cbbTenKhachHang.Text).Rows[0][3].ToString(), convertFromNumberToString(tongtienhoadon));
+                        frmView.ShowDialog();
+                    }
+                    else
                     {
                         MessageBox.Show("Bạn chưa chọn sản phẩm nào");
                     }
@@ -291,12 +304,12 @@ namespace QuanLiVatLieuXayDung.View.UC
 
                 if (sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][3].ToString() != sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][4].ToString())
                 {
-                    cbbDonVi.Items.Add("Bán sỉ: " + sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][3]);
-                    cbbDonVi.Items.Add("Bán lẻ: " + sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][4]);
+                    cbbDonVi.Items.Add(sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][3]);
+                    cbbDonVi.Items.Add( sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][4]);
                 }
                 else
                 {
-                    cbbDonVi.Items.Add("Bán sỉ và bán lẻ: " + sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][3]);
+                    cbbDonVi.Items.Add(sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][3]);
                 }
                 lblDVbansi.Text = "Đơn vị: "+sanPham.GetSanPhamTheoTen(cbbTenSanPham.Text).Rows[0][3].ToString();
             }
@@ -318,8 +331,6 @@ namespace QuanLiVatLieuXayDung.View.UC
             }
         }
 
-
-        long thanhtientemp = 0;
         
         private void dtpData_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
@@ -331,5 +342,134 @@ namespace QuanLiVatLieuXayDung.View.UC
             cbbTenSanPham.Text = dtpData.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
             lblDVbansi.Text="Đơn vị: "+dtpData.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
         }
+
+        static String convertFromNumberToString(long a_number)
+        {
+            String result = "";
+            long number = a_number;
+            int mod;
+            int k = 0;
+            while (number > 0)
+            {
+                mod = (int)number % 1000;
+                number = (number / 1000);
+                String tempt = convertFromThreeDigitNumberToString(mod, number != 0);
+
+                if (number!=0)
+                switch (k)
+                {
+                    case 1:
+                        tempt += " nghin";
+                        break;
+                    case 2:
+                        tempt += " trieu";
+                        break;
+                    case 3:
+                        tempt += " ty";
+                        break;
+                    case 4:
+                        tempt += " nghin ty";
+                        break;
+                    default:
+                        break;
+                }
+                k++;
+                result = tempt + " " + result;
+            }
+
+            return result;
+
+        }
+
+        static String convertFromThreeDigitNumberToString(int a_number, bool before = true)
+        {
+            int number = a_number;
+            String result = "";
+            bool remove = true;
+            int k = 0;
+            int[] array = { 0, 0, 0 };
+            while (number > 0)
+            {
+                array[k] = number % 10;
+                number = number / 10;
+                k++;
+            }
+
+            if (array[2] != 0 || (array[2] == 0 && before && (array[1] != 0 || array[0] != 0)))
+            {
+                result += convertFromDigitToString(array[2]) + " tram ";
+            }
+
+            if ((array[2] != 0 || (array[2] == 0 && before)) && array[1] == 0 && array[0] != 0)
+            {
+                result += "le ";
+            }
+
+            if (array[1] != 0)
+            {
+                if (array[1] != 1)
+                {
+                    result += convertFromDigitToString(array[1]) + " muoi ";
+                }
+                else
+                {
+                    result += "muoi ";
+                }
+            }
+
+            if (array[0] != 0)
+            {
+                if (array[0] != 5)
+                {
+                    result += convertFromDigitToString(array[0]);
+                }
+                else
+                {
+                    result += "lam";
+                }
+            }
+
+            return result;
+        }
+
+        static String convertFromDigitToString(int number)
+        {
+            String result = "";
+            switch (number)
+            {
+                case 1:
+                    result = "mot";
+                    break;
+                case 2:
+                    result = "hai";
+                    break;
+                case 3:
+                    result = "ba";
+                    break;
+                case 4:
+                    result = "bon";
+                    break;
+                case 6:
+                    result = "sau";
+                    break;
+                case 7:
+                    result = "bay";
+                    break;
+                case 8:
+                    result = "tam";
+                    break;
+                case 9:
+                    result = "chin";
+                    break;
+                case 0:
+                    result = "khong";
+                    break;
+                default:
+                    result = "nam";
+                    break;
+            }
+            return result;
+        }
     }
+
 }
