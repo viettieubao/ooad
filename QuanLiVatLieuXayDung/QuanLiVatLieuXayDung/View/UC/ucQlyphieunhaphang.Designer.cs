@@ -38,15 +38,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtgChiTietDonHang = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNgayNhap = new System.Windows.Forms.TextBox();
+            this.txtTenNhaCungCap = new System.Windows.Forms.TextBox();
             this.btnThemPN = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,8 +54,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTenNhaCungCap = new System.Windows.Forms.TextBox();
-            this.txtNgayNhap = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDonHangNhap)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -196,15 +188,6 @@
             this.dtgChiTietDonHang.AllowUserToAddRows = false;
             this.dtgChiTietDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgChiTietDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgChiTietDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14,
-            this.Column15});
             this.dtgChiTietDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgChiTietDonHang.Location = new System.Drawing.Point(4, 19);
             this.dtgChiTietDonHang.Margin = new System.Windows.Forms.Padding(5);
@@ -212,54 +195,6 @@
             this.dtgChiTietDonHang.ReadOnly = true;
             this.dtgChiTietDonHang.Size = new System.Drawing.Size(1196, 362);
             this.dtgChiTietDonHang.TabIndex = 1;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Mã phiếu nhập";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Mã sản phẩm";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Tên sản phẩm";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Giá nhập";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Số lượng nhập theo chứng từ";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Số lượng nhập thực tế";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Đơn vị tính";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Thành tiền";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -288,6 +223,22 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phiếu nhập hàng";
+            // 
+            // txtNgayNhap
+            // 
+            this.txtNgayNhap.Location = new System.Drawing.Point(837, 25);
+            this.txtNgayNhap.Name = "txtNgayNhap";
+            this.txtNgayNhap.ReadOnly = true;
+            this.txtNgayNhap.Size = new System.Drawing.Size(200, 22);
+            this.txtNgayNhap.TabIndex = 30;
+            // 
+            // txtTenNhaCungCap
+            // 
+            this.txtTenNhaCungCap.Location = new System.Drawing.Point(477, 23);
+            this.txtTenNhaCungCap.Name = "txtTenNhaCungCap";
+            this.txtTenNhaCungCap.ReadOnly = true;
+            this.txtTenNhaCungCap.Size = new System.Drawing.Size(200, 22);
+            this.txtTenNhaCungCap.TabIndex = 29;
             // 
             // btnThemPN
             // 
@@ -437,22 +388,6 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Nhà cung cấp";
             // 
-            // txtTenNhaCungCap
-            // 
-            this.txtTenNhaCungCap.Location = new System.Drawing.Point(477, 23);
-            this.txtTenNhaCungCap.Name = "txtTenNhaCungCap";
-            this.txtTenNhaCungCap.ReadOnly = true;
-            this.txtTenNhaCungCap.Size = new System.Drawing.Size(200, 22);
-            this.txtTenNhaCungCap.TabIndex = 29;
-            // 
-            // txtNgayNhap
-            // 
-            this.txtNgayNhap.Location = new System.Drawing.Point(837, 25);
-            this.txtNgayNhap.Name = "txtNgayNhap";
-            this.txtNgayNhap.ReadOnly = true;
-            this.txtNgayNhap.Size = new System.Drawing.Size(200, 22);
-            this.txtNgayNhap.TabIndex = 30;
-            // 
             // ucQlyphieunhaphang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -502,14 +437,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnThemPN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.TextBox txtNgayNhap;
         private System.Windows.Forms.TextBox txtTenNhaCungCap;
     }

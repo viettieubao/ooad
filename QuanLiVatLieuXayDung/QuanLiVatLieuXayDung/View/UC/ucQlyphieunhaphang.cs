@@ -53,6 +53,26 @@ namespace QuanLiVatLieuXayDung.View.UC
                 }
                 else
                 {
+                    int day, month, year;
+                    string[] array = txtTimNCC.Text.Split('/');
+                    if (array.Length == 3)
+                    {
+                        if (int.TryParse(array[0], out day) && int.TryParse(array[1], out month) && int.TryParse(array[2], out year))
+                        {
+                            DateTime date = new DateTime(year, month, day);
+                            dgvDanhSachDonHangNhap.DataSource = phieunhapController.GetAllPhieuNhapByNgayNhap(date);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ngày lập tìm kiếm sai định dạng");
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ngày lập tìm kiếm sai định dạng");
+                        return;
+                    }
                 }
             }
             else
