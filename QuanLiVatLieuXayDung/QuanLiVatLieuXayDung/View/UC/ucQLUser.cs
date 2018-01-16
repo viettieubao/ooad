@@ -15,6 +15,7 @@ namespace QuanLiVatLieuXayDung.View.UC
     {
         string rule { get; set; }
         UserController user;
+        int state = -1;
         public ucQLUser()
         {
             user = new UserController();
@@ -24,37 +25,42 @@ namespace QuanLiVatLieuXayDung.View.UC
             cbbTimtheo.SelectedIndex = 0;
             cbbBoPhan.SelectedIndex = 1;
             Dissable();
+            btnThem.Enabled = false;
+            btnCapNhat.Enabled = false;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            try
+            if (state == 0)
             {
-                if (txtTenNhanVien.Text!=""&& txtTenTaiKhoan.Text!="")
+                try
                 {
-                    int rerult = user.AddUser(txtTenTaiKhoan.Text, txtTenNhanVien.Text, dtpNgaySinh.Value, cbbBoPhan.Text, txtDiaChi.Text, txtSoDienThoai.Text);
-                    if (rerult == 1)
+                    if (txtTenNhanVien.Text != "" && txtTenTaiKhoan.Text != "")
                     {
-                        MessageBox.Show("Thêm mới tài khoản thành công", "Thành công");
-                        loadall();
-                        Dissable();
-                        btnThem.Enabled = false;
+                        int rerult = user.AddUser(txtTenTaiKhoan.Text, txtTenNhanVien.Text, dtpNgaySinh.Value, cbbBoPhan.Text, txtDiaChi.Text, txtSoDienThoai.Text);
+                        if (rerult == 1)
+                        {
+                            MessageBox.Show("Thêm mới tài khoản thành công", "Thành công");
+                            loadall();
+                            Dissable();
+                            btnThem.Enabled = false;
+                            btnSua.Enabled = true;
+                            state = -1;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm mới tài khoản thất bại", "Thất bại");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Thêm mới tài khoản thất bại", "Thất bại");
+                        MessageBox.Show("Chưa điền đầy đủ các trường bắt buộc", "Cảnh báo");
                     }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Chưa điền đầy đủ các trường bắt buộc", "Cảnh báo");
-                }
-                
-                
-            }
-            catch
-            {
 
+                }
             }
         }
         private void loadall()
@@ -93,18 +99,30 @@ namespace QuanLiVatLieuXayDung.View.UC
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            int result=user.UpdateUser(txtTenTaiKhoan.Text, txtTenNhanVien.Text, dtpNgaySinh.Value, cbbBoPhan.Text, txtDiaChi.Text, txtSoDienThoai.Text);
-            if (result == 1)
+            if (state == 0)
             {
-                MessageBox.Show("Cập nhật thành công");
+                if (txtTenNhanVien.Text != "" && txtTenTaiKhoan.Text != "")
+                {
+                    int result = user.UpdateUser(txtTenTaiKhoan.Text, txtTenNhanVien.Text, dtpNgaySinh.Value, cbbBoPhan.Text, txtDiaChi.Text, txtSoDienThoai.Text);
+                    if (result == 1)
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        loadall();
+                        Dissable();
+                        btnCapNhat.Enabled = false;
+                        btnThemNhanVien.Enabled = true;
+                        state = -1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại");
+                    }          
+                }
+                else
+                {
+                    MessageBox.Show("Chưa điền đầy đủ các trường bắt buộc", "Cảnh báo");
+                }
             }
-            else
-            {
-                MessageBox.Show("Cập nhật thất bại");
-            }
-            loadall();
-            Dissable();
-            btnCapNhat.Enabled = false;
         }
         private void Dissable()
         {
@@ -136,16 +154,48 @@ namespace QuanLiVatLieuXayDung.View.UC
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            Clear();
-            Enable();
-            btnThem.Enabled = true;
+            if (state == -1)
+            {
+                state = 0;
+                Clear();
+                Enable();
+                btnThem.Enabled = true;
+                btnSua.Enabled = false;
+                btnThemNhanVien.Text = "Huỷ thêm";
+            }
+            else
+            {
+                state = -1;
+                btnThemNhanVien.Text = "Thêm";
+                btnThem.Enabled = false;
+                btnSua.Enabled = true;
+                Dissable();
+                Clear();
+                loadall();
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Enable();
-            txtTenTaiKhoan.Enabled = false;
-            btnCapNhat.Enabled = true;
+            if (state == -1)
+            {
+                state = 0;
+                Enable();
+                txtTenTaiKhoan.Enabled = false;
+                btnCapNhat.Enabled = true;
+                btnThemNhanVien.Enabled = false;
+                btnSua.Text = "Huỷ sửa";
+            }
+            else
+            {
+                state = -1;
+                btnSua.Text = "Sửa";
+                btnCapNhat.Enabled = false;
+                btnThemNhanVien.Enabled = true;
+                Dissable();
+                Clear();
+                loadall();
+            }
         }
 
 

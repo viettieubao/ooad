@@ -38,5 +38,14 @@ namespace QuanLiVatLieuXayDung.Model
 
             return Connection.getData(cmd);
         }
+
+        public int Insert(int sohoadon, int sotiendoanhthu)
+        {
+            string cmd1 = @"select max(mabaocao) from baocao";
+            int mabaocao = int.Parse(Connection.getData(cmd1).Rows[0][0].ToString());
+
+            string cmd2 = @"insert into baocaodoanhthu(mabaocao,masanpham,soluongtondauthang,soluongtoncuoithang,soluongnhaptrongthang, soluongbanratrongthang) values (" + mabaocao + "," + int.Parse(danhsach.Rows[i][0].ToString()) + "," + int.Parse(danhsach.Rows[i][3].ToString()) + "," + int.Parse(danhsach.Rows[i][4].ToString()) + "," + int.Parse(danhsach.Rows[i][5].ToString()) + "," + int.Parse(danhsach.Rows[i][6].ToString()) + ")";
+            return 0;
+        }
     }
 }
