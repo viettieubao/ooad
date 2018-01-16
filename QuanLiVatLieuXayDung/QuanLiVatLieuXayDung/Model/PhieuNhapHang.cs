@@ -21,6 +21,26 @@ namespace QuanLiVatLieuXayDung.Model
         FROM PHIEUNHAP pn";
             return Connection.getData(cmd);
         }
+
+        public DataTable GetAllPhieuNhapByNhaCungCap(string nhacungcap)
+        {
+            string cmd = @"SELECT  [MAPHIEUNHAP] as [Mã phiếu nhập]
+        ,[MAPHIEUGIAOHANG] AS [Mã phiếu giao hàng nhà cung cấp]
+        ,[NGAYNHAP] as [Ngày nhập]
+        ,[tennhacungcap] as [Nhà cung cấp]
+        ,[NGUOIGIAOHANG] as [Người giao hàng]
+        ,[TONGTIENHOADON] as [Tổng tiền hóa đơn]
+        ,[SOTIENDATHANHTOAN] as [Số tiền đã thanh toán]
+        FROM phieunhap, nhacungcap where phieunhap.manhacungcap = nhacungcap.manhacungcap and tennhacungcap like N'%" + nhacungcap + "%'";
+            return Connection.getData(cmd);
+        }
+
+        public DataTable GetChiTietPhieuNhap(int maphieunhap)
+        {
+            string cmd = @"SELECT maphieunhap as [Mã phiếu nhập], tensanpham as [Tên sản phẩm], gianhap as [Giá nhập], soluongnhaptheochungtu as [Số lượng nhập theo chứng từ], soluongnhapthucte as [Số lượng nhập theo thực tế], tendonvitinh as [Đơn vị tính], (soluongnhaptheochungtu * gianhap) as [Thành tiền] from chitietphieunhap, donvi, sanpham where sanpham.masanpham = chitietphieunhap.masanpham and donvi.madonvitinh = chitietphieunhap.madonvitinh and maphieunhap = " + maphieunhap;
+            return Connection.getData(cmd);
+        }
+
         public int Update(int maphieunhap,string nguoigiaohang, string sodienthoai,long tongtien,long sotiendathanhtoan,DateTime ngaynhap)
         {
             string cmd = @"UPDATE PHIEUNHAP SET NGUOIGIAOHANG=N'" + nguoigiaohang + "',sodienthoai=" + sodienthoai + ",tongtien=" + tongtien+ ",sotiendathanhtoan=" + sotiendathanhtoan + ",ngaynhap=convert(datetime,'" + ngaynhap.ToString(@"yyyy - MM - dd") + "')";

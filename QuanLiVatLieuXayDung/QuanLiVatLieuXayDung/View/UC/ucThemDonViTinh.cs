@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using QuanLiVatLieuXayDung.Controller;
 using System.Windows.Forms;
-
+using QuanLiVatLieuXayDung.Controller;
 
 namespace QuanLiVatLieuXayDung.View.UC
 {

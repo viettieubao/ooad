@@ -8,6 +8,19 @@ namespace QuanLiVatLieuXayDung.Model
 {
     class BaoCaoDoanhThu
     {
+        public DataTable GetAllDoanhthu()
+        {
+            string cmd = @"	Select sp.MASANPHAM, sp.TENSANPHAM, sum(SOLUONGSANPHAM) as [Số Lượng], sum(THANHTIEN) as [Thành Tiền]
+	        From [OOAD].[dbo].[SANPHAM] sp, [OOAD].[dbo].[CHITIETHOADON] c, [OOAD].[dbo].[HOADON] hd
+            Where sp.MASANPHAM=c.MASANPHAM and hd.MAHOADON=c.MaHOADON and 
+			Group by sp.MASANPHAM, sp.TENSANPHAM";
+            return Connection.getData(cmd);
+        }
+        public DataTable TongHoaDon()
+        {
+            string cmd = @" Select count(MAHOADON) From [OOAD].[dbo].[HOADON]";
+            return Connection.getData(cmd);
+        }
         public DataTable GetAllBaoCaoCuaHang(int thangbaocao, int nambaocao)
         {
             DateTime ngaydauthang = new DateTime(nambaocao, thangbaocao, 1);
