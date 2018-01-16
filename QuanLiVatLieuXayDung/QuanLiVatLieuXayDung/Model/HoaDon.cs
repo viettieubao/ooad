@@ -19,10 +19,11 @@ namespace QuanLiVatLieuXayDung.Model
         {
             string cmd = @"insert into hoadon(makhachhang,ngaylap,tongtien,thuevat) values ("+makhachang+",convert(datetime, '"+ ngaylap.ToString(@"yyyy - MM - dd ") +"'),"+tongtien+","+thuevat+")";
             int result = Connection.ExcuteNonQuery(cmd);
+            int mahoadon=-1;
             if (result == 1)
             {
                 string cmd1 = @"select max(mahoadon) from hoadon ";
-                int mahoadon = int.Parse(Connection.getData(cmd1).Rows[0][0].ToString());
+                 mahoadon = int.Parse(Connection.getData(cmd1).Rows[0][0].ToString());
 
                 foreach (DataRow row in sanpham.Rows)
                 {
@@ -30,7 +31,7 @@ namespace QuanLiVatLieuXayDung.Model
                     int tem = Connection.ExcuteNonQuery(cmd2);
                 }
             }
-            return result;
+            return mahoadon;
         }
 
 
