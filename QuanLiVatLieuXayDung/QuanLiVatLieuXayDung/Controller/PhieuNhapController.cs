@@ -12,14 +12,26 @@ namespace QuanLiVatLieuXayDung.Controller
     class PhieuNhapController
     {
         PhieuNhapHang phieuNhap = new PhieuNhapHang();
+        Nhacungcap nhacungcap = new Nhacungcap();
         public DataTable GetAllPhieuNhap()
         {
             return phieuNhap.GetAllPhieuNhap();
         }
-        public int InsertPhieuNhap(string maphieugiaohang,int nhacungcap, string nguoigiaohang, string sodienthoai, long tongtien, long sotiendathanhtoan, DateTime ngaynhap,DataTable danhsachsanpham)
+
+        public DataTable GetChiTietPhieuNhap(int maphieunhap)
         {
-            return phieuNhap.Insert(maphieugiaohang,nhacungcap, nguoigiaohang, sodienthoai, tongtien,  sotiendathanhtoan, ngaynhap,danhsachsanpham);
+            return phieuNhap.GetChiTietPhieuNhap(maphieunhap);
         }
+
+        public int InsertPhieuNhap(string maphieugiaohang,int manhacungcap, string nguoigiaohang, string sodienthoai, long tongtien, long sotiendathanhtoan, DateTime ngaynhap,DataTable danhsachsanpham)
+        {
+            if (phieuNhap.Insert(maphieugiaohang, manhacungcap, nguoigiaohang, sodienthoai, tongtien, sotiendathanhtoan, ngaynhap, danhsachsanpham) == 1)
+            {
+                nhacungcap.UpdateCongNoNhaCungCap(manhacungcap, tongtien - sotiendathanhtoan);
+            }
+            return 0;
+        }
+
         public int Update(int maphieunhap, string nguoigiaohang, string sodienthoai, long tongtien,  long sotiendathanhtoan, DateTime ngaynhap)
         {
             return phieuNhap.Update(maphieunhap, nguoigiaohang, sodienthoai, tongtien,  sotiendathanhtoan, ngaynhap);
@@ -29,6 +41,12 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return phieuNhap.Search(nhacungcap, tongtien, ngaynhap, flat);
         }
+
+        public DataTable GetAllPhieuNhapByNhaCungCap(string nhacungcap)
+        {
+            return phieuNhap.GetAllPhieuNhapByNhaCungCap(nhacungcap);
+        }
+
         public DataTable GetAllNhaCC()
         {
             return phieuNhap.GetAllNhaCC();

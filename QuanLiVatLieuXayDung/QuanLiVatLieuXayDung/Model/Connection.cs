@@ -17,7 +17,7 @@ namespace QuanLiVatLieuXayDung.Model
         public static SqlDataAdapter sqlDataAdapter;
         public static DataTable dataset;
 
-        public static string conn = @"Data Source=DESKTOP-UD95KR6;Initial Catalog=OOAD;Integrated Security=True";
+        public static string conn = @"Data Source=.\SQLEXPRESS;Initial Catalog=OOAD;Integrated Security=True";
         public static DataTable getData(String sql)
         {
             sqlConnection = new SqlConnection(conn);
@@ -41,9 +41,9 @@ namespace QuanLiVatLieuXayDung.Model
                 sqlConnection.Close();
                 result = 1;
             }
-            catch
+            catch (Exception e)
             {
-                
+                MessageBox.Show(e.Message);
             }
             return result;
         }
