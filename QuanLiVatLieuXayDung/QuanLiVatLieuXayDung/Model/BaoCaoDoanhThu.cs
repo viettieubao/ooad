@@ -19,14 +19,17 @@ namespace QuanLiVatLieuXayDung.Model
 
         public DataTable GetTongDoanhThu(int thang, int nam)
         {
-            return null;
+            DateTime ngaydauthang = new DateTime(nam, thang, 1);
+            DateTime ngaycuoithang = new DateTime(nam, thang, DateTime.DaysInMonth(nam, thang));
+            string cmd = @"Select sum(tongtien) From [OOAD].[dbo].[HOADON] where ngaylap between convert(datetime, '" + ngaydauthang.ToString("yyyy-MM-dd") + "') and convert(datetime, '" + ngaycuoithang.ToString("yyyy-MM-dd") + "')";
+            return Connection.getData(cmd);
         }
 
         public DataTable TongHoaDon(int thang, int nam)
         {
             DateTime ngaydauthang = new DateTime(nam, thang, 1);
             DateTime ngaycuoithang = new DateTime(nam, thang, DateTime.DaysInMonth(nam, thang));
-            string cmd = @" Select count(MAHOADON) From [OOAD].[dbo].[HOADON] where ngaylap between convert(datetime, '" + ngaydauthang.ToString("yyyy-MM-dd") + "') and convert(datetime, '" + ngaydauthang.ToString("yyyy-MM-dd") + "')";
+            string cmd = @"Select count(MAHOADON) From [OOAD].[dbo].[HOADON] where ngaylap between convert(datetime, '" + ngaydauthang.ToString("yyyy-MM-dd") + "') and convert(datetime, '" + ngaycuoithang.ToString("yyyy-MM-dd") + "')";
             return Connection.getData(cmd);
         }
         public DataTable GetAllBaoCaoCuaHang(int thangbaocao, int nambaocao)
@@ -53,7 +56,7 @@ namespace QuanLiVatLieuXayDung.Model
             int mabaocao = int.Parse(Connection.getData(cmd1).Rows[0][0].ToString());
 
             string cmd2 = @"insert into baocaodoanhthu(mabaocao,tongsohoadontrongthang,tongdoanhthu) values (" + mabaocao + "," + sohoadon + "," + sotiendoanhthu + ")";
-            return 0;
+            return Connection.ExcuteNonQuery(cmd2);
         }
     }
 }

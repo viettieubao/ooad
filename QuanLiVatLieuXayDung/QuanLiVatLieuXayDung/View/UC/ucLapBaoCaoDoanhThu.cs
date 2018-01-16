@@ -13,6 +13,7 @@ namespace QuanLiVatLieuXayDung.View.UC
     public partial class ucLapBaoCaoDoanhThu : UserControl
     {
         int nam = -1;
+        int thang = -1;
         BaoCaoController baocaoController = new BaoCaoController();
         BaoCaoDoanhThuController doanhthuController = new BaoCaoDoanhThuController();
         public ucLapBaoCaoDoanhThu()
@@ -28,12 +29,13 @@ namespace QuanLiVatLieuXayDung.View.UC
                 MessageBox.Show("Năm báo cáo không được bỏ trống");
                 return;
             }
-
+            thang = cbbThang.SelectedIndex + 1;
             if (int.TryParse(txtNam.Text, out nam))
             {
                 if (nam <= 2099 && nam >= 1990)
                 {
-                    //DataTable data = baocaoController.
+                    txtTonghoadon.Text = doanhthuController.TongHoaDon(thang, nam).ToString();
+                    txtTongdoanhthu.Text = doanhthuController.TongDoanhThu(thang, nam).ToString();
                 }
                 else
                 {
@@ -43,6 +45,26 @@ namespace QuanLiVatLieuXayDung.View.UC
             else
             {
                 MessageBox.Show("Năm báo cáo phải ở định dạng số");
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            int nambaocao = 0;
+            if (int.TryParse(txtNam.Text, out nambaocao) && nambaocao != nam)
+            {
+                MessageBox.Show("Vui lòng chọn Lập báo cáo trước khi lưu báo cáo");
+                return;
+            }
+            if (cbbThang.SelectedIndex + 1 != thang)
+            {
+                MessageBox.Show("Vui lòng chọn Lập báo cáo trước khi lưu báo cáo");
+                return;
+            }
+            int sohoadon = 0, sodoanhthu = 0;
+            if (int.TryParse(txtTonghoadon.Text, out sohoadon) && int.TryParse(txtTongdoanhthu.Text, out sodoanhthu))
+            {
+                baocaoController.InsertBaoCaoDoanhThu(thang, nam, sohoadon, sodoanhthu);
             }
         }
     }
