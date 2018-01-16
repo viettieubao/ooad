@@ -11,7 +11,13 @@ namespace QuanLiVatLieuXayDung.Model
     {
         public DataTable GetAllBaoCao()
         {
-            string cmd = @"select * from baocao";
+            string cmd = @"select thangbaocao as [Tháng báo cáo], nambaocao as [Năm báo cáo], ngaylap as [Ngày lập], mabaocao as [Mã báo cáo], loaibaocao as [Loại báo cáo] from baocao";
+            return Connection.getData(cmd);
+        }
+
+        public DataTable GetAllNamBaoCao()
+        {
+            string cmd = @"select distinct nambaocao from baocao";
             return Connection.getData(cmd);
         }
 

@@ -15,9 +15,9 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return Baocaodoanhthu.GetAllDoanhthu();
         }
-        public DataTable TongHoaDon()
+        public DataTable TongHoaDon(int thang, int nam)
         {
-            return Baocaodoanhthu.TongHoaDon();
+            return Baocaodoanhthu.TongHoaDon(thang, nam);
         }
     }
 }
