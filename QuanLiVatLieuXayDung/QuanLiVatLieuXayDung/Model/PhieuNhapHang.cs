@@ -35,6 +35,19 @@ namespace QuanLiVatLieuXayDung.Model
             return Connection.getData(cmd);
         }
 
+        public DataTable GetAllPhieuNhapByNgayNhap(DateTime ngaylap)
+        {
+            string cmd = @"SELECT  [MAPHIEUNHAP] as [Mã phiếu nhập]
+        ,[MAPHIEUGIAOHANG] AS [Mã phiếu giao hàng nhà cung cấp]
+        ,[NGAYNHAP] as [Ngày nhập]
+        ,(select tennhacungcap from nhacungcap ncc where pn.manhacungcap=ncc.manhacungcap) as [Nhà cung cấp]
+        ,[NGUOIGIAOHANG] as [Người giao hàng]
+        ,[TONGTIENHOADON] as [Tổng tiền hóa đơn]
+        ,[SOTIENDATHANHTOAN] as [Số tiền đã thanh toán]
+        FROM PHIEUNHAP pn where day(ngaynhap) = " + ngaylap.Date.Day + " and month(ngaynhap) = " + ngaylap.Date.Month + " and year(ngaynhap) = " + ngaylap.Date.Year;
+            return Connection.getData(cmd);
+        }
+
         public DataTable GetChiTietPhieuNhap(int maphieunhap)
         {
             string cmd = @"SELECT maphieunhap as [Mã phiếu nhập], tensanpham as [Tên sản phẩm], gianhap as [Giá nhập], soluongnhaptheochungtu as [Số lượng nhập theo chứng từ], soluongnhapthucte as [Số lượng nhập theo thực tế], tendonvitinh as [Đơn vị tính], (soluongnhaptheochungtu * gianhap) as [Thành tiền] from chitietphieunhap, donvi, sanpham where sanpham.masanpham = chitietphieunhap.masanpham and donvi.madonvitinh = chitietphieunhap.madonvitinh and maphieunhap = " + maphieunhap;

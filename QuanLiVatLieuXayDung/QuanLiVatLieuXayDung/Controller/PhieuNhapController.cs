@@ -47,6 +47,11 @@ namespace QuanLiVatLieuXayDung.Controller
             return phieuNhap.GetAllPhieuNhapByNhaCungCap(nhacungcap);
         }
 
+        public DataTable GetAllPhieuNhapByNgayNhap(DateTime ngaylap)
+        {
+            return phieuNhap.GetAllPhieuNhapByNgayNhap(ngaylap);
+        }
+
         public DataTable GetAllNhaCC()
         {
             return phieuNhap.GetAllNhaCC();
