@@ -13,6 +13,7 @@ namespace QuanLiVatLieuXayDung.View
 {
     public partial class ucQlnhacungcap : UserControl
     {
+        int state = -1;
         public ucQlnhacungcap()
         {
             InitializeComponent();
@@ -79,17 +80,45 @@ namespace QuanLiVatLieuXayDung.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Enable();
-            Clear();
-            btnCapnhat.Enabled = false;
-            btnThem.Enabled = true;
+            if (state == -1)
+            {
+                state = 0;
+                Enable();
+                Clear();
+                btnSua.Enabled = false;
+                btnThem.Text = "Huỷ thêm";
+                btnThemNCC.Enabled = true;
+            }
+            else
+            {
+                state = -1;
+                Disable();
+                loadall();
+                btnSua.Enabled = true;
+                btnThem.Text = "Thêm";
+                btnThemNCC.Enabled = false;
+            }
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Enable();
-            txtMancc.Enabled = false;
-            btnThemNCC.Enabled = true;
-            btnCapnhat.Enabled = false;
+            if (state == -1)
+            {
+                state = 0;
+                Enable();
+                txtMancc.Enabled = false;
+                btnCapnhat.Enabled = true;
+                btnThem.Enabled = false;
+                btnSua.Text = "Huỷ sửa";
+            }
+            else
+            {
+                state = -1;
+                Disable();
+                loadall();
+                btnCapnhat.Enabled = false;
+                btnThem.Enabled = true;
+                btnSua.Text = "Sửa";
+            }
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -127,16 +156,23 @@ namespace QuanLiVatLieuXayDung.View
         }
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
-            int result = nhacungcap.UpdateNhacungcap(int.Parse(txtMancc.Text), txtTenncc.Text, txtDiachi.Text, txtSdt.Text, txtEmail.Text, txtMsthue.Text, long.Parse(txtCongno.Text));
-            if (result == 1)
+            if (state == 0)
             {
-                MessageBox.Show("Cập nhật thành công");
-                Disable();
-                loadall();
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật thất bại");
+                int result = nhacungcap.UpdateNhacungcap(int.Parse(txtMancc.Text), txtTenncc.Text, txtDiachi.Text, txtSdt.Text, txtEmail.Text, txtMsthue.Text, long.Parse(txtCongno.Text));
+                if (result == 1)
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                    Disable();
+                    loadall();
+                    state = -1;
+                    btnCapnhat.Enabled = false;
+                    btnThem.Enabled = true;
+                    btnSua.Text = "Sửa";
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại");
+                }
             }
         }
 
@@ -166,20 +202,25 @@ namespace QuanLiVatLieuXayDung.View
 
         private void btnThemNCC_Click(object sender, EventArgs e)
         {
-            long congno;
-            if (txtCongno.Text == "") congno = 0;
-            else congno = long.Parse(txtCongno.Text);
-            int result = nhacungcap.InsertNhacungcap(txtTenncc.Text, txtDiachi.Text, txtSdt.Text, txtEmail.Text, txtMsthue.Text, congno);
-            if (result == 1)
+            if (state == 0)
             {
-                MessageBox.Show("Thêm thành công");
-                Disable();
-                loadall();
-                btnThemNCC.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("Thêm thất bại");
+                long congno;
+                if (txtCongno.Text == "") congno = 0;
+                else congno = long.Parse(txtCongno.Text);
+                int result = nhacungcap.InsertNhacungcap(txtTenncc.Text, txtDiachi.Text, txtSdt.Text, txtEmail.Text, txtMsthue.Text, congno);
+                if (result == 1)
+                {
+                    MessageBox.Show("Thêm thành công");
+                    Disable();
+                    loadall();
+                    btnSua.Enabled = true;
+                    btnThem.Text = "Thêm";
+                    btnThemNCC.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
             }
         }
 

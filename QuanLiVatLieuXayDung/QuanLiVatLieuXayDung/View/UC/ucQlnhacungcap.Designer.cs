@@ -43,6 +43,7 @@
             this.dtgSpncc = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSuasp = new System.Windows.Forms.Button();
+            this.btnThemSp = new System.Windows.Forms.Button();
             this.btnXoasp = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             this.txtMasp = new System.Windows.Forms.TextBox();
             this.txtDonvi = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnThemNCC = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCapnhat = new System.Windows.Forms.Button();
             this.txtSdt = new System.Windows.Forms.TextBox();
@@ -66,8 +68,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnThemNCC = new System.Windows.Forms.Button();
-            this.btnThemSp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNcc)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -232,6 +232,7 @@
             // 
             // dtgSpncc
             // 
+            this.dtgSpncc.AllowUserToAddRows = false;
             this.dtgSpncc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -266,6 +267,18 @@
             this.btnSuasp.TabIndex = 22;
             this.btnSuasp.Text = "Sửa";
             this.btnSuasp.UseVisualStyleBackColor = true;
+            // 
+            // btnThemSp
+            // 
+            this.btnThemSp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemSp.Location = new System.Drawing.Point(591, 142);
+            this.btnThemSp.Name = "btnThemSp";
+            this.btnThemSp.Size = new System.Drawing.Size(86, 32);
+            this.btnThemSp.TabIndex = 23;
+            this.btnThemSp.Text = "Thêm";
+            this.btnThemSp.UseVisualStyleBackColor = true;
+            this.btnThemSp.Click += new System.EventHandler(this.btnThemSanPham_Click);
             // 
             // btnXoasp
             // 
@@ -353,6 +366,18 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhà cung cấp";
+            // 
+            // btnThemNCC
+            // 
+            this.btnThemNCC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThemNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemNCC.Location = new System.Drawing.Point(618, 96);
+            this.btnThemNCC.Name = "btnThemNCC";
+            this.btnThemNCC.Size = new System.Drawing.Size(106, 34);
+            this.btnThemNCC.TabIndex = 20;
+            this.btnThemNCC.Text = "Thêm ";
+            this.btnThemNCC.UseVisualStyleBackColor = true;
+            this.btnThemNCC.Click += new System.EventHandler(this.btnThemNCC_Click);
             // 
             // groupBox1
             // 
@@ -448,6 +473,7 @@
             this.txtCongno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCongno.Location = new System.Drawing.Point(449, 81);
             this.txtCongno.Name = "txtCongno";
+            this.txtCongno.ReadOnly = true;
             this.txtCongno.Size = new System.Drawing.Size(101, 23);
             this.txtCongno.TabIndex = 15;
             // 
@@ -510,30 +536,6 @@
             this.label3.Size = new System.Drawing.Size(123, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên nhà cung cấp";
-            // 
-            // btnThemNCC
-            // 
-            this.btnThemNCC.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThemNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemNCC.Location = new System.Drawing.Point(618, 96);
-            this.btnThemNCC.Name = "btnThemNCC";
-            this.btnThemNCC.Size = new System.Drawing.Size(106, 34);
-            this.btnThemNCC.TabIndex = 20;
-            this.btnThemNCC.Text = "Thêm ";
-            this.btnThemNCC.UseVisualStyleBackColor = true;
-            this.btnThemNCC.Click += new System.EventHandler(this.btnThemNCC_Click);
-            // 
-            // btnThemSp
-            // 
-            this.btnThemSp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSp.Location = new System.Drawing.Point(591, 142);
-            this.btnThemSp.Name = "btnThemSp";
-            this.btnThemSp.Size = new System.Drawing.Size(86, 32);
-            this.btnThemSp.TabIndex = 23;
-            this.btnThemSp.Text = "Thêm";
-            this.btnThemSp.UseVisualStyleBackColor = true;
-            this.btnThemSp.Click += new System.EventHandler(this.btnThemSanPham_Click);
             // 
             // ucQlnhacungcap
             // 
