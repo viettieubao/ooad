@@ -31,7 +31,6 @@
             this.btnLuuxuat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cbbNam = new System.Windows.Forms.ComboBox();
             this.cbbThang = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.txtTonghoadon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtNam = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDoanhThu)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -73,7 +73,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cbbNam);
+            this.groupBox4.Controls.Add(this.txtNam);
             this.groupBox4.Controls.Add(this.cbbThang);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.label1);
@@ -88,16 +88,9 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin";
             // 
-            // cbbNam
-            // 
-            this.cbbNam.FormattingEnabled = true;
-            this.cbbNam.Location = new System.Drawing.Point(328, 25);
-            this.cbbNam.Name = "cbbNam";
-            this.cbbNam.Size = new System.Drawing.Size(121, 21);
-            this.cbbNam.TabIndex = 7;
-            // 
             // cbbThang
             // 
+            this.cbbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbThang.FormattingEnabled = true;
             this.cbbThang.Items.AddRange(new object[] {
             "Một",
@@ -148,6 +141,7 @@
             this.btnLapbaocao.TabIndex = 1;
             this.btnLapbaocao.Text = "Lập báo cáo";
             this.btnLapbaocao.UseVisualStyleBackColor = true;
+            this.btnLapbaocao.Click += new System.EventHandler(this.btnLapbaocao_Click);
             // 
             // dtgDoanhThu
             // 
@@ -215,6 +209,13 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Tổng số hóa đơn";
             // 
+            // txtNam
+            // 
+            this.txtNam.Location = new System.Drawing.Point(340, 26);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(118, 20);
+            this.txtNam.TabIndex = 8;
+            // 
             // ucLapBaoCaoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,7 +239,6 @@
         private System.Windows.Forms.Button btnLuuxuat;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox cbbNam;
         private System.Windows.Forms.ComboBox cbbThang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -249,5 +249,6 @@
         private System.Windows.Forms.TextBox txtTonghoadon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNam;
     }
 }

@@ -16,9 +16,17 @@ namespace QuanLiVatLieuXayDung.Model
 			Group by sp.MASANPHAM, sp.TENSANPHAM";
             return Connection.getData(cmd);
         }
-        public DataTable TongHoaDon()
+
+        public DataTable GetTongDoanhThu(int thang, int nam)
         {
-            string cmd = @" Select count(MAHOADON) From [OOAD].[dbo].[HOADON]";
+            return null;
+        }
+
+        public DataTable TongHoaDon(int thang, int nam)
+        {
+            DateTime ngaydauthang = new DateTime(nam, thang, 1);
+            DateTime ngaycuoithang = new DateTime(nam, thang, DateTime.DaysInMonth(nam, thang));
+            string cmd = @" Select count(MAHOADON) From [OOAD].[dbo].[HOADON] where ngaylap between convert(datetime, '" + ngaydauthang.ToString("yyyy-MM-dd") + "') and convert(datetime, '" + ngaydauthang.ToString("yyyy-MM-dd") + "')";
             return Connection.getData(cmd);
         }
         public DataTable GetAllBaoCaoCuaHang(int thangbaocao, int nambaocao)
@@ -39,12 +47,12 @@ namespace QuanLiVatLieuXayDung.Model
             return Connection.getData(cmd);
         }
 
-        public int Insert(int sohoadon, int sotiendoanhthu)
+        public int Insert(int sohoadon, long sotiendoanhthu)
         {
             string cmd1 = @"select max(mabaocao) from baocao";
             int mabaocao = int.Parse(Connection.getData(cmd1).Rows[0][0].ToString());
 
-            string cmd2 = @"insert into baocaodoanhthu(mabaocao,masanpham,soluongtondauthang,soluongtoncuoithang,soluongnhaptrongthang, soluongbanratrongthang) values (" + mabaocao + "," + int.Parse(danhsach.Rows[i][0].ToString()) + "," + int.Parse(danhsach.Rows[i][3].ToString()) + "," + int.Parse(danhsach.Rows[i][4].ToString()) + "," + int.Parse(danhsach.Rows[i][5].ToString()) + "," + int.Parse(danhsach.Rows[i][6].ToString()) + ")";
+            string cmd2 = @"insert into baocaodoanhthu(mabaocao,tongsohoadontrongthang,tongdoanhthu) values (" + mabaocao + "," + sohoadon + "," + sotiendoanhthu + ")";
             return 0;
         }
     }
