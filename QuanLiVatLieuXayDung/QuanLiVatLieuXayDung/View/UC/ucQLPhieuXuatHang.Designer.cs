@@ -52,7 +52,6 @@
             this.dgvDanhSachPhieuXuat = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -230,6 +229,7 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTimKiem.Location = new System.Drawing.Point(211, 24);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(220, 22);
@@ -289,6 +289,7 @@
             // dgvChiTietPhieuXuat
             // 
             this.dgvChiTietPhieuXuat.AllowUserToAddRows = false;
+            this.dgvChiTietPhieuXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChiTietPhieuXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvChiTietPhieuXuat.Location = new System.Drawing.Point(4, 19);
@@ -314,6 +315,7 @@
             // dgvDanhSachPhieuXuat
             // 
             this.dgvDanhSachPhieuXuat.AllowUserToAddRows = false;
+            this.dgvDanhSachPhieuXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachPhieuXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachPhieuXuat.Location = new System.Drawing.Point(4, 19);
@@ -327,7 +329,6 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.button3);
-            this.groupBox6.Controls.Add(this.button2);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox6.Location = new System.Drawing.Point(0, 436);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
@@ -342,25 +343,14 @@
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(252, 18);
+            this.button3.Location = new System.Drawing.Point(168, 14);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 28);
             this.button3.TabIndex = 3;
             this.button3.Text = "Lập phiếu xuất hàng";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(81, 18);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ucQLPhieuXuatHang
             // 
@@ -413,7 +403,6 @@
         private System.Windows.Forms.DataGridView dgvDanhSachPhieuXuat;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtTimKiem;
     }
 }

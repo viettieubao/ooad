@@ -42,12 +42,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSachPhieuThuTien = new System.Windows.Forms.DataGridView();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -228,6 +228,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm kiếm";
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTimKiem.Location = new System.Drawing.Point(139, 23);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(270, 22);
+            this.txtTimKiem.TabIndex = 4;
+            // 
             // cbbTimKiem
             // 
             this.cbbTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -283,6 +291,7 @@
             // dgvDanhSachPhieuThuTien
             // 
             this.dgvDanhSachPhieuThuTien.AllowUserToAddRows = false;
+            this.dgvDanhSachPhieuThuTien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachPhieuThuTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachPhieuThuTien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachPhieuThuTien.Location = new System.Drawing.Point(4, 19);
@@ -291,13 +300,6 @@
             this.dgvDanhSachPhieuThuTien.Size = new System.Drawing.Size(1067, 228);
             this.dgvDanhSachPhieuThuTien.TabIndex = 0;
             this.dgvDanhSachPhieuThuTien.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachPhieuThuTien_RowEnter);
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(139, 23);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(270, 22);
-            this.txtTimKiem.TabIndex = 4;
             // 
             // ucQLPhieuThuTien
             // 

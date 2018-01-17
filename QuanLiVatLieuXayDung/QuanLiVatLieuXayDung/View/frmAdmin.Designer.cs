@@ -82,7 +82,6 @@
             this.tabcontrol.SelectedIndex = 0;
             this.tabcontrol.Size = new System.Drawing.Size(1008, 705);
             this.tabcontrol.TabIndex = 0;
-
             // 
             // tabPage1
             // 
@@ -94,7 +93,6 @@
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "Quản lý tài khoản";
             this.tabPage1.UseVisualStyleBackColor = true;
-
             // 
             // ucQLUser1
             // 
@@ -105,7 +103,6 @@
             this.ucQLUser1.Name = "ucQLUser1";
             this.ucQLUser1.Size = new System.Drawing.Size(994, 670);
             this.ucQLUser1.TabIndex = 0;
-
             // 
             // tabPage2
             // 
@@ -116,7 +113,6 @@
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Quản lý sản phẩm";
             this.tabPage2.UseVisualStyleBackColor = true;
-
             // 
             // ucQlsanpham1
             // 
@@ -139,7 +135,6 @@
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Quản lý nhà cung cấp";
             this.tabPage3.UseVisualStyleBackColor = true;
-
             // 
             // ucQlnhacungcap1
             // 
@@ -149,7 +144,6 @@
             this.ucQlnhacungcap1.Name = "ucQlnhacungcap1";
             this.ucQlnhacungcap1.Size = new System.Drawing.Size(983, 820);
             this.ucQlnhacungcap1.TabIndex = 0;
-  
             // 
             // tabPage4
             // 
@@ -180,7 +174,6 @@
             this.tabPage5.TabIndex = 6;
             this.tabPage5.Text = "Quản lý hóa đơn";
             this.tabPage5.UseVisualStyleBackColor = true;
-
             // 
             // ucQLHoaDon1
             // 
@@ -201,7 +194,6 @@
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "Quản lý báo cáo";
             this.tabPage6.UseVisualStyleBackColor = true;
-    
             // 
             // ucQLBaoCao1
             // 
@@ -243,7 +235,7 @@
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Thay đổi quy định";
             this.tabPage8.UseVisualStyleBackColor = true;
-
+            // 
             // ucThayDoiQuyDinh1
             // 
             this.ucThayDoiQuyDinh1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -253,7 +245,7 @@
             this.ucThayDoiQuyDinh1.Name = "ucThayDoiQuyDinh1";
             this.ucThayDoiQuyDinh1.Size = new System.Drawing.Size(994, 670);
             this.ucThayDoiQuyDinh1.TabIndex = 0;
-
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.tabcontrol);
@@ -313,9 +305,11 @@
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdmin_FormClosed);
             this.tabcontrol.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

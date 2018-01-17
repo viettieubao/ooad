@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbLoaiBaoCao = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSachBaoCao = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -56,7 +56,7 @@
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.comboBox2);
+            this.groupBox4.Controls.Add(this.cbbLoaiBaoCao);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -118,7 +118,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(415, 27);
+            this.label3.Location = new System.Drawing.Point(415, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 16);
@@ -129,7 +129,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(595, 27);
+            this.label2.Location = new System.Drawing.Point(595, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 16);
@@ -140,27 +140,22 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(109, 27);
+            this.label1.Location = new System.Drawing.Point(109, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Loại báo cáo";
             // 
-            // comboBox2
+            // cbbLoaiBaoCao
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Báo cáo tồn",
-            "Báo cáo doanh thu",
-            "Báo cáo công nợ khách hàng",
-            "Báo cáo công nợ cửa hàng"});
-            this.comboBox2.Location = new System.Drawing.Point(204, 19);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 24);
-            this.comboBox2.TabIndex = 4;
+            this.cbbLoaiBaoCao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbbLoaiBaoCao.FormattingEnabled = true;
+            this.cbbLoaiBaoCao.Location = new System.Drawing.Point(204, 19);
+            this.cbbLoaiBaoCao.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbLoaiBaoCao.Name = "cbbLoaiBaoCao";
+            this.cbbLoaiBaoCao.Size = new System.Drawing.Size(199, 24);
+            this.cbbLoaiBaoCao.TabIndex = 4;
             // 
             // groupBox5
             // 
@@ -244,7 +239,7 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbbLoaiBaoCao;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dgvDanhSachBaoCao;
         private System.Windows.Forms.GroupBox groupBox6;

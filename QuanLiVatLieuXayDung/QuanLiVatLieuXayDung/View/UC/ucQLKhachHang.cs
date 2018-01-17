@@ -19,6 +19,11 @@ namespace QuanLiVatLieuXayDung.View.UC
         public ucQLKhachHang()
         {
             InitializeComponent();
+            if (frmLogin.rule == "admin")
+            {
+                btnThemKhachHang.Enabled = false;
+                btnSuaKhachHang.Enabled = false;
+            }
             btnKhoaCapNhat.Enabled = false;
             btnKhoaThem.Enabled = false;
             Lock();

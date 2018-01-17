@@ -15,6 +15,7 @@ namespace QuanLiVatLieuXayDung.View
     {
         ucLapHoaDon ucLapHoaDon;
         ucLapPhieuNhapHang lapPhieuNhapHang;
+        ucLapPhieuXuatHang lapPhieuXuatHang;
         public frmThem(int key)
         {
             InitializeComponent();
@@ -25,16 +26,19 @@ namespace QuanLiVatLieuXayDung.View
                 ucLapHoaDon.Dock = DockStyle.Fill;
                 ucLapHoaDon.BringToFront();
             }
-            if (key == 2)
+            if (key == 2) //lap phieu nhap hang
             {
                 lapPhieuNhapHang = new ucLapPhieuNhapHang();
                 panel1.Controls.Add(lapPhieuNhapHang);
                 lapPhieuNhapHang.Dock = DockStyle.Fill;
                 lapPhieuNhapHang.BringToFront();
             }
-            if (key == 3)
+            if (key == 3) //lap phieu xuat hang
             {
-
+                lapPhieuXuatHang = new ucLapPhieuXuatHang();
+                panel1.Controls.Add(lapPhieuXuatHang);
+                lapPhieuXuatHang.Dock = DockStyle.Fill;
+                lapPhieuXuatHang.BringToFront();
             }
         }
 

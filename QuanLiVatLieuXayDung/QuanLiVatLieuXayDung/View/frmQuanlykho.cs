@@ -49,5 +49,23 @@ namespace QuanLiVatLieuXayDung.View
             {
             }
         }
+
+        private void frmQuanlykho_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void frmQuanlykho_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void frmQuanlykho_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có muốn thoát không", "Exit", MessageBoxButtons.OKCancel);
+            if (dr == DialogResult.OK)
+            {
+                frmLogin.close();
+            }
+        }
     }
 }

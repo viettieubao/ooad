@@ -33,10 +33,10 @@
             this.txtTenDonViTinh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvDonViTinh = new System.Windows.Forms.DataGridView();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -103,6 +103,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm kiếm";
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTimKiem.Location = new System.Drawing.Point(216, 26);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(398, 22);
+            this.txtTimKiem.TabIndex = 5;
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -126,7 +134,7 @@
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(599, 302);
+            this.groupBox5.Size = new System.Drawing.Size(738, 302);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách đơn vị tính";
@@ -141,15 +149,8 @@
             this.dgvDonViTinh.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDonViTinh.Name = "dgvDonViTinh";
             this.dgvDonViTinh.ReadOnly = true;
-            this.dgvDonViTinh.Size = new System.Drawing.Size(591, 279);
+            this.dgvDonViTinh.Size = new System.Drawing.Size(730, 279);
             this.dgvDonViTinh.TabIndex = 0;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(216, 26);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(398, 22);
-            this.txtTimKiem.TabIndex = 5;
             // 
             // ucThemDonViTinh
             // 

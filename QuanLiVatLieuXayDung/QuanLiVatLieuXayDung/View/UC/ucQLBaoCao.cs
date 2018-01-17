@@ -20,6 +20,20 @@ namespace QuanLiVatLieuXayDung.View.UC
             cbbThang.SelectedIndex = 0;
             cbbNam.DataSource = baocaoController.GetAllNamBaoCao();
             cbbNam.DisplayMember = "nambaocao";
+            cbbLoaiBaoCao.Items.Clear();
+            if (frmLogin.rule == "admin")
+            {
+                cbbLoaiBaoCao.Items.Add("Báo cáo tồn");
+                cbbLoaiBaoCao.Items.Add("Báo cáo doanh thu");
+                cbbLoaiBaoCao.Items.Add("Báo cáo công nợ khách hàng");
+                cbbLoaiBaoCao.Items.Add("Báo cáo công nợ cửa hàng");
+            }
+            else
+            {
+                cbbLoaiBaoCao.Items.Add("Báo cáo doanh thu");
+                cbbLoaiBaoCao.Items.Add("Báo cáo công nợ khách hàng");
+                cbbLoaiBaoCao.Items.Add("Báo cáo công nợ cửa hàng");
+            }
         }
     }
 }

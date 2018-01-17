@@ -10,7 +10,7 @@ namespace QuanLiVatLieuXayDung.Model
     {
         public DataTable GetAllDoanhthu()
         {
-            string cmd = @"	Select sp.MASANPHAM, sp.TENSANPHAM, sum(SOLUONGSANPHAM) as [Số Lượng], sum(THANHTIEN) as [Thành Tiền]
+            string cmd = @"	Select sp.MASANPHAM , sp.TENSANPHAM , sum(SOLUONGSANPHAM) as [Số Lượng], sum(THANHTIEN) as [Thành Tiền]
 	        From [OOAD].[dbo].[SANPHAM] sp, [OOAD].[dbo].[CHITIETHOADON] c, [OOAD].[dbo].[HOADON] hd
             Where sp.MASANPHAM=c.MASANPHAM and hd.MAHOADON=c.MaHOADON and 
 			Group by sp.MASANPHAM, sp.TENSANPHAM";

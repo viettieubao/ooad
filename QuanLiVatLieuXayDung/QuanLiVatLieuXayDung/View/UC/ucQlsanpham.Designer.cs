@@ -82,6 +82,7 @@
             this.txtSoLuongTonToiThieu.Name = "txtSoLuongTonToiThieu";
             this.txtSoLuongTonToiThieu.Size = new System.Drawing.Size(40, 22);
             this.txtSoLuongTonToiThieu.TabIndex = 10;
+            this.txtSoLuongTonToiThieu.Text = "0";
             // 
             // txtSoLuongBanSiToiThieu
             // 
@@ -91,6 +92,7 @@
             this.txtSoLuongBanSiToiThieu.Name = "txtSoLuongBanSiToiThieu";
             this.txtSoLuongBanSiToiThieu.Size = new System.Drawing.Size(40, 22);
             this.txtSoLuongBanSiToiThieu.TabIndex = 9;
+            this.txtSoLuongBanSiToiThieu.Text = "0";
             // 
             // txtTenSanPham
             // 
@@ -222,6 +224,7 @@
             this.txtGiaBanLe.Name = "txtGiaBanLe";
             this.txtGiaBanLe.Size = new System.Drawing.Size(93, 22);
             this.txtGiaBanLe.TabIndex = 26;
+            this.txtGiaBanLe.Text = "0";
             // 
             // cbbDVBanSi
             // 
@@ -253,6 +256,7 @@
             this.txtGiaBanSi.Name = "txtGiaBanSi";
             this.txtGiaBanSi.Size = new System.Drawing.Size(93, 22);
             this.txtGiaBanSi.TabIndex = 22;
+            this.txtGiaBanSi.Text = "0";
             // 
             // label1
             // 
@@ -316,6 +320,7 @@
             this.txtSoLuongTon.Name = "txtSoLuongTon";
             this.txtSoLuongTon.Size = new System.Drawing.Size(120, 22);
             this.txtSoLuongTon.TabIndex = 16;
+            this.txtSoLuongTon.Text = "0";
             // 
             // label9
             // 
@@ -548,6 +553,7 @@
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(117, 22);
             this.txtTo.TabIndex = 31;
+            this.txtTo.Text = "0";
             // 
             // label2
             // 
@@ -569,6 +575,7 @@
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Size = new System.Drawing.Size(117, 22);
             this.txtFrom.TabIndex = 5;
+            this.txtFrom.Text = "0";
             // 
             // ucQlsanpham
             // 

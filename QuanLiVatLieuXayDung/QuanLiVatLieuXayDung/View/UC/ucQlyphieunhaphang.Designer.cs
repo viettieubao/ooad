@@ -226,6 +226,7 @@
             // 
             // txtNgayNhap
             // 
+            this.txtNgayNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNgayNhap.Location = new System.Drawing.Point(837, 25);
             this.txtNgayNhap.Name = "txtNgayNhap";
             this.txtNgayNhap.ReadOnly = true;
@@ -234,6 +235,7 @@
             // 
             // txtTenNhaCungCap
             // 
+            this.txtTenNhaCungCap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTenNhaCungCap.Location = new System.Drawing.Point(477, 23);
             this.txtTenNhaCungCap.Name = "txtTenNhaCungCap";
             this.txtTenNhaCungCap.ReadOnly = true;
@@ -246,7 +248,7 @@
             this.btnThemPN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemPN.Location = new System.Drawing.Point(907, 86);
             this.btnThemPN.Name = "btnThemPN";
-            this.btnThemPN.Size = new System.Drawing.Size(130, 44);
+            this.btnThemPN.Size = new System.Drawing.Size(130, 38);
             this.btnThemPN.TabIndex = 28;
             this.btnThemPN.Text = "Thêm phiếu nhập";
             this.btnThemPN.UseVisualStyleBackColor = true;

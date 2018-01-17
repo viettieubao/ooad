@@ -113,12 +113,12 @@ namespace QuanLiVatLieuXayDung.View.UC
         }
         private void Clear()
         {
-            txtGiaBanLe.Text = "";
-            txtGiaBanSi.Text = "";
+            txtGiaBanLe.Text = "0";
+            txtGiaBanSi.Text = "0";
             txtMaSanPham.Text = "";
-            txtSoLuongBanSiToiThieu.Text = "";
-            txtSoLuongTon.Text = ""; ;
-            txtSoLuongTonToiThieu.Text = "";
+            txtSoLuongBanSiToiThieu.Text = "0";
+            txtSoLuongTon.Text = "0"; ;
+            txtSoLuongTonToiThieu.Text = "0";
             txtTenSanPham.Text = "";
         }
 
@@ -332,10 +332,30 @@ namespace QuanLiVatLieuXayDung.View.UC
             }
             if (CbTimTheoGia.CheckState == CheckState.Checked && cbTimTheoTen.CheckState == CheckState.Unchecked)//tìm theo giá
             {
-                dtpData.DataSource = sanPham.SearchTheoGiaSanPham(giabatdau, giaketthuc, flat);
-            }else if (CbTimTheoGia.CheckState == CheckState.Checked && cbTimTheoTen.CheckState == CheckState.Checked)//tìm theo tên và giá
+                giabatdau = long.Parse(txtFrom.Text);
+                giaketthuc = long.Parse(txtTo.Text);
+                if (giabatdau > giaketthuc)
+                {
+                    MessageBox.Show("Giá bắt đầu phải nhỏ hơn giá kết thúc","Lỗi");
+                }
+                else
+                {
+                    dtpData.DataSource = sanPham.SearchTheoGiaSanPham(giabatdau, giaketthuc, flat);
+                }
+            }
+            else if (CbTimTheoGia.CheckState == CheckState.Checked && cbTimTheoTen.CheckState == CheckState.Checked)//tìm theo tên và giá
             {
-                dtpData.DataSource = sanPham.SearchTheoTenVaGia(txtTimTheoTen.Text, giabatdau, giaketthuc, flat);
+                giabatdau = long.Parse(txtFrom.Text);
+                giaketthuc = long.Parse(txtTo.Text);
+                if (giabatdau > giaketthuc)
+                {
+                    MessageBox.Show("Giá bắt đầu phải nhỏ hơn giá kết thúc", "Lỗi");
+                }
+                else
+                {
+                    dtpData.DataSource = sanPham.SearchTheoTenVaGia(txtTimTheoTen.Text, giabatdau, giaketthuc, flat);
+                }
+                
             }
             else if (CbTimTheoGia.CheckState==CheckState.Unchecked&&cbTimTheoTen.CheckState==CheckState.Unchecked)
             {

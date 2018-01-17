@@ -38,13 +38,13 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.ucQlsanpham1 = new QuanLiVatLieuXayDung.View.UC.ucQlsanpham();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.ucLapBaoCaoTon1 = new QuanLiVatLieuXayDung.View.UC.ucLapBaoCaoTon();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTaikhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ucLapBaoCaoTon1 = new QuanLiVatLieuXayDung.View.UC.ucLapBaoCaoTon();
             this.tabPage1.SuspendLayout();
             this.tabcontrol.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -125,6 +125,9 @@
             // 
             // ucQlnhacungcap1
             // 
+            this.ucQlnhacungcap1.AutoScroll = true;
+            this.ucQlnhacungcap1.AutoScrollMinSize = new System.Drawing.Size(0, 1000);
+            this.ucQlnhacungcap1.AutoSize = true;
             this.ucQlnhacungcap1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucQlnhacungcap1.Location = new System.Drawing.Point(0, 0);
             this.ucQlnhacungcap1.Margin = new System.Windows.Forms.Padding(4);
@@ -161,6 +164,16 @@
             this.tabPage5.TabIndex = 7;
             this.tabPage5.Text = "Lập báo cáo tồn kho";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // ucLapBaoCaoTon1
+            // 
+            this.ucLapBaoCaoTon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLapBaoCaoTon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucLapBaoCaoTon1.Location = new System.Drawing.Point(0, 0);
+            this.ucLapBaoCaoTon1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucLapBaoCaoTon1.Name = "ucLapBaoCaoTon1";
+            this.ucLapBaoCaoTon1.Size = new System.Drawing.Size(1240, 696);
+            this.ucLapBaoCaoTon1.TabIndex = 0;
             // 
             // mnuThoat
             // 
@@ -212,16 +225,6 @@
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // ucLapBaoCaoTon1
-            // 
-            this.ucLapBaoCaoTon1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucLapBaoCaoTon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucLapBaoCaoTon1.Location = new System.Drawing.Point(0, 0);
-            this.ucLapBaoCaoTon1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucLapBaoCaoTon1.Name = "ucLapBaoCaoTon1";
-            this.ucLapBaoCaoTon1.Size = new System.Drawing.Size(1240, 696);
-            this.ucLapBaoCaoTon1.TabIndex = 0;
-            // 
             // frmQuanlykho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,10 +234,14 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmQuanlykho";
             this.Text = "frmQuanlykho";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuanlykho_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuanlykho_FormClosed);
+            this.Load += new System.EventHandler(this.frmQuanlykho_Load);
             this.tabPage1.ResumeLayout(false);
             this.tabcontrol.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

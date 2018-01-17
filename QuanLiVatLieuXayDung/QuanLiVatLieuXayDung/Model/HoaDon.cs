@@ -11,7 +11,7 @@ namespace QuanLiVatLieuXayDung.Model
     {
         public DataTable GetAllHoaDon()
         {
-            string cmd = @"";
+            string cmd = @"select mahoadon as [Mã hoá đơn], tenkhachhang as [Tên khách hàng], ngaylap as [Ngày lập], diachi as [Địa chỉ], sodienthoai as [Số điện thoại] from hoadon, khachhang where hoadon.makhachhang = khachhang.makhachhang order by mahoadon asc";
             return Connection.getData(cmd);
         }
 
@@ -58,7 +58,12 @@ namespace QuanLiVatLieuXayDung.Model
 
         public DataTable GetChiTietHoaDon(int maDonHang)
         {
-            string cmd = @"select chitiethoadon.masanpham, tensanpham, madonvitinhbansi, giabansi, giabanle, madonvitinhbanle, chitiethoadon.madonvitinh, tendonvitinh, soluongsanpham, soluongsanphamdaxuat from chitiethoadon, sanpham, donvi where sanpham.masanpham = chitiethoadon.masanpham and donvi.madonvitinh = chitiethoadon.madonvitinh and mahoadon = " + maDonHang;
+            string cmd = @" select masanpham as [Mã sản phẩm], (select sp.TENSANPHAM from SANPHAM sp where sp.MASANPHAM=cthd.MASANPHAM) as [Tên sản phẩm],
+ CTHD.SOLUONGSANPHAM as [Số lượng], 
+ (SELECT dv.tendonvitinh from donvi dv where dv.MADONVITINH =cthd.MADONVITINH) as  [Đơn vị tính],
+ cthd.THANHTIEN as [Thành tiền],
+ (cthd.THANHTIEN/cthd.SOLUONGSANPHAM) as [Giá bán]
+ from CHITIETHOADON cthd where cthd.MAHOADON= " + maDonHang;
             return Connection.getData(cmd);
         }
 

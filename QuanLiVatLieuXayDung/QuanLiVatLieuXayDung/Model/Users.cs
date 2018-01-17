@@ -55,7 +55,17 @@ namespace QuanLiVatLieuXayDung.Model
         }
         public DataTable Search(string tennhanvien,string bophan)
         {
-            string cmd = @"select manhanvien as 'STT', username as [Tên tài khoản], tennhanvien as [Tên nhân viên], bophan as [Bộ phận], diachi as [Địa chỉ], sodienthoai as [Số điện thoại], ngaysinh as [Ngày sinh] from nhanvien where tennhanvien like '%"+tennhanvien+ @"%' or bophan like '"+bophan+"'";
+            string cmd;
+            if (tennhanvien == "")
+            {
+                cmd = @"select manhanvien as 'STT', username as [Tên tài khoản], tennhanvien as [Tên nhân viên], bophan as [Bộ phận], diachi as [Địa chỉ], sodienthoai as [Số điện thoại], ngaysinh as [Ngày sinh] from nhanvien 
+where  bophan <>'admin' and bophan like N'%" + bophan + "%'";
+            }
+            else
+            {
+                cmd = @"select manhanvien as 'STT', username as [Tên tài khoản], tennhanvien as [Tên nhân viên], bophan as [Bộ phận], diachi as [Địa chỉ], sodienthoai as [Số điện thoại], ngaysinh as [Ngày sinh] from nhanvien 
+where bophan<>'admin' and tennhanvien like N'%" + tennhanvien + @"%'";
+            }
             return Connection.getData(cmd);
         }
 

@@ -25,6 +25,10 @@ namespace QuanLiVatLieuXayDung.View.UC
             {
                 btnThemPN.Enabled = false;
             }
+            if (frmLogin.rule == "admin")
+            {
+                btnThemPN.Enabled = false;
+            }
             dgvDanhSachDonHangNhap.DataSource = phieunhapController.GetAllPhieuNhap();
             cbbTimtheo.SelectedIndex = 0;
         }
@@ -93,5 +97,6 @@ namespace QuanLiVatLieuXayDung.View.UC
             chitietphieunhap = phieunhapController.GetChiTietPhieuNhap(int.Parse(txtMaPhieuNhap.Text));
             dtgChiTietDonHang.DataSource = chitietphieunhap;
         }
+
     }
 }

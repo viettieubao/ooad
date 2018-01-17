@@ -264,6 +264,7 @@
             // dgvDanhSachHoaDon
             // 
             this.dgvDanhSachHoaDon.AllowUserToAddRows = false;
+            this.dgvDanhSachHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachHoaDon.Location = new System.Drawing.Point(4, 19);
@@ -289,6 +290,7 @@
             // dgvDanhSachKhachHang
             // 
             this.dgvDanhSachKhachHang.AllowUserToAddRows = false;
+            this.dgvDanhSachKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachKhachHang.Location = new System.Drawing.Point(4, 19);

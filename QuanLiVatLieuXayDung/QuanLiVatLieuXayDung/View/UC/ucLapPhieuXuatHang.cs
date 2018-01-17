@@ -31,8 +31,13 @@ namespace QuanLiVatLieuXayDung.View.UC
             btnSuaSp.Enabled = false;
             btnXoa.Enabled = false;
             txtTongTien.Text = "0";
+            load();
         }
 
+        void load()
+        {
+            dgvDanhSachHoaDon.DataSource = hoadonController.GetAllHoaDon();
+        }
         private void updateTongTien()
         {
             long tongTien = 0;
@@ -95,6 +100,10 @@ namespace QuanLiVatLieuXayDung.View.UC
                         clearHoaDonData();
                     }
                 }
+            }
+            else
+            {
+                load();
             }
         }
 

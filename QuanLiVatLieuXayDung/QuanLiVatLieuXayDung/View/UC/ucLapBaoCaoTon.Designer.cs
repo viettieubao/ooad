@@ -73,6 +73,7 @@
             // 
             // cbbThang
             // 
+            this.cbbThang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbThang.FormattingEnabled = true;
             this.cbbThang.Items.AddRange(new object[] {
@@ -95,6 +96,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(419, 27);
             this.label2.Name = "label2";
@@ -104,6 +106,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(150, 27);
             this.label1.Name = "label1";
@@ -113,6 +116,7 @@
             // 
             // txtNam
             // 
+            this.txtNam.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtNam.Location = new System.Drawing.Point(470, 24);
             this.txtNam.Name = "txtNam";
@@ -179,6 +183,7 @@
             // dgvChiTietBaoCao
             // 
             this.dgvChiTietBaoCao.AllowUserToAddRows = false;
+            this.dgvChiTietBaoCao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChiTietBaoCao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietBaoCao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmnMaSanPham,

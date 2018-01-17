@@ -54,8 +54,6 @@
             this.dgvChiTietHoaDon = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSachHoaDon = new System.Windows.Forms.DataGridView();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -63,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHoaDon)).BeginInit();
-            this.groupBox6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -283,6 +280,7 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTimKiem.Location = new System.Drawing.Point(194, 23);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(229, 22);
@@ -295,7 +293,6 @@
             this.cbbTimKiem.FormattingEnabled = true;
             this.cbbTimKiem.Items.AddRange(new object[] {
             "Mã hóa đơn",
-            "Ngày lập",
             "Nhân viên lập",
             "Tên khách hàng"});
             this.cbbTimKiem.Location = new System.Drawing.Point(749, 23);
@@ -344,6 +341,7 @@
             // dgvChiTietHoaDon
             // 
             this.dgvChiTietHoaDon.AllowUserToAddRows = false;
+            this.dgvChiTietHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvChiTietHoaDon.Location = new System.Drawing.Point(4, 19);
@@ -360,7 +358,7 @@
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(474, 199);
+            this.groupBox5.Size = new System.Drawing.Size(474, 249);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách hóa đơn";
@@ -368,39 +366,15 @@
             // dgvDanhSachHoaDon
             // 
             this.dgvDanhSachHoaDon.AllowUserToAddRows = false;
+            this.dgvDanhSachHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachHoaDon.Location = new System.Drawing.Point(4, 19);
             this.dgvDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDanhSachHoaDon.Name = "dgvDanhSachHoaDon";
-            this.dgvDanhSachHoaDon.Size = new System.Drawing.Size(466, 176);
+            this.dgvDanhSachHoaDon.Size = new System.Drawing.Size(466, 226);
             this.dgvDanhSachHoaDon.TabIndex = 0;
             this.dgvDanhSachHoaDon.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachHoaDon_RowEnter);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.button3);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox6.Location = new System.Drawing.Point(0, 436);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(474, 50);
-            this.groupBox6.TabIndex = 7;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Chức năng";
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(177, 14);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 28);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Lập hóa đơn";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -408,7 +382,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 237);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(474, 199);
+            this.panel1.Size = new System.Drawing.Size(474, 249);
             this.panel1.TabIndex = 8;
             // 
             // ucQLHoaDon
@@ -416,7 +390,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
@@ -432,7 +405,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHoaDon)).EndInit();
-            this.groupBox6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -464,8 +436,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dgvChiTietHoaDon;
         private System.Windows.Forms.DataGridView dgvDanhSachHoaDon;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtTimKiem;

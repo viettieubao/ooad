@@ -16,13 +16,13 @@ namespace QuanLiVatLieuXayDung.Model
         }
         public DataTable GetAllDonViTinh()
         {
-            string cmd = @"select tendonvitinh from donvi";
+            string cmd = @"select tendonvitinh  as [Tên đơn vị tính] from donvi";
             return Connection.getData(cmd);
         }
 
         public DataTable GetAllDonViTinhWithTenDonVi(string tendonvi)
         {
-            string cmd = @"select tendonvitinh from donvi where tendonvitinh like N'%" + tendonvi + "%'";
+            string cmd = @"select tendonvitinh as [Tên đơn vị tính] from donvi where tendonvitinh like N'%" + tendonvi + "%'";
             return Connection.getData(cmd);
         }
         //public int InsertBaoCaoTon(int masanpham, long tongTien, string tenNguoiGiaoHang, DataTable sanpham, List<int> maSP, List<int> donViTinh)

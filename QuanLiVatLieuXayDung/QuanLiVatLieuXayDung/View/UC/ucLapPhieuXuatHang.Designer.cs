@@ -613,6 +613,7 @@
             // dgvDanhSachHoaDon
             // 
             this.dgvDanhSachHoaDon.AllowUserToAddRows = false;
+            this.dgvDanhSachHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachHoaDon.Location = new System.Drawing.Point(279, 10);
             this.dgvDanhSachHoaDon.Name = "dgvDanhSachHoaDon";

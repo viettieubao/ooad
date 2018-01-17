@@ -30,15 +30,15 @@
         {
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ucLapHoaDon1 = new QuanLiVatLieuXayDung.View.UC.ucLapHoaDon();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ucQLKhachHang1 = new QuanLiVatLieuXayDung.View.UC.ucQLKhachHang();
             this.mnuDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTaikhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabcontrol = new System.Windows.Forms.TabControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ucQLKhachHang1 = new QuanLiVatLieuXayDung.View.UC.ucQLKhachHang();
-            this.ucLapHoaDon1 = new QuanLiVatLieuXayDung.View.UC.ucLapHoaDon();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,6 +64,16 @@
             this.tabPage1.Text = "Lập hóa đơn";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // ucLapHoaDon1
+            // 
+            this.ucLapHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLapHoaDon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucLapHoaDon1.Location = new System.Drawing.Point(3, 3);
+            this.ucLapHoaDon1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucLapHoaDon1.Name = "ucLapHoaDon1";
+            this.ucLapHoaDon1.Size = new System.Drawing.Size(944, 670);
+            this.ucLapHoaDon1.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.ucQLKhachHang1);
@@ -73,6 +83,16 @@
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Quản lý khách hàng";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ucQLKhachHang1
+            // 
+            this.ucQLKhachHang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucQLKhachHang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucQLKhachHang1.Location = new System.Drawing.Point(0, 0);
+            this.ucQLKhachHang1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucQLKhachHang1.Name = "ucQLKhachHang1";
+            this.ucQLKhachHang1.Size = new System.Drawing.Size(950, 676);
+            this.ucQLKhachHang1.TabIndex = 0;
             // 
             // mnuDoimatkhau
             // 
@@ -130,26 +150,6 @@
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // ucQLKhachHang1
-            // 
-            this.ucQLKhachHang1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucQLKhachHang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucQLKhachHang1.Location = new System.Drawing.Point(0, 0);
-            this.ucQLKhachHang1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucQLKhachHang1.Name = "ucQLKhachHang1";
-            this.ucQLKhachHang1.Size = new System.Drawing.Size(950, 676);
-            this.ucQLKhachHang1.TabIndex = 0;
-            // 
-            // ucLapHoaDon1
-            // 
-            this.ucLapHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucLapHoaDon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucLapHoaDon1.Location = new System.Drawing.Point(3, 3);
-            this.ucLapHoaDon1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucLapHoaDon1.Name = "ucLapHoaDon1";
-            this.ucLapHoaDon1.Size = new System.Drawing.Size(944, 670);
-            this.ucLapHoaDon1.TabIndex = 0;
-            // 
             // frmBanhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +160,7 @@
             this.Name = "frmBanhang";
             this.Text = "frmBanhang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBanhang_FormClosed);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

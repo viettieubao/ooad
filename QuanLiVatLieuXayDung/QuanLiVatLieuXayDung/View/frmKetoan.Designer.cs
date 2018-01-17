@@ -208,6 +208,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmKetoan";
             this.Text = "frmKetoan";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmKetoan_FormClosed);
             this.tabcontrol.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);

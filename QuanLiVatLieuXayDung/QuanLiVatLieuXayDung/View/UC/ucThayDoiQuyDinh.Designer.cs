@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dgvQuyDinh = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
@@ -41,7 +40,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuyDinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,16 +69,9 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Controls.Add(this.dataGridView4);
             this.groupBox1.Controls.Add(this.dgvQuyDinh);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridView4, "dataGridView4");
-            this.dataGridView4.Name = "dataGridView4";
             // 
             // dgvQuyDinh
             // 
@@ -123,7 +114,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuyDinh)).EndInit();
             this.ResumeLayout(false);
 
@@ -135,7 +125,6 @@
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.Button btnCapnhat;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridView dgvQuyDinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

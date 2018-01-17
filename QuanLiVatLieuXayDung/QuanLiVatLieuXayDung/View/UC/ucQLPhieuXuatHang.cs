@@ -20,9 +20,17 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
             InitializeComponent();
             cbbTimKiem.SelectedIndex = 0;
-            dgvDanhSachPhieuXuat.DataSource = phieuxuatController.GetAllPhieuXuat();
+            load();
+            if (frmLogin.rule == "admin")
+            {
+                button3.Enabled = false;
+            }
         }
 
+        void load()
+        {
+            dgvDanhSachPhieuXuat.DataSource = phieuxuatController.GetAllPhieuXuat();
+        }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if (txtTimKiem.Text.Trim() != "")
@@ -72,6 +80,13 @@ namespace QuanLiVatLieuXayDung.View.UC
 
             chiTietPhieuXuat = phieuxuatController.GetChiTietPhieuXuat(int.Parse(txtMaPhieuXuat.Text));
             dgvChiTietPhieuXuat.DataSource = chiTietPhieuXuat;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmThem frmThem = new frmThem(3);
+            frmThem.ShowDialog();
+            load();
         }
     }
 }

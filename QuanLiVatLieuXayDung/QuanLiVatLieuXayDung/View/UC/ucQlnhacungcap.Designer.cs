@@ -45,7 +45,6 @@
             this.btnSuasp = new System.Windows.Forms.Button();
             this.btnThemSp = new System.Windows.Forms.Button();
             this.btnXoasp = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMasp = new System.Windows.Forms.TextBox();
@@ -196,7 +195,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(867, 663);
+            this.panel1.Size = new System.Drawing.Size(867, 646);
             this.panel1.TabIndex = 2;
             // 
             // groupBox4
@@ -207,7 +206,6 @@
             this.groupBox4.Controls.Add(this.btnSuasp);
             this.groupBox4.Controls.Add(this.btnThemSp);
             this.groupBox4.Controls.Add(this.btnXoasp);
-            this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.txtMasp);
@@ -216,7 +214,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(0, 412);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(867, 251);
+            this.groupBox4.Size = new System.Drawing.Size(867, 234);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách sản phẩm";
@@ -242,7 +240,7 @@
             this.dtgSpncc.Name = "dtgSpncc";
             this.dtgSpncc.ReadOnly = true;
             this.dtgSpncc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgSpncc.Size = new System.Drawing.Size(504, 223);
+            this.dtgSpncc.Size = new System.Drawing.Size(504, 206);
             this.dtgSpncc.TabIndex = 0;
             this.dtgSpncc.MouseEnter += new System.EventHandler(this.dtgSpncc_MouseEnter);
             // 
@@ -290,14 +288,6 @@
             this.btnXoasp.TabIndex = 23;
             this.btnXoasp.Text = "Xóa";
             this.btnXoasp.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(705, 338);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(101, 23);
-            this.textBox2.TabIndex = 11;
             // 
             // label10
             // 
@@ -543,7 +533,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "ucQlnhacungcap";
-            this.Size = new System.Drawing.Size(867, 663);
+            this.Size = new System.Drawing.Size(867, 646);
             this.Load += new System.EventHandler(this.ucQlnhacungcap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgNcc)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -590,7 +580,6 @@
         private System.Windows.Forms.TextBox txtCongno;
         private System.Windows.Forms.RadioButton rdbTenncc;
         private System.Windows.Forms.RadioButton rdbMancc;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDonvi;

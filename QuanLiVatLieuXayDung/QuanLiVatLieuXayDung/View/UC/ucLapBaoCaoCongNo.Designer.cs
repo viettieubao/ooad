@@ -68,6 +68,7 @@
             // 
             // cbbThang
             // 
+            this.cbbThang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbThang.FormattingEnabled = true;
             this.cbbThang.Items.AddRange(new object[] {
@@ -115,7 +116,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(99, 25);
+            this.label3.Location = new System.Drawing.Point(98, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 6;

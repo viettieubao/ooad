@@ -18,8 +18,13 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
             InitializeComponent();
             cbbTimKiem.SelectedIndex = 0;
+            load();
         }
 
+        void load()
+        {
+            dgvDanhSachHoaDon.DataSource = hoadonController.GetAllHoaDon();
+        }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if (txtTimKiem.Text.Trim() != "")
@@ -51,6 +56,10 @@ namespace QuanLiVatLieuXayDung.View.UC
                 {
                     dgvDanhSachHoaDon.DataSource = hoadonController.SearchTenKhachHang(txtTimKiem.Text);
                 }
+            }
+            else
+            {
+                load();
             }
         }
 

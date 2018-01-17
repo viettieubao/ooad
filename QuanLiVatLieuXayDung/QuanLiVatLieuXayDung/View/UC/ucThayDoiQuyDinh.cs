@@ -19,6 +19,10 @@ namespace QuanLiVatLieuXayDung.View.UC
             btnThem.Enabled = false;
         }
 
+        void load()
+        {
+
+        }
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Bạn có muốn thay đổi không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
