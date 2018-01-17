@@ -22,7 +22,7 @@ namespace QuanLiVatLieuXayDung.Model
                 "(sp.soluong - " + GetSoLuongNhap(masp, ngaycuoithang, today) + "+" + GetSoLuongXuat(masp, ngaycuoithang, today) + ") as [Số lượng tồn cuối tháng], " +
                 "(" + GetSoLuongNhap(masp, ngaydauthang, ngaycuoithang) + ") as [Số lượng nhập trong tháng], " +
                 "(" + GetSoLuongXuat(masp, ngaydauthang, ngaycuoithang) + ")  as [Số lượng xuất trong tháng]" +
-                "From sanpham sp, nhacungcap where sp.manhacungcap = nhacungcap.manhacungcap and sp.masanpham = " + masp;
+                "From sanpham sp, nhacungcap where sp.manhacungcap is not null  and  sp.manhacungcap = nhacungcap.manhacungcap and sp.masanpham = " + masp;
 
             return Connection.getData(cmd);
         }

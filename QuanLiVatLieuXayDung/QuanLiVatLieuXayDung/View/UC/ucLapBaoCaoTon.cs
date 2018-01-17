@@ -42,25 +42,27 @@ namespace QuanLiVatLieuXayDung.View.UC
                             int masp = int.Parse(spRow[0].ToString());
                             DataTable tempt = baocaoController.GetBaoCaoTon(masp, cbbThang.SelectedIndex + 1, nam);
                             int soluongtondauthang = 0, soluongtoncuoithang = 0, soluongnhaptrongthang = 0, soluongxuattrongthang = 0;
-                            if (tempt.Rows[0][3].ToString() != "")
+                            if (tempt.Rows.Count > 0)
                             {
-                                soluongtondauthang = (int)tempt.Rows[0][3];
+                                if (tempt.Rows[0][3].ToString() != "")
+                                {
+                                    soluongtondauthang = (int)tempt.Rows[0][3];
+                                }
+                                if (tempt.Rows[0][4].ToString() != "")
+                                {
+                                    soluongtoncuoithang = (int)tempt.Rows[0][4];
+                                }
+                                if (tempt.Rows[0][5].ToString() != "")
+                                {
+                                    soluongnhaptrongthang = (int)tempt.Rows[0][5];
+                                }
+                                if (tempt.Rows[0][6].ToString() != "")
+                                {
+                                    soluongxuattrongthang = (int)tempt.Rows[0][6];
+                                }
+                                string[] row = new string[] { tempt.Rows[0][0].ToString(), tempt.Rows[0][1].ToString(), tempt.Rows[0][2].ToString(), soluongtondauthang.ToString(), soluongtoncuoithang.ToString(), soluongnhaptrongthang.ToString(), soluongxuattrongthang.ToString() };
+                                dgvChiTietBaoCao.Rows.Add(row);
                             }
-                            if (tempt.Rows[0][4].ToString() != "")
-                            {
-                                soluongtoncuoithang = (int)tempt.Rows[0][4];
-                            }
-                            if (tempt.Rows[0][5].ToString() != "")
-                            {
-                                soluongnhaptrongthang = (int)tempt.Rows[0][5];
-                            }
-                            if (tempt.Rows[0][6].ToString() != "")
-                            {
-                                soluongxuattrongthang = (int)tempt.Rows[0][6];
-                            }
-
-                            string[] row = new string[] { tempt.Rows[0][0].ToString(), tempt.Rows[0][1].ToString(), tempt.Rows[0][2].ToString(), soluongtondauthang.ToString(), soluongtoncuoithang.ToString(), soluongnhaptrongthang.ToString(), soluongxuattrongthang.ToString() };
-                            dgvChiTietBaoCao.Rows.Add(row);
                         }
                     }
                 }

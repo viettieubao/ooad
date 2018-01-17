@@ -15,19 +15,19 @@ namespace QuanLiVatLieuXayDung.Model
             return Connection.getData(cmd);
         }
 
-        public int InsertHoaDon(int makhachang,long tongtien, long thuevat, DateTime ngaylap,DataTable sanpham)
+        public int InsertHoaDon(int makhachang, long tongtien, long thuevat, DateTime ngaylap, DataTable sanpham)
         {
-            string cmd = @"insert into hoadon(makhachhang,ngaylap,tongtien,thuevat) values ("+makhachang+",convert(datetime, '"+ ngaylap.ToString(@"yyyy - MM - dd ") +"'),"+tongtien+","+thuevat+")";
+            string cmd = @"insert into hoadon(makhachhang,ngaylap,tongtien,thuevat) values (" + makhachang + ",convert(datetime, '" + ngaylap.ToString(@"yyyy - MM - dd ") + "')," + tongtien + "," + thuevat + ")";
             int result = Connection.ExcuteNonQuery(cmd);
-            int mahoadon=-1;
+            int mahoadon = -1;
             if (result == 1)
             {
                 string cmd1 = @"select max(mahoadon) from hoadon ";
-                 mahoadon = int.Parse(Connection.getData(cmd1).Rows[0][0].ToString());
+                mahoadon = int.Parse(Connection.getData(cmd1).Rows[0][0].ToString());
 
                 foreach (DataRow row in sanpham.Rows)
                 {
-                    string cmd2 = @"insert into chitiethoadon (mahoadon,masanpham,soluongsanpham,madonvitinh,thanhtien) values ("+mahoadon+","+row[0]+","+row[4]+",(select madonvitinh from donvi dv where dv.tendonvitinh=N'"+row[2]+"'),"+row[5]+")";
+                    string cmd2 = @"insert into chitiethoadon (mahoadon,masanpham,soluongsanpham,madonvitinh,thanhtien) values (" + mahoadon + "," + row[0] + "," + row[4] + ",(select madonvitinh from donvi dv where dv.tendonvitinh=N'" + row[2] + "')," + row[5] + ")";
                     int tem = Connection.ExcuteNonQuery(cmd2);
                 }
             }
@@ -56,7 +56,7 @@ namespace QuanLiVatLieuXayDung.Model
             return Connection.getData(cmd);
         }
 
-        public DataTable GetChiTietHoaDon(int maDonHang)
+        public DataTable GetChiTietHoaDon_Show(int maDonHang)
         {
             string cmd = @" select masanpham as [Mã sản phẩm], (select sp.TENSANPHAM from SANPHAM sp where sp.MASANPHAM=cthd.MASANPHAM) as [Tên sản phẩm],
  CTHD.SOLUONGSANPHAM as [Số lượng], 
@@ -76,6 +76,11 @@ namespace QuanLiVatLieuXayDung.Model
             }
 
             return 0;
+        }
+        public DataTable GetChiTietHoaDon(int maDonHang)
+        {
+            string cmd = @"select chitiethoadon.masanpham, tensanpham, madonvitinhbansi, giabansi, giabanle, madonvitinhbanle, chitiethoadon.madonvitinh, tendonvitinh, soluongsanpham, soluongsanphamdaxuat from chitiethoadon, sanpham, donvi where sanpham.masanpham = chitiethoadon.masanpham and donvi.madonvitinh = chitiethoadon.madonvitinh and mahoadon = " + maDonHang;
+            return Connection.getData(cmd);
         }
     }
 }

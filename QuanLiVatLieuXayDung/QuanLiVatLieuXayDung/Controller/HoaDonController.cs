@@ -40,6 +40,9 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return hoaDon.GetAllHoaDon();
         }
-
+        public DataTable GetChiTietHoaDon_Show(int maHoaDon)
+        {
+            return hoaDon.GetChiTietHoaDon_Show(maHoaDon);
+        }
     }
 }

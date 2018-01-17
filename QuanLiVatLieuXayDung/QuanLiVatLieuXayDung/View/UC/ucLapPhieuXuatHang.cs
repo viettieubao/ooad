@@ -136,7 +136,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
             txtSoLuongXuat.Text = "0";
             dgvDanhSachSanPham.Rows.Clear();
-            chiTietHoaDon = hoadonController.GetChiTietHoaDon(int.Parse(txtMaHoaDon.Text));
+            chiTietHoaDon = hoadonController.GetChiTietHoaDon_Show(int.Parse(txtMaHoaDon.Text));
             txtSoLuongConLai.Text = (int.Parse(chiTietHoaDon.Rows[cbbTenSanPham.SelectedIndex]["soluongsanpham"].ToString()) - int.Parse(chiTietHoaDon.Rows[cbbTenSanPham.SelectedIndex]["soluongsanphamdaxuat"].ToString())).ToString();
         }
 
@@ -206,11 +206,13 @@ namespace QuanLiVatLieuXayDung.View.UC
 
         private void dgvDanhSachHoaDon_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            
             txtMaHoaDon.Text = dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
             txtTenKhachHang.Text = dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
             txtSoDienThoai.Text = dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
             txtDiaChi.Text = dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
             txtNgayXuat.Text = dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+
             chiTietHoaDon = hoadonController.GetChiTietHoaDon(int.Parse(dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[0].FormattedValue.ToString()));
             cbbTenSanPham.DataSource = chiTietHoaDon;
             cbbTenSanPham.ValueMember = "masanpham";
@@ -228,7 +230,7 @@ namespace QuanLiVatLieuXayDung.View.UC
             {
                 DataRow row = chiTietHoaDon.Rows[cbbTenSanPham.SelectedIndex];
                 txtDonViTinh.Text = row["tendonvitinh"].ToString();
-                //txtGiaBan.Text = chiTietHoaDon.Rows[cbbTenSanPham.SelectedIndex][4].ToString();
+                txtGiaBan.Text = chiTietHoaDon.Rows[cbbTenSanPham.SelectedIndex][4].ToString();
                 if (row["madonvitinhbansi"] == row["madonvitinh"])
                 {
                     txtGiaBan.Text = row["giabansi"].ToString();
