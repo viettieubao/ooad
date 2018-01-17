@@ -508,6 +508,7 @@
             this.btnThemKhachHang.TabIndex = 32;
             this.btnThemKhachHang.Text = "Khách hàng mới";
             this.btnThemKhachHang.UseVisualStyleBackColor = false;
+            this.btnThemKhachHang.Click += new System.EventHandler(this.btnThemKhachHang_Click);
             // 
             // label12
             // 

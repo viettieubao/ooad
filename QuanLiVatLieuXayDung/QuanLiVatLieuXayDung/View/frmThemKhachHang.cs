@@ -23,6 +23,8 @@ namespace QuanLiVatLieuXayDung.View
         private void btnKhoaThem_Click(object sender, EventArgs e)
         {
             khachhang.InsertKhachhang(txtTenKhachHang.Text, txtSoDienThoai.Text, txtDiaChi.Text);
+            MessageBox.Show("Thêm thành công!");
+            this.Close();
         }
 
         private void btnKhoaCapNhat_Click(object sender, EventArgs e)

@@ -113,5 +113,11 @@ namespace QuanLiVatLieuXayDung.View.UC
                 txtSoTienThu.Text = dgvDanhSachPhieuThuTien.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
             }
         }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            frmThem frm = new frmThem(4);
+            frm.ShowDialog();
+        }
     }
 }
