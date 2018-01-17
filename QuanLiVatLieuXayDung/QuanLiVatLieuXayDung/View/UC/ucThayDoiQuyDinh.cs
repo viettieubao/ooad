@@ -7,43 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiVatLieuXayDung.Controller;
 
 namespace QuanLiVatLieuXayDung.View.UC
 {
     public partial class ucThayDoiQuyDinh : UserControl
     {
+        ThamSoController thamSo;
         public ucThayDoiQuyDinh()
         {
             InitializeComponent();
-            txtGia.Enabled = false;
-            btnThem.Enabled = false;
+            thamSo = new ThamSoController();
+            load();
         }
 
         void load()
         {
-
+            dgvQuyDinh.DataSource = thamSo.getAllThamSo();
         }
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có muốn thay đổi không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
+            
+            if (thamSo.SearchThamSoTheoTen(txtQuyDinh.Text).Rows.Count == 0)
             {
-                MessageBox.Show("Thay đổi thành công");
-                txtGia.Enabled = false;
-                btnThem.Enabled = false;
+                thamSo.InsertThamso(txtQuyDinh.Text, int.Parse(txtGiaTri.Text));
+                MessageBox.Show("Thêm thành công");
             }
-            else if (dialogResult == DialogResult.No)
+            else
             {
-                txtGia.Text = "";
-                txtGia.Enabled = false;
-                btnThem.Enabled = false;
+                MessageBox.Show("Quy định đã tồn tại");
             }
+            load();
         }
 
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
-            btnThem.Enabled = true;
-            txtGia.Enabled = true;
+
+            thamSo.UpdateThamSo(txtQuyDinh.Text, int.Parse(txtGiaTri.Text));
+            load();
+        }
+
+        private void dgvQuyDinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtQuyDinh.Text = dgvQuyDinh.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+            txtGiaTri.Text = dgvQuyDinh.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
         }
     }
 }

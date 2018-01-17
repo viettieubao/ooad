@@ -34,8 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvQuyDinh = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtGia = new System.Windows.Forms.TextBox();
+            this.txtGiaTri = new System.Windows.Forms.TextBox();
+            this.txtQuyDinh = new System.Windows.Forms.TextBox();
             this.btnCapnhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
@@ -48,8 +48,8 @@
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.groupBox1);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.txtGia);
+            this.groupBox4.Controls.Add(this.txtGiaTri);
+            this.groupBox4.Controls.Add(this.txtQuyDinh);
             this.groupBox4.Controls.Add(this.btnCapnhat);
             this.groupBox4.Controls.Add(this.btnThem);
             resources.ApplyResources(this.groupBox4, "groupBox4");
@@ -80,16 +80,18 @@
             this.dgvQuyDinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dgvQuyDinh, "dgvQuyDinh");
             this.dgvQuyDinh.Name = "dgvQuyDinh";
+            this.dgvQuyDinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvQuyDinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuyDinh_CellContentClick);
             // 
-            // textBox1
+            // txtGiaTri
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.txtGiaTri, "txtGiaTri");
+            this.txtGiaTri.Name = "txtGiaTri";
             // 
-            // txtGia
+            // txtQuyDinh
             // 
-            resources.ApplyResources(this.txtGia, "txtGia");
-            this.txtGia.Name = "txtGia";
+            resources.ApplyResources(this.txtQuyDinh, "txtQuyDinh");
+            this.txtQuyDinh.Name = "txtQuyDinh";
             // 
             // btnCapnhat
             // 
@@ -122,12 +124,12 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtGia;
+        private System.Windows.Forms.TextBox txtQuyDinh;
         private System.Windows.Forms.Button btnCapnhat;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvQuyDinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGiaTri;
     }
 }

@@ -231,52 +231,52 @@
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="textBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtGiaTri.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtGiaTri.Location" type="System.Drawing.Point, System.Drawing">
     <value>217, 69</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtGiaTri.Size" type="System.Drawing.Size, System.Drawing">
     <value>373, 22</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtGiaTri.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;txtGiaTri.Name" xml:space="preserve">
+    <value>txtGiaTri</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtGiaTri.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtGiaTri.Parent" xml:space="preserve">
     <value>groupBox4</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtGiaTri.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="txtGia.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtQuyDinh.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="txtGia.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtQuyDinh.Location" type="System.Drawing.Point, System.Drawing">
     <value>217, 42</value>
   </data>
-  <data name="txtGia.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtQuyDinh.Size" type="System.Drawing.Size, System.Drawing">
     <value>373, 22</value>
   </data>
-  <data name="txtGia.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtQuyDinh.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;txtGia.Name" xml:space="preserve">
-    <value>txtGia</value>
+  <data name="&gt;&gt;txtQuyDinh.Name" xml:space="preserve">
+    <value>txtQuyDinh</value>
   </data>
-  <data name="&gt;&gt;txtGia.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtQuyDinh.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtGia.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtQuyDinh.Parent" xml:space="preserve">
     <value>groupBox4</value>
   </data>
-  <data name="&gt;&gt;txtGia.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtQuyDinh.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="btnCapnhat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">

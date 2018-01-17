@@ -23,11 +23,13 @@ namespace QuanLiVatLieuXayDung.View.UC
             sanPham = new SanPhamController();
             khachhang = new KhachhangController();
             hoaDon = new HoaDonController();
+            thamSo = new ThamSoController();
         }
 
         SanPhamController sanPham;
         KhachhangController khachhang;
         HoaDonController hoaDon;
+        ThamSoController thamSo;
         private void ucQlsanpham_Load(object sender, EventArgs e)
         {
             load();
@@ -236,7 +238,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         {
 
             int makhachhang = 0;
-            if (tongtienhoadon > 1000000)
+            if (tongtienhoadon >thamSo.getGiatriThamSobyID(1))
             {//trường hợp hóa đơn khách hàng lớn hơn 10 triệu
                 if (cbbTenKhachHang.Text != "")
                 {
