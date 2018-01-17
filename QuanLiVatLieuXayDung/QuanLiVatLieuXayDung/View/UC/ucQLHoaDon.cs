@@ -71,7 +71,11 @@ namespace QuanLiVatLieuXayDung.View.UC
             txtTongTienHoaDon.Text = dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
             txtMaHoaDon.Text = dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
 
-            dgvChiTietHoaDon.DataSource = hoadonController.GetChiTietHoaDon(int.Parse(dgvDanhSachHoaDon.Rows[e.RowIndex].Cells[0].FormattedValue.ToString()));
+            long tongtien = hoadonController.GetTongTienHoaDon(int.Parse(txtMaHoaDon.Text));
+            long dathanhtoan = hoadonController.GetSoTienDaTraHoaDon(int.Parse(txtMaHoaDon.Text));
+            txtTongTienHoaDon.Text = tongtien.ToString();
+            txtDaThanhToan.Text = dathanhtoan.ToString();
+            txtConNo.Text = (tongtien - dathanhtoan).ToString();
         }
     }
 }

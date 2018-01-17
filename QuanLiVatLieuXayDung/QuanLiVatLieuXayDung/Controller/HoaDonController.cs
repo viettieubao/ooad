@@ -44,5 +44,15 @@ namespace QuanLiVatLieuXayDung.Controller
         {
             return hoaDon.GetChiTietHoaDon_Show(maHoaDon);
         }
+
+        public long GetSoTienDaTraHoaDon(int mahoadon)
+        {
+            return hoaDon.SoTienDaTraMoiHoaDon(mahoadon);
+        }
+
+        public long GetTongTienHoaDon(int mahoadon)
+        {
+            return hoaDon.GetTongTienHoaDon(mahoadon);
+        }
     }
 }

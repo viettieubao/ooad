@@ -17,7 +17,7 @@ namespace QuanLiVatLieuXayDung.Model
         public int InsertPhieuThuTien(int mahoadon, string lydothutien, long sotiendathu)
         {
             int result = 0;
-            string cmd = @"insert into phieuthutien(mahoadon, ngaylap, lydothutien, sotiendathu) values (" + mahoadon + "," + DateTime.Now.Date.ToString(@"yyyy - MM - dd") + ",'" + lydothutien + "'," + sotiendathu + ")";
+            string cmd = @"insert into phieuthutien(mahoadon, ngaylap, lydothutien, sotiendathu) values (" + mahoadon + ",convert(datetime,'" + DateTime.Now.Date.ToString(@"yyyy - MM - dd") + "'),N'" + lydothutien + "'," + sotiendathu + ")";
             return Connection.ExcuteNonQuery(cmd);
         }
 

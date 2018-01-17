@@ -82,5 +82,27 @@ namespace QuanLiVatLieuXayDung.Model
             string cmd = @"select chitiethoadon.masanpham, tensanpham, madonvitinhbansi, giabansi, giabanle, madonvitinhbanle, chitiethoadon.madonvitinh, tendonvitinh, soluongsanpham, soluongsanphamdaxuat from chitiethoadon, sanpham, donvi where sanpham.masanpham = chitiethoadon.masanpham and donvi.madonvitinh = chitiethoadon.madonvitinh and mahoadon = " + maDonHang;
             return Connection.getData(cmd);
         }
+
+        public long SoTienDaTraMoiHoaDon(int mahoadon)
+        {
+            string cmd = @"select sum(sotiendathu) from phieuthutien where mahoadon = " + mahoadon;
+            DataTable dt = Connection.getData(cmd);
+            if (dt.Rows[0][0].ToString() != "")
+            {
+                return int.Parse(dt.Rows[0][0].ToString());
+            }
+            return 0;
+        }
+
+        public long GetTongTienHoaDon(int mahoadon)
+        {
+            string cmd = @"select tongtien from hoadon where mahoadon = " + mahoadon;
+            DataTable dt = Connection.getData(cmd);
+            if (dt.Rows[0][0].ToString() != "")
+            {
+                return int.Parse(dt.Rows[0][0].ToString());
+            }
+            return 0;
+        }
     }
 }
