@@ -54,6 +54,7 @@ namespace QuanLiVatLieuXayDung.View.UC
         long tongtienhoadon = 0;
         long tinhtongtiensanpham()
         {
+            tongtienhoadon = 0;
             foreach (DataGridViewRow row in dtpData.Rows)
             {
                 tongtienhoadon += int.Parse(row.Cells[3].FormattedValue.ToString()) * long.Parse(row.Cells[4].FormattedValue.ToString());
@@ -78,7 +79,7 @@ namespace QuanLiVatLieuXayDung.View.UC
                                 string thanhtien = (long.Parse(txtGiaBan.Text) * int.Parse(txtSoLuong.Text)).ToString();
                                 string[] row = new string[] { txtMaSP.Text, cbbTenSanPham.Text, cbbDonVi.Text, txtGiaBan.Text, txtSoLuong.Text, thanhtien };
                                 dtpData.Rows.Add(row);
-                                tongtiensanpham += tinhtongtiensanpham();
+                                tongtiensanpham = tinhtongtiensanpham();
                                 thuevat = tongtiensanpham / 10;
                                 tongtienhoadon = tongtiensanpham + thuevat;
                                 txtTongTien.Text = tongtienhoadon.ToString();
@@ -117,7 +118,7 @@ namespace QuanLiVatLieuXayDung.View.UC
 
                             dtpData.Rows.Add(row);
 
-                            tongtiensanpham += tinhtongtiensanpham();
+                            tongtiensanpham = tinhtongtiensanpham();
                             thuevat = tongtiensanpham / 10;
                             tongtienhoadon = tongtiensanpham + thuevat;
                             txtThueVAT.Text = thuevat.ToString();
@@ -162,7 +163,7 @@ namespace QuanLiVatLieuXayDung.View.UC
                                 int index = dtpData.CurrentRow.Index;
                                 dtpData.Rows.RemoveAt(index);
                                 dtpData.Rows.Insert(index, row);
-                                tongtiensanpham += tinhtongtiensanpham();
+                                tongtiensanpham = tinhtongtiensanpham();
                                 thuevat = tongtiensanpham / 10;
                                 tongtienhoadon = tongtiensanpham + thuevat;
                                 txtTongTien.Text = tongtienhoadon.ToString();
@@ -203,7 +204,7 @@ namespace QuanLiVatLieuXayDung.View.UC
                             int index = dtpData.CurrentRow.Index;
                             dtpData.Rows.RemoveAt(index);
                             dtpData.Rows.Insert(index, row);
-                            tongtiensanpham += tinhtongtiensanpham();
+                            tongtiensanpham = tinhtongtiensanpham();
                             thuevat = tongtiensanpham / 10;
                             tongtienhoadon = tongtiensanpham + thuevat;
                             txtTongTien.Text = tongtienhoadon.ToString();

@@ -69,11 +69,11 @@ namespace QuanLiVatLieuXayDung.View
 
         private void frmAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //DialogResult dr = MessageBox.Show("Bạn có muốn thoát không", "Exit", MessageBoxButtons.OKCancel);
-            //if (dr == DialogResult.OK)
-            //{
-            //    frmLogin.close();
-            //}
+            DialogResult dr = MessageBox.Show("Bạn có muốn thoát không", "Exit", MessageBoxButtons.OKCancel);
+            if (dr == DialogResult.OK)
+            {
+                frmLogin.close();
+            }
         }
     }
 }

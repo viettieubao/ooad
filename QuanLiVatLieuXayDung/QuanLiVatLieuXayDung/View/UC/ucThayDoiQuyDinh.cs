@@ -27,7 +27,6 @@ namespace QuanLiVatLieuXayDung.View.UC
         }
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            
             if (thamSo.SearchThamSoTheoTen(txtQuyDinh.Text).Rows.Count == 0)
             {
                 thamSo.InsertThamso(txtQuyDinh.Text, int.Parse(txtGiaTri.Text));
@@ -42,7 +41,6 @@ namespace QuanLiVatLieuXayDung.View.UC
 
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
-
             thamSo.UpdateThamSo(txtQuyDinh.Text, int.Parse(txtGiaTri.Text));
             load();
         }

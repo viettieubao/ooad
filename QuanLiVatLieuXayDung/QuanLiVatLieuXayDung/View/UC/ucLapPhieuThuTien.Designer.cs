@@ -35,7 +35,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtConNo = new System.Windows.Forms.TextBox();
@@ -73,7 +72,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtConNo);
@@ -159,17 +157,6 @@
             this.label12.Size = new System.Drawing.Size(37, 16);
             this.label12.TabIndex = 16;
             this.label12.Text = "VND";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1000, 83);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 16);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "VND";
             // 
             // label9
             // 
@@ -454,7 +441,6 @@
         private System.Windows.Forms.TextBox txtDaThanhToan;
         private System.Windows.Forms.TextBox txtTongTienHoaDon;
         private System.Windows.Forms.TextBox txtConNo;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox4;
