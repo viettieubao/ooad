@@ -20,6 +20,7 @@ namespace QuanLiVatLieuXayDung.View.UC
             cbbThang.SelectedIndex = 0;
             cbbNam.DataSource = baocaoController.GetAllNamBaoCao();
             cbbNam.DisplayMember = "nambaocao";
+            cbbNam.SelectedIndex = 0;
             cbbLoaiBaoCao.Items.Clear();
             if (frmLogin.rule == "admin")
             {
@@ -27,12 +28,26 @@ namespace QuanLiVatLieuXayDung.View.UC
                 cbbLoaiBaoCao.Items.Add("Báo cáo doanh thu");
                 cbbLoaiBaoCao.Items.Add("Báo cáo công nợ khách hàng");
                 cbbLoaiBaoCao.Items.Add("Báo cáo công nợ cửa hàng");
+                cbbLoaiBaoCao.SelectedIndex = 0;
             }
             else
             {
                 cbbLoaiBaoCao.Items.Add("Báo cáo doanh thu");
                 cbbLoaiBaoCao.Items.Add("Báo cáo công nợ khách hàng");
                 cbbLoaiBaoCao.Items.Add("Báo cáo công nợ cửa hàng");
+                cbbLoaiBaoCao.SelectedIndex = 0;
+            }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            int nam = 0;
+            if (cbbNam.Items.Count > 0)
+            {
+                if (int.TryParse(cbbNam.Text, out nam))
+                {
+                    dgvDanhSachBaoCao.DataSource = baocaoController.SearchBaoCao(cbbLoaiBaoCao.Text, cbbThang.SelectedIndex + 1, int.Parse(cbbNam.Text));
+                }
             }
         }
     }

@@ -61,5 +61,10 @@ namespace QuanLiVatLieuXayDung.Controller
             baocao.InsertBaoCao(thangbaocao, nambaocao, "Báo cáo công nợ cửa hàng");
             return 0;
         }
+
+        public DataTable SearchBaoCao(string loaibaocao, int thang, int nam)
+        {
+            return baocao.SearchBaoCao(loaibaocao, thang, nam);
+        }
     }
 }
